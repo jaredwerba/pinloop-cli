@@ -16,13 +16,14 @@
 </p>
 
 <p align="center">
-  Pinloop is a job search tool built for your coding agent to run from a terminal.
+  Pinloop is a job board built for your coding agent, run entirely from a terminal.
 </p>
 
 <p align="center">
-  It holds a large collection of frequently updated job postings, can hold your<br>
-  resume and any other preferences, and calls AI models to evaluate postings<br>
-  against what it knows about you.
+  It pulls in millions of postings a month, worldwide, across every white-collar<br>
+  field, refreshed hourly from company hiring systems and from job boards like<br>
+  LinkedIn. It can also hold your resume and any other preference files and make<br>
+  LLM calls to judge every posting against what it knows about you.
 </p>
 
 <br>
@@ -64,13 +65,20 @@ Run `pinloop login` to make an account.
 The commands talk to Pinloop's servers, so everything except the guide needs an
 account. Login goes through a browser, with no password.
 
-A free account gets a limited number of judged postings and semantic searches per
-month. You can use your own coding agent subscription of choice to instead have the
-agent judge postings and upload those judgments to Pinloop for free.
-Run `pinloop upgrade` to raise the free plan's limits and gain access
-to scheduled routines and watches which run unattended to review postings even when
-your laptop is closed. Keyword search, filtering, saved lists of postings,
-stored profile documents (e.g., resumes), and non-scheduled routines cost nothing.
+Free plan:
+- Search Pinloop with words and filters to count how many postings match you before pulling
+- Pull 5 postings per day
+- Judge 150 postings per month through LLM calls (or infinite postings w/ your own agent)
+- 50 semantic searches per month
+
+Pro plan:
+- Pull 1500 postings per month
+- Judge 1500 postings per month through LLM calls
+- Set routines to scan and save postings automatically on Pinloop's servers, either on a schedule or when new postings come in, even when your laptop is closed
+- Unlimited semantic search
+- Everything on Free
+
+Run `pinloop upgrade` to upgrade to Pro.
 
 ## License
 
