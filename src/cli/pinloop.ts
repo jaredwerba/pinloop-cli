@@ -74,6 +74,31 @@ import { coverageOf, type Coverage } from '../shared/coverage.ts';
 import { runFilter, type FilterRules } from '../shared/filter.ts';
 import { buildGuide, NON_COMMAND_PARTS } from '../shared/guide.ts';
 import { allowanceLines, SIGNED_OUT_SENTENCE } from '../shared/guide-text.ts';
+import {
+  OPEN_THE_PAGE,
+  proComparisonBlock,
+  proOfferFrom,
+  proOfferSpokenSentence,
+  relayParagraph,
+  relayedSentence,
+} from '../shared/plan-text.ts';
+import {
+  bothFeedsCountLine,
+  companyNeedsAnEmployerRefusal,
+  countLine,
+  employerNamesFrom,
+  heldToEmployersLine,
+  marketCountLine,
+  MOST_EMPLOYERS_ON_ONE_COMMAND,
+  pullNeedsAFromRefusal,
+  pullStopAndAskMessage,
+  pullUsedLine,
+  searchUsedLine,
+  stopAndAskMessage,
+  tooManyEmployersRefusal,
+  UNTIL_POSTINGS_RUN_OUT,
+  type PullWindow,
+} from '../shared/postings-text.ts';
 import { SKILL_TEXT, SKILL_VERSION } from '../shared/skill-file.ts';
 import { printWelcome } from '../shared/welcome.ts';
 import {
@@ -96,6 +121,7 @@ import {
   OPEN_THIS_ADDRESS_LINE,
   PASSWORD_FLAGS_REFUSAL,
   PASTE_THE_CODE_LINE,
+  SHOW_LINK_TO_AGENT_LINE,
   loggedInLine,
   signedOutLine,
   type DeliveredPass,
@@ -230,9 +256,27 @@ const UPDATE_WITH = 'update with: npm install -g pinloop';
  */
 let newerVersionSeen: string | undefined;
 
-/** The line an out-of-date copy prints under its own answer. */
-function outOfDateLine(newest: string): string {
-  return `this pinloop is ${CLI_VERSION}. the newest is ${newest}. ${UPDATE_WITH}`;
+/**
+ * The line an out-of-date copy prints under its own answer.
+ *
+ * The middle sentence arrived with slice 6 of the postings release
+ * (docs/postings-release-slice-6-criteria.md, approved by Andrew 2026-09-12,
+ * decision 4). That release switches off the collecting Pinloop used to do on
+ * its own once an hour, so from it a job posting reaches Pinloop only because
+ * somebody ran `pinloop pull`, or because a schedule or a watch of theirs ran
+ * one. A copy published before that release has no `pinloop pull` in it at all.
+ * The person running one keeps everything they already have and keeps searching
+ * and judging it, and simply stops seeing anything new, so that is the one thing
+ * this line now says has changed for them.
+ *
+ * It is exported so a test can read the sentence character for character without
+ * running a whole command.
+ */
+export function outOfDateLine(newest: string): string {
+  return (
+    `this pinloop is ${CLI_VERSION}. the newest is ${newest}. New postings now arrive only ` +
+    `through the new version. ${UPDATE_WITH}`
+  );
 }
 
 /** The line a copy prints when the server will not answer it at all. */
@@ -382,6 +426,19 @@ class Failure extends Error {
     this.retryAfterSeconds = retryAfterSeconds;
   }
 }
+
+/**
+ * A failure whose words have already been printed, as JSON on standard output.
+ *
+ * It exists for one case: a pull asked for JSON that could not be finished. What
+ * went wrong belongs inside the one JSON object such a run prints, so that
+ * whatever is reading the output finds it where it finds everything else — and
+ * the run still has to end in failure, so that the same reader can tell a pull
+ * that broke from a pull that matched nothing. Throwing this says both: the
+ * command ends in failure, and nothing more is written to the error stream,
+ * because the sentence is already on standard output.
+ */
+class AlreadySaid extends Failure {}
 
 /** What a person is told when neither the saved pass nor its renewal works. */
 const LOG_IN_AGAIN =
@@ -979,6 +1036,223 @@ function stoppedToAsk(json: unknown): boolean {
 }
 
 /**
+ * The words the person typed after `pinloop`, kept as they were typed.
+ *
+ * A search that stops to have the person asked first prints the whole command to
+ * run again, ending in `--confirm` and the token, and the surest way to print a
+ * command that really works is to print the one that was just typed. It is
+ * captured when the program starts rather than read from process.argv where it
+ * is needed, because the tests run this program through vite-node, which leaves
+ * its own loader in the arguments.
+ */
+let typedWords: string[] = [];
+
+/** Those same words, with any `--confirm` and the token after it taken out. */
+function commandWords(): string[] {
+  const words: string[] = [];
+  for (let at = 0; at < typedWords.length; at += 1) {
+    if (typedWords[at] === '--confirm') {
+      at += 1;
+      continue;
+    }
+    words.push(typedWords[at]!);
+  }
+  return words;
+}
+
+// ---------------------------------------------------------------------------
+// The six flags that moved from `pinloop search` to `pinloop viewed`, and the
+// retired `pinloop list` (docs/postings-release-slice-4-criteria.md, approved
+// by Andrew 2026-09-12, criteria 2 and 3)
+// ---------------------------------------------------------------------------
+
+/**
+ * The six flags `pinloop search` stopped taking.
+ *
+ * All six only make sense over the postings this account has already been
+ * handed: ranking by meaning, ranking by the documents in this profile, a match
+ * strength, the text a meaning search would send, a named set of postings, and
+ * leaving out the postings this account has already judged. `pinloop viewed`
+ * is the command that searches those postings, so all six live there now.
+ *
+ * The server still answers every one of them on a search, because a copy of
+ * `pinloop` somebody installed before this release still sends them. What
+ * changed is only what the installed command offers.
+ */
+const FLAGS_THAT_MOVED_TO_VIEWED = [
+  '--semantic',
+  '--from-profile',
+  '--min-match',
+  '--preview',
+  '--within',
+  '--unjudged',
+] as const;
+
+/**
+ * The first of those six a person typed, in the order they typed them, or
+ * nothing when they typed none.
+ *
+ * The words are read as they were typed rather than off what commander parsed,
+ * for two reasons. `pinloop search` no longer declares any of the six, so
+ * commander would turn the command away as carrying an option nobody knows
+ * before anything here could say which command the flag belongs to. And the
+ * order a person typed their flags in is the order the sentence below names
+ * them in, which is what makes the whole command it prints a command they can
+ * copy and run.
+ */
+function firstFlagThatMovedToViewed(): string | undefined {
+  for (const typed of typedWords) {
+    const flag = String(typed).split('=')[0] ?? '';
+    if ((FLAGS_THAT_MOVED_TO_VIEWED as readonly string[]).includes(flag)) return flag;
+  }
+  return undefined;
+}
+
+/**
+ * The whole command the person typed, with the first word swapped for another
+ * command, so the sentence that refuses them prints a line they can copy and
+ * run as it stands. Nothing is reordered and nothing is added.
+ */
+function theSameCommandAs(verb: string): string {
+  const [, ...rest] = commandWords();
+  return ['pinloop', verb, ...rest].join(' ');
+}
+
+/**
+ * Turns a `pinloop search` carrying one of the six flags away before anything
+ * is sent, in one sentence naming the flag and the whole command to run
+ * instead.
+ *
+ * It runs before the command tree parses the words, because none of the six is
+ * declared on `pinloop search` any more: left to itself, commander would say
+ * only that the option is unknown, which tells a person the flag is gone
+ * without telling them where it went.
+ *
+ * One sentence, not six: only the first of the six is named, and the command it
+ * prints already carries the rest.
+ */
+function refuseFlagsThatMovedToViewed(): void {
+  if (typedWords[0] !== 'search') return;
+  const moved = firstFlagThatMovedToViewed();
+  if (moved === undefined) return;
+  throw new Failure(
+    `${moved} belongs to pinloop viewed, which searches the postings this account already ` +
+      `has. Run: ${theSameCommandAs('viewed')}`,
+  );
+}
+
+/**
+ * The line printed after a search saying what it cost this account, built out of
+ * the numbers the server sent.
+ *
+ * A run that followed every page is one search to the person and several
+ * requests to the server, so what was charged and what was already this
+ * account's are added up across the pages, what is left comes from the last page
+ * answered, and how many postings match comes from the first.
+ *
+ * A server old enough to send none of those numbers — a copy of this command
+ * newer than the server it is pointed at — prints no line at all, which is
+ * better than a line built out of guesses.
+ */
+function postingsUsedLine(answered: any[], showing: number): string | undefined {
+  const counted = answered.filter((body) => typeof body?.charged === 'number');
+  if (counted.length === 0) return undefined;
+  const last = counted[counted.length - 1];
+  // The page this search would have handed back if the day had had room for a
+  // whole one. The server sends it only when the page was really cut down.
+  const asked = Number(counted[0]?.asked_for);
+  const askedFor = Number.isFinite(asked) && asked > showing ? asked : undefined;
+  return searchUsedLine({
+    showing,
+    matching: Number(counted[0]?.matching ?? showing),
+    alreadyHad: counted.reduce((total, body) => total + Number(body?.already_had ?? 0), 0),
+    used: counted.reduce((total, body) => total + Number(body?.charged ?? 0), 0),
+    left: (last?.left ?? 0) as number | string,
+    period: last?.postings_period === 'day' ? 'day' : 'month',
+    ...(askedFor === undefined ? {} : { askedFor }),
+    // Both plans' numbers and the price, sent by the server only to an account
+    // that could actually buy Pro, so an account already paying and the owner
+    // account read the same line with no offer on the end of it.
+    ...(proOfferFrom(last?.upgrade) === undefined
+      ? {}
+      : { offer: proOfferFrom(last?.upgrade)! }),
+  });
+}
+
+/**
+ * The line printed after a pull, built out of the numbers the server sent.
+ *
+ * It is one function rather than a block inside the pull command because two
+ * places need the identical text: the line itself, written to the error stream
+ * for a person to read, and the `tell_the_person` field of a --json run, which
+ * reads its sentence back out of this same string.
+ */
+function pullLineFrom(numbers: Record<string, unknown>, rowCount: number): string {
+  const offer = proOfferFrom(numbers['upgrade']);
+  return pullUsedLine({
+    pulled: Number(numbers['pulled'] ?? rowCount),
+    matching: Number(numbers['matching'] ?? rowCount),
+    window: (numbers['window'] ?? { kind: 'last-week' }) as PullWindow,
+    alreadyHad: Number(numbers['already_had'] ?? 0),
+    used: Number(numbers['used'] ?? 0),
+    left: (numbers['left'] ?? 0) as number | string,
+    period: numbers['period'] === 'day' ? 'day' : 'month',
+    nextPostedAfter: String(numbers['next_posted_after'] ?? ''),
+    ...(offer === undefined ? {} : { offer }),
+  });
+}
+
+/**
+ * The `tell_the_person` field of a machine-readable answer, holding the exact
+ * sentence a line carries for the person, and nothing at all when that line
+ * carries none (Andrew, 2026-09-14).
+ */
+function relayField(line: string | undefined): Record<string, string> {
+  const said = relayedSentence(line);
+  return said === undefined ? {} : { tell_the_person: said };
+}
+
+/**
+ * The block a stopped search or a stopped pull prints, or nothing for the three
+ * gates that are about judging rather than postings.
+ *
+ * It is a function for the same reason the line after a pull is: the block is
+ * printed for a person and its sentence is also handed back under
+ * `tell_the_person` in a --json run, and building it twice would let the two
+ * copies drift apart.
+ */
+function stopAndAskFrom(json: any, gate: ConfirmGate, token: string): string | undefined {
+  if (gate.kind !== 'search' && gate.kind !== 'pull') return undefined;
+  const counts = (json?.confirm_postings ?? {}) as Record<string, unknown>;
+  const offer = proOfferFrom(counts['upgrade']);
+  if (gate.kind === 'pull') {
+    return pullStopAndAskMessage({
+      wouldTake: Number(counts['would_take'] ?? 0),
+      left: Number(counts['left'] ?? 0),
+      wouldBeLeft: Number(counts['would_be_left'] ?? 0),
+      period: counts['period'] === 'day' ? 'day' : 'month',
+      command: nextCommandLine(gate, token),
+      ...(offer === undefined ? {} : { offer }),
+    });
+  }
+  const handedInLastHour = Number(counts['handed_in_last_hour']);
+  return stopAndAskMessage({
+    wouldTake: Number(counts['would_take'] ?? 0),
+    cappedByLimit: counts['capped'] === true,
+    alreadyHas: Number(counts['already_has'] ?? 0),
+    matching: Number(counts['matching'] ?? 0),
+    left: Number(counts['left'] ?? 0),
+    wouldBeLeft: Number(counts['would_be_left'] ?? 0),
+    period: counts['period'] === 'day' ? 'day' : 'month',
+    command: nextCommandLine(gate, token),
+    ...(offer === undefined ? {} : { offer }),
+    ...(Number.isFinite(handedInLastHour) && counts['handed_in_last_hour'] !== undefined
+      ? { handedInLastHour }
+      : {}),
+  });
+}
+
+/**
  * Which of the five commands a stopped call is being reported for, plus every
  * piece of context each command already has that the server's answer does not
  * carry: the routine name a person typed after `--routine`, for the two
@@ -1008,7 +1282,16 @@ type ConfirmGate =
       firstDueAt?: string;
     }
   | { kind: 'watch-put'; routineName: string; name: string }
-  | { kind: 'routine-put'; name: string; description?: string; steps?: string };
+  | { kind: 'routine-put'; name: string; description?: string; steps?: string }
+  // A search stopped so the person can be asked first. It carries the words the
+  // person typed rather than the conditions the search was built from, because
+  // the command printed for them to run again has to be the command they typed
+  // with the token added, not a rebuilt one that might differ from it.
+  | { kind: 'search'; words: readonly string[] }
+  // A pull stopped so the person can be asked first. It carries the words the
+  // person typed, for the same reason a stopped search does: the command printed
+  // for them to run again has to be the one they typed with the token added.
+  | { kind: 'pull'; words: readonly string[] };
 
 /** "26" and "1,000": how every count of judgments is written out. */
 function withCommas(n: number): string {
@@ -1086,6 +1369,47 @@ function stepLabelLeftOut(kinds: string[]): string {
   return kinds[0] === 'quick' ? 'quick-judge step' : 'judge step';
 }
 
+/**
+ * "every six hours" / "every 12 hours": how often a stored row fires, as the
+ * block that asks before an account starts spending on its own says it
+ * (docs/postings-release-slice-5-criteria.md, criterion 6).
+ *
+ * Six is spelled as a word because every watch runs at that one interval and the
+ * sentence reads as a fact about watches rather than as a number somebody chose.
+ * Every other figure is a cadence a person typed, so it is printed back as the
+ * figure they typed.
+ */
+function cadenceInWords(hours: number): string {
+  return hours === 6 ? 'every six hours' : `every ${hours} hours`;
+}
+
+/**
+ * "up to 20 a firing", "up to 5 a firing", or "with no cap a firing": the most
+ * one firing of a routine's pull step could take.
+ *
+ * A schedule's sentence says "postings" in the middle of it and a watch's does
+ * not, because a schedule's pull asks for the newest page of the last week every
+ * time while a watch's asks only for what the count has grown by, so the two
+ * sentences read differently around this phrase.
+ */
+function pullSizePhrase(pageSize: number | null, sayingPostings: boolean): string {
+  if (pageSize === null) return 'with no cap a firing';
+  const what = sayingPostings ? ' postings' : '';
+  return `up to ${withCommas(pageSize)}${what} a firing`;
+}
+
+/**
+ * The line that tells a coding agent to put the choice about spending postings
+ * to the person and wait for an answer.
+ */
+function askAboutCollecting(hours: number): string {
+  return (
+    'if you are a coding agent: ask the person, in one plain sentence, whether they want a ' +
+    `routine that spends from their postings on its own ${cadenceInWords(hours)}, or would ` +
+    'rather pull by hand — then wait for their answer before running this again with --confirm'
+  );
+}
+
 /** "1 hour" / "2 hours": how the token's own lifetime is spoken. */
 function hoursPhrase(hours: number): string {
   return `${hours} hour${hours === 1 ? '' : 's'}`;
@@ -1109,6 +1433,10 @@ function tokenScope(gate: ConfirmGate): string {
       return 'this exact watch name and routine name';
     case 'routine-put':
       return 'this exact routine name and these exact steps';
+    case 'search':
+      return 'this exact search';
+    case 'pull':
+      return 'this exact pull';
   }
 }
 
@@ -1180,6 +1508,10 @@ function nextCommandLine(gate: ConfirmGate, token: string): string {
       if (gate.description !== undefined) words.push('--description', shellArg(gate.description));
       if (gate.steps !== undefined) words.push('--steps', shellArg(gate.steps));
       break;
+    case 'search':
+    case 'pull':
+      words.push(...gate.words.map(shellArg));
+      break;
   }
   words.push('--confirm', token);
   return words.join(' ');
@@ -1227,6 +1559,9 @@ function reportConfirmation(json: any, asJson: boolean, gate: ConfirmGate): void
         ? {}
         : { confirm_cadence_hours: json.confirm_cadence_hours }),
       ...(json?.confirm_fired_by === undefined ? {} : { confirm_fired_by: json.confirm_fired_by }),
+      ...(json?.confirm_postings === undefined ? {} : { confirm_postings: json.confirm_postings }),
+      ...(gate.kind === 'search' ? { next_command: nextCommandLine(gate, token) } : {}),
+      ...relayField(stopAndAskFrom(json, gate, token)),
     });
     return;
   }
@@ -1234,7 +1569,22 @@ function reportConfirmation(json: any, asJson: boolean, gate: ConfirmGate): void
   const lines: string[] = [];
   const kinds = Object.keys(judgments);
 
-  if (gate.kind === 'judge' || gate.kind === 'routine-run') {
+  if (gate.kind === 'search') {
+    // A stopped search says the whole thing in one block: what it would take,
+    // what this account already has of what matches, what would be left, the one
+    // sentence for the coding agent to put to the person, and the whole command
+    // to run again. The words are in src/shared/postings-text.ts with every
+    // other sentence about postings, and the command is the last line so that
+    // it can be copied straight off the bottom of the screen.
+    lines.push(stopAndAskFrom(json, gate, token)!);
+  } else if (gate.kind === 'pull') {
+    // A stopped pull says the same thing in one block: what it would take, what
+    // would be left, the one sentence for the coding agent to put to the person,
+    // and the whole command to run again on a line of its own. It names no
+    // figure for what this account already has, because a pull charges for every
+    // row it brings back whether or not this account had it.
+    lines.push(stopAndAskFrom(json, gate, token)!);
+  } else if (gate.kind === 'judge' || gate.kind === 'routine-run') {
     // A judging run holds exactly one kind: a call is either a full judgement
     // or a quick screen, never both at once.
     const kind = kinds[0] ?? 'full';
@@ -1322,9 +1672,62 @@ function reportConfirmation(json: any, asJson: boolean, gate: ConfirmGate): void
     const namingLabel = stepLabelNaming(kinds);
     const leftOutLabel = stepLabelLeftOut(kinds);
     const ceiling = ceilingPhrase(judgments);
+    // The routine holds a step that goes out and collects postings, so storing
+    // this row commits the account to spending postings on its own
+    // (docs/postings-release-slice-5-criteria.md, criterion 6). A routine that
+    // both collects and judges prints the sentence about collecting beside the
+    // sentences about judging, so the person is asked about all of what a firing
+    // spends rather than half of it.
+    const collecting = json?.confirm_pull_step as { page_size: number | null } | undefined;
+    const judges = kinds.length > 0;
+    // Which schedule or which watch already fires the routine a `routine put` is
+    // about to change. Storing a schedule or a watch names the routine it points
+    // at in the command itself, so only editing an already-fired routine has to
+    // be told which row is running it.
+    const firedBy = json?.confirm_fired_by as { kind: 'schedule' | 'watch'; name: string } | undefined;
+    const firedByKind = firedBy?.kind ?? 'schedule';
+    const firedByName = firedBy?.name ?? '';
 
-    if (gate.kind === 'schedule-put') {
-      lines.push(`stored nothing. the routine '${gate.routineName}' ends in a ${namingLabel}`);
+    if (gate.kind === 'schedule-put' && collecting !== undefined) {
+      lines.push(`stored nothing. the routine '${gate.routineName}' has a pull step`);
+      lines.push(
+        'storing this schedule would let each firing take the newest postings from the last ' +
+          `week out of this account's postings, ` +
+          `${pullSizePhrase(collecting.page_size, true)}, as often as ` +
+          `${cadenceInWords(cadenceHours)}`,
+      );
+      lines.push(askAboutCollecting(cadenceHours));
+    } else if (gate.kind === 'watch-put' && collecting !== undefined) {
+      lines.push(`stored nothing. the routine '${gate.routineName}' has a pull step`);
+      lines.push(
+        'storing this watch would let each firing take every posting that is new since the ' +
+          `firing before it, ${pullSizePhrase(collecting.page_size, false)}, from this ` +
+          `account's postings, as often as ${cadenceInWords(cadenceHours)}`,
+      );
+      lines.push(askAboutCollecting(cadenceHours));
+    } else if (gate.kind === 'routine-put' && collecting !== undefined) {
+      lines.push(
+        `stored nothing. the ${firedByKind} '${firedByName}' already runs this routine, and ` +
+          'the routine being stored has a pull step',
+      );
+      lines.push(
+        firedByKind === 'watch'
+          ? `storing this routine would let each firing of '${firedByName}' take every posting ` +
+              `that is new since the firing before it, ` +
+              `${pullSizePhrase(collecting.page_size, false)}, from this account's postings, as ` +
+              `often as ${cadenceInWords(cadenceHours)}`
+          : `storing this routine would let each firing of '${firedByName}' take the newest ` +
+              `postings from the last week out of this account's postings, ` +
+              `${pullSizePhrase(collecting.page_size, true)}, as often as ` +
+              `${cadenceInWords(cadenceHours)}`,
+      );
+      lines.push(askAboutCollecting(cadenceHours));
+    }
+
+    if (gate.kind === 'schedule-put' && judges) {
+      if (collecting === undefined) {
+        lines.push(`stored nothing. the routine '${gate.routineName}' ends in a ${namingLabel}`);
+      }
       lines.push(`storing this schedule would let ${ceiling} run per firing, as often as ${rateFactual(cadenceHours)}`);
       lines.push(
         `the same routine with its ${leftOutLabel} left out still runs for free, searching ` +
@@ -1342,12 +1745,14 @@ function reportConfirmation(json: any, asJson: boolean, gate: ConfirmGate): void
           'postings by hand instead — then wait for their answer before running this again ' +
           'with --confirm',
       );
-    } else if (gate.kind === 'watch-put') {
-      lines.push(`stored nothing. the routine '${gate.routineName}' ends in a ${namingLabel}`);
+    } else if (gate.kind === 'watch-put' && judges) {
+      if (collecting === undefined) {
+        lines.push(`stored nothing. the routine '${gate.routineName}' ends in a ${namingLabel}`);
+      }
       lines.push(`storing this watch would let ${ceiling} run per firing, as often as ${rateFactual(cadenceHours)}`);
       lines.push(
         `the same routine with its ${leftOutLabel} left out still checks for new postings ` +
-          'every hour for free — you or the person can read what it finds and judge it by ' +
+          'every six hours for free — you or the person can read what it finds and judge it by ' +
           'hand instead of paying for automatic judging every time (any of those can still be ' +
           'saved with `pinloop judgment put` if worth keeping)',
       );
@@ -1360,14 +1765,13 @@ function reportConfirmation(json: any, asJson: boolean, gate: ConfirmGate): void
           'postings by hand instead — then wait for their answer before running this again ' +
           'with --confirm',
       );
-    } else {
-      const firedBy = json?.confirm_fired_by as { kind: 'schedule' | 'watch'; name: string } | undefined;
-      const firedByKind = firedBy?.kind ?? 'schedule';
-      const firedByName = firedBy?.name ?? '';
-      lines.push(
-        `stored nothing. the ${firedByKind} '${firedByName}' already runs this routine, and ` +
-          `the routine being stored still ends in a ${namingLabel}`,
-      );
+    } else if (gate.kind === 'routine-put' && judges) {
+      if (collecting === undefined) {
+        lines.push(
+          `stored nothing. the ${firedByKind} '${firedByName}' already runs this routine, and ` +
+            `the routine being stored still ends in a ${namingLabel}`,
+        );
+      }
       lines.push(
         `storing this routine would let ${ceiling} run per firing of '${firedByName}', as ` +
           `often as ${rateFactual(cadenceHours)}`,
@@ -1401,8 +1805,14 @@ function reportConfirmation(json: any, asJson: boolean, gate: ConfirmGate): void
   // answers with when the token a second call carries is missing, invented,
   // made for something else, or stale (src/server/confirm.ts), and it still
   // rides along unprinted in the JSON form of this same answer.
-  lines.push(`next command: ${nextCommandLine(gate, token)}`);
-  lines.push(`(token expires in ${hoursPhrase(tokenHours)}, matches only ${tokenScope(gate)})`);
+  //
+  // A stopped search is the one exception: its block already ends with the whole
+  // command to run again, on a line of its own, so that the line a person or a
+  // coding agent copies is the last thing on the screen with nothing after it.
+  if (gate.kind !== 'search' && gate.kind !== 'pull') {
+    lines.push(`next command: ${nextCommandLine(gate, token)}`);
+    lines.push(`(token expires in ${hoursPhrase(tokenHours)}, matches only ${tokenScope(gate)})`);
+  }
   process.stderr.write(`${lines.join('\n')}\n`);
 }
 
@@ -1555,6 +1965,61 @@ const LARGE_SETS_MUST_BE_PIPED =
 const WITHIN_HELP =
   'only these postings: their ids separated by commas, or - to read them from the JSON piped in; ' +
   `${LARGE_SETS_MUST_BE_PIPED} (the - form)`;
+
+/**
+ * What the four new ways of narrowing a search say for themselves in the help
+ * (docs/postings-release-slice-4-criteria.md, approved by Andrew 2026-09-12,
+ * criterion 4).
+ *
+ * Each one names a few of the values it takes rather than all of them, because
+ * thirty-three kinds of job on one help line is a wall nobody reads. A value
+ * outside the list comes back from the server as a sentence naming every value
+ * that is served, and this program prints that sentence as it stands, so the
+ * whole list is one mistyped command away.
+ */
+const EXPERIENCE_HELP =
+  'only postings asking for this band of years of experience: 0-2, 2-5, 5-10 or 10+';
+const EDUCATION_HELP =
+  'only postings asking for this degree, such as "bachelor degree" or "high school"';
+const CATEGORY_HELP = 'only postings of this kind of job, such as Software, Sales or Healthcare';
+const FROM_HELP =
+  'only postings from one of the two places a posting comes from: "career sites" or "job boards"';
+
+/**
+ * Puts the four flags slice 4 added on one command, so that the four commands
+ * carrying them cannot come to offer different ones.
+ *
+ * `pinloop search`, `pinloop viewed`, `pinloop pull` and `pinloop count` all
+ * take the same four, and slice 4's criterion 4 is explicit that one piece of
+ * code decides everything about all four. Four separate copies of these four
+ * lines is how one command quietly ends up offering three of them, or spelling
+ * one of them a second way, which a person meets as a flag that is typed and
+ * then ignored.
+ *
+ * It is called after the command has been fully declared. Commander takes an
+ * option added at any point before it reads what somebody typed, and calling it
+ * last keeps each command's own chain readable.
+ */
+function withPostingFilters(command: Command): Command {
+  return command
+    .option('--experience <band>', EXPERIENCE_HELP)
+    .option('--education <degree>', EDUCATION_HELP)
+    .option('--category <kind>', CATEGORY_HELP)
+    .option('--from <place>', FROM_HELP);
+}
+
+/**
+ * The four, as the flag each one is typed as and the field each one becomes in a
+ * request to the server. The two are the same word in all four cases, and the
+ * server reads them under those names on /search, /viewed, /pull and /count
+ * alike.
+ */
+const POSTING_FILTER_FIELDS: ReadonlyArray<readonly [string, string]> = [
+  ['experience', 'experience'],
+  ['education', 'education'],
+  ['category', 'category'],
+  ['from', 'from'],
+];
 
 /** The postings in a server answer, under whichever of the two names it used. */
 function rowsOf(json: any): Record<string, unknown>[] {
@@ -1753,7 +2218,10 @@ function interpretationSentence(report: Record<string, unknown>, rowCount: numbe
     // and both hand back every posting the conditions allow, page after page.
     // Saying so is what keeps a run that is fetching the whole corpus from
     // looking like a ceiling that failed to hold.
-    return `${said}; this search has no ceiling, so it hands back every posting the conditions allow, page after page`;
+    return (
+      `${said}; this search has no ceiling, so it hands back the postings the conditions ` +
+      `allow, page after page, ${UNTIL_POSTINGS_RUN_OUT}`
+    );
   }
 
   const ceiling = Number(report['ceiling']);
@@ -1941,6 +2409,64 @@ function refuseAllWithLimit(options: Record<string, unknown>): void {
   if (options['all'] === true && typeof limit === 'string' && limit !== '') {
     throw new Failure(ALL_AND_LIMIT_CONTRADICT);
   }
+}
+
+/**
+ * Refuses a pull that did not say which of the two places a posting comes from
+ * (Andrew, 2026-09-13).
+ *
+ * The sentence is the one the server refuses the same pull in, read out of
+ * src/shared/postings-text.ts, so the two say the same words. This check exists
+ * beside the server's so that nothing at all leaves this machine: a pull is the
+ * one command that goes out and collects, and a refusal that travels to the
+ * server first is a request nobody needed to make.
+ */
+function refuseAPullWithNoPlace(options: Record<string, unknown>): void {
+  const place = options['from'];
+  if (typeof place !== 'string' || place.trim() === '') {
+    throw new Failure(pullNeedsAFromRefusal());
+  }
+}
+
+/**
+ * Gathers one more `--company` onto the ones already written (Andrew,
+ * 2026-09-14).
+ *
+ * Commander hands an option's value to this on every occurrence of the flag,
+ * along with whatever it collected from the occurrences before, so writing
+ * `--company Google --company Microsoft` arrives here twice and ends up as one
+ * piece of text with a comma between the two names. A single `--company` holding
+ * `"Google,Microsoft"` is already that piece of text and is kept as it stands.
+ * Both forms therefore reach the rest of the program identically, which is the
+ * point: an agent turning "big tech" into a hundred employer names may write
+ * them whichever way is easier.
+ */
+function alsoThisEmployer(written: string, soFar: string | undefined): string {
+  return soFar === undefined || soFar === '' ? written : `${soFar},${written}`;
+}
+
+/**
+ * The employer names a pull or a count was given, checked before anything leaves
+ * this machine, or nothing when `--company` was not written at all.
+ *
+ * The splitting, the trimming and the dropping of a name written twice are done
+ * by the same shared code the server does them with, so the names this command
+ * shows the person are exactly the names the server holds the postings to. Both
+ * refusals are read out of that same shared file for the same reason.
+ *
+ * The check is done here as well as on the server because `--company` with
+ * nothing usable on it would otherwise travel as no employer at all, and come
+ * back as every employer there is.
+ */
+function employersOn(options: Record<string, unknown>): string[] | undefined {
+  const written = options['company'];
+  if (typeof written !== 'string' || written.trim() === '') return undefined;
+  const names = employerNamesFrom(written);
+  if (names.length === 0) throw new Failure(companyNeedsAnEmployerRefusal());
+  if (names.length > MOST_EMPLOYERS_ON_ONE_COMMAND) {
+    throw new Failure(tooManyEmployersRefusal(names.length));
+  }
+  return names;
 }
 
 /**
@@ -2292,7 +2818,7 @@ export function buildProgram(): Command {
     // The two monthly counts, as the server's answer states them. The numbers
     // are all the server's: this program holds no copy of any limit, so a limit
     // Andrew changes changes what this already-installed copy prints.
-    lines.push(...allowanceLines(json?.allowances));
+    lines.push(...allowanceLines(json?.allowances, json?.plan));
     lines.push('');
     lines.push(
       'Join the Discord to talk to Andrew (who builds Pinloop) and other users directly: https://pinloop.ai/discord',
@@ -2432,7 +2958,7 @@ export function buildProgram(): Command {
 
       const waiting = await waitForBrowserSignIn();
       try {
-        const addressLines = `${OPEN_THIS_ADDRESS_LINE}\n${ADDRESS_INDENT}${waiting.pageUrl}\n`;
+        const addressLines = `${OPEN_THIS_ADDRESS_LINE}\n${ADDRESS_INDENT}${waiting.pageUrl}\n${SHOW_LINK_TO_AGENT_LINE}\n`;
 
         // Nobody is at this terminal to paste a code into or to watch it give
         // up after ten minutes, so nothing here waits: the address is printed,
@@ -2528,16 +3054,262 @@ export function buildProgram(): Command {
       if (url === '') {
         throw new Failure('the Pinloop server handed back no address to open. Try again.');
       }
+      // The comparison goes above the address, for an account that is not
+      // already paying (Andrew, 2026-09-14). Until that day this command printed
+      // one sentence and a web address, so somebody who ran `pinloop upgrade` to
+      // find out what Pro cost learned nothing until the browser loaded. An
+      // account that already pays is sent no offer and reads the address alone,
+      // because the address it gets is Stripe's own page for changing a card or
+      // cancelling.
+      const offer = proOfferFrom(json?.offer);
+      if (offer !== undefined) {
+        process.stdout.write(`${proComparisonBlock(offer)}\n`);
+      }
       process.stdout.write(billingLines(url));
+      if (offer !== undefined) {
+        process.stdout.write(
+          `\n${relayParagraph(proOfferSpokenSentence(offer), 'Then give them the address on its own line.').trim()}\n`,
+        );
+      }
       openInBrowser(url);
     });
 
-  program
+  const searchCommand = program
     .command('search')
     .description('search the corpus')
     .argument('[words...]', 'the words a posting has to contain')
     .option('--limit <n>', 'how many postings to show')
     .option('--cursor <cursor>', 'the cursor a previous search handed back')
+    .option('--country <country>', 'only postings in this country')
+    .option('--workplace <workplace>', 'only postings with this workplace kind')
+    .option('--employment <employment>', 'only postings with this employment label')
+    .option('--posted-after <date>', 'only postings posted on or after this date (YYYY-MM-DD)')
+    .option(
+      '--match <all|any>',
+      'whether a posting has to carry every word or just one of them (any by default)',
+    )
+    .option(
+      '--order <match|newest>',
+      'put the best matches first, or the newest postings first (best matches by default)',
+    )
+    .option('--top <n>', 'how many postings the server may consider before it stops')
+    .option('--in <part>', 'search only this part of a posting: title')
+    .option(
+      '--company <ids>',
+      'only postings from these employers: their ids separated by commas, as "pinloop companies" prints them',
+    )
+    .option('--json', 'print one JSON object holding the rows, instead of cards')
+    .option(
+      '--all',
+      'follow every page and print them all at once, instead of one page and a cursor',
+    )
+    .option('--confirm <token>', CONFIRM_OPTION_HELP)
+    .action(async (words: string[], options: Record<string, string | boolean | undefined>) => {
+      const pass = readPass();
+      nowDoing('searching');
+      refuseAllWithLimit(options);
+      const query = queryFrom(options, [
+        ['limit', 'limit'],
+        ['cursor', 'cursor'],
+        // The token the first call of a stopped search printed. Only a call
+        // carrying it hands any posting over.
+        ['confirm', 'confirm'],
+        ['country', 'country'],
+        ['workplace', 'workplace'],
+        ['employment', 'employment'],
+        ['postedAfter', 'posted_after'],
+        // The relevance options. Nothing is checked here on purpose: the server
+        // is the one that knows which values it serves, and it already answers a
+        // value it will not serve with a message naming the ones it will, which
+        // this program prints as it stands.
+        ['match', 'match'],
+        ['order', 'order'],
+        ['top', 'top'],
+        ['in', 'in'],
+        ['company', 'company'],
+        // The four things a posting says about itself. Nothing is checked here
+        // on purpose, exactly as with the two above it: the server is the one
+        // that knows which values it serves, and it answers a value it will not
+        // serve with a sentence naming every value it will, which this program
+        // prints as it stands.
+        ...POSTING_FILTER_FIELDS,
+      ]);
+      const q = words.join(' ').trim();
+      if (q !== '') query.set('q', q);
+
+      let rows: Record<string, unknown>[];
+      let report: Record<string, unknown> | undefined;
+      let cursor: unknown = null;
+      /** Every page the server answered, for the numbers about postings on them. */
+      let answered: any[] = [];
+
+      try {
+      if (options['all'] === true) {
+        // A best-match search over any of the words stops at its own ceiling
+        // rather than at the end of the corpus, and the server marks that end by
+        // handing back no cursor. So following every page here reaches the
+        // ceiling and stops, exactly as it does one page at a time, and the
+        // report the search prints says which ceiling ended it.
+        //
+        // A search with no words, and a search asked for newest first, have no
+        // ceiling at all: both are in date order with nothing to rank, so
+        // following every page of one really does walk every posting the
+        // conditions allow. That is said out loud on the first page rather than
+        // at the end, because the end may be a long way off and a person
+        // watching the row count climb deserves to know why before it gets
+        // there.
+        let saidNoCeiling = false;
+        // A search in date order walks every posting the conditions allow, with
+        // no ceiling of its own, which is the run the pull ceiling is about. A
+        // best-match search stops at its own `top` and is bounded already. The
+        // order is worked out the same way the server works it out: best match
+        // when there are words and the caller did not ask for newest, date order
+        // otherwise. The first request of a date-ordered run says so, and the
+        // server counts what matched before it fetches anything and refuses the
+        // whole run when the count is over what one command may pull
+        // (specs/feature-pull-ceiling.md, section 2). The server counts only on
+        // the request that names no page to carry on from, so the pages after
+        // the first cost one statement each rather than two.
+        //
+        // The mark itself travels on every page of the run from 2026-09-12
+        // (Andrew, after the build). It is part of what the run's own confirm
+        // token was made for: the server checks every request now, and the only
+        // thing that tells it a page belongs to a run somebody has already been
+        // asked about is that token and these same conditions coming back
+        // together. The token rides along on every page too, because it sits in
+        // the conditions this loop rebuilds each time.
+        const every = await followEveryPage(
+          'pinloop search',
+          async (from) => {
+            const body = bodyFrom(query);
+            body['limit'] = String(PAGE_WHILE_FOLLOWING);
+            if (from !== undefined) body['cursor'] = from;
+            else delete body['cursor'];
+            body['all'] = 'true';
+            const answer = await callAsAccount(pass, '/search', { method: 'POST', body });
+            if (!saidNoCeiling && interpretationOf(answer.json)?.['ceiling_applies'] === false) {
+              saidNoCeiling = true;
+              process.stderr.write(
+                'search --all: this search is sorted by date, so there is no limit on how ' +
+                  'many postings come back. It will keep fetching every posting that matches, ' +
+                  `${UNTIL_POSTINGS_RUN_OUT}. Press Ctrl-C to stop it.\n`,
+              );
+            }
+            return answer;
+          },
+          textOption(options['cursor']),
+        );
+        rows = every.rows;
+        report = interpretationOf(every.bodies[0]);
+        answered = every.bodies;
+      } else {
+        const { json } = await callAsAccount(pass, '/search', {
+          method: 'POST',
+          body: bodyFrom(query),
+        });
+        rows = rowsOf(json);
+        report = interpretationOf(json);
+        cursor = cursorOf(json);
+        answered = [json];
+      }
+      } catch (error) {
+        // The search was refused because it could take more postings than this
+        // account has left. Asked for JSON, that refusal is one field of the one
+        // object this command prints, so the thing reading the output reads it
+        // the same way it reads everything else rather than having to watch the
+        // error stream. Read by a person it stays where every other refusal is:
+        // the error stream, with the command ending in failure.
+        if (options['json'] === true && error instanceof Failure && error.status === 402) {
+          printJson({ rows: [], cursor: null, refused: error.message, ...relayField(error.message) });
+          return;
+        }
+        throw error;
+      }
+
+      // The server stopped this search so the person can be asked first: it is
+      // bigger than one page, or this account has been handed a great many
+      // postings in the past hour. Nothing came back and nothing was taken.
+      const stopped = answered.find((body) => stoppedToAsk(body));
+      if (stopped !== undefined) {
+        reportConfirmation(stopped, options['json'] === true, {
+          kind: 'search',
+          words: commandWords(),
+        });
+        return;
+      }
+
+      if (options['json']) {
+        // A JSON caller never sees the interpretation sentence above, but it
+        // still needs to know when the ceiling cut its results short, so that
+        // line goes to standard error here exactly as it does for a person —
+        // standard output stays nothing but the JSON.
+        if (report && report['mode'] !== 'semantic') saySearchCoverage(report);
+        const answer: Record<string, unknown> = { rows, cursor };
+        if (report) answer['interpretation'] = report;
+        // The sentence the line after a search would have carried rides here
+        // instead, because with --json that line is never printed at all
+        // (Andrew, 2026-09-14).
+        Object.assign(answer, relayField(postingsUsedLine(answered, rows.length)));
+        printJson(answer);
+        return;
+      }
+
+      // What the search actually looked for goes to standard error, the same
+      // way filter's report of what it dropped does: it is for the person, and
+      // standard output has to stay nothing but the postings.
+      if (report?.['mode'] === 'semantic') {
+        saySemanticReport(report);
+        // A preview searched for nothing, so there is nothing to say about how
+        // many postings came back.
+        if (report['preview_text'] !== undefined) return;
+      } else if (report) {
+        // How much came back leads, and what the search looked for follows it.
+        saySearchCoverage(report);
+        // The one line saying what the search looked for and how much came
+        // back. It is dimmed for a person, so it reads as a note about the list
+        // rather than as another row of it, and left exactly as it is for
+        // anything else reading.
+        //
+        // The line about postings follows it in the same write, undimmed: it is
+        // the one thing on the screen that says what this search cost and what
+        // is left, and it is printed after every search, including one that cost
+        // nothing, so a coding agent always knows where the account stands
+        // rather than reading a silence it has to guess at.
+        const postingsLine = postingsUsedLine(answered, rows.length);
+        process.stderr.write(
+          `${summaryLine(interpretationSentence(report, rows.length), screen.colours)}\n` +
+            (postingsLine === undefined ? '' : `${postingsLine}\n`),
+        );
+        // Then the one thing the sentence above cannot say, because it is about
+        // what was taken away rather than what was looked for: the postings this
+        // account has a verdict for were left out.
+        if (report['unjudged'] === true) {
+          process.stderr.write('leaving out postings you already judged\n');
+        }
+      }
+
+      if (rows.length === 0) {
+        process.stdout.write('no postings matched that search\n');
+        return;
+      }
+      // A meaning search's rows each carry a match strength; it is printed as
+      // one extra line on the card so it is visible without --json.
+      for (const card of rows) {
+        const strength = (card as { strength?: unknown }).strength;
+        printCard(
+          card as unknown as Card,
+          typeof strength === 'number' ? [`match ${strength.toFixed(2)}`] : [],
+        );
+      }
+    });
+  withPostingFilters(searchCommand);
+
+  const viewedCommand = program
+    .command('viewed')
+    .description('search the postings this account has already been handed')
+    .argument('[words...]', 'the words a posting has to contain')
+    .option('--limit <n>', 'how many postings to show')
+    .option('--cursor <cursor>', 'the cursor a previous run handed back')
     .option('--country <country>', 'only postings in this country')
     .option('--workplace <workplace>', 'only postings with this workplace kind')
     .option('--employment <employment>', 'only postings with this employment label')
@@ -2593,22 +3365,20 @@ export function buildProgram(): Command {
         ['workplace', 'workplace'],
         ['employment', 'employment'],
         ['postedAfter', 'posted_after'],
-        // The relevance options. Nothing is checked here on purpose: the server
-        // is the one that knows which values it serves, and it already answers a
-        // value it will not serve with a message naming the ones it will, which
-        // this program prints as it stands.
         ['match', 'match'],
         ['order', 'order'],
         ['top', 'top'],
         ['in', 'in'],
         ['company', 'company'],
+        ...POSTING_FILTER_FIELDS,
       ]);
       const q = words.join(' ').trim();
       if (q !== '') query.set('q', q);
-      // The meaning-search options. Nothing is checked here either: the server
-      // is the one that refuses a word-search option given alongside --semantic,
-      // by name, and this program prints what it says. --from-profile arrives as
-      // true when it was typed bare and as the names when they were given.
+      // The meaning-search options, which live on this command now. Nothing is
+      // checked here: the server refuses a word-search option given alongside
+      // --semantic, by name, and this program prints what it says.
+      // --from-profile arrives as true when it was typed bare and as the names
+      // when they were given.
       if (options['semantic'] === true) query.set('semantic', 'true');
       if (options['preview'] === true) query.set('preview', 'true');
       const fromProfile = options['fromProfile'];
@@ -2620,7 +3390,7 @@ export function buildProgram(): Command {
       if (typeof minMatch === 'string' && minMatch !== '') query.set('min_match', minMatch);
       const within = options['within'];
       if (typeof within === 'string' && within !== '') {
-        query.set('within', await withinSet(within, 'pinloop search'));
+        query.set('within', await withinSet(within, 'pinloop viewed'));
       }
       // The server decides whose verdicts these are, from the login pass. All
       // this says is that the caller asked for the restriction.
@@ -2629,76 +3399,54 @@ export function buildProgram(): Command {
       let rows: Record<string, unknown>[];
       let report: Record<string, unknown> | undefined;
       let cursor: unknown = null;
+      /** Every page the server answered, for the numbers about postings on them. */
+      let answered: any[] = [];
 
-      if (options['all'] === true) {
-        // A best-match search over any of the words stops at its own ceiling
-        // rather than at the end of the corpus, and the server marks that end by
-        // handing back no cursor. So following every page here reaches the
-        // ceiling and stops, exactly as it does one page at a time, and the
-        // report the search prints says which ceiling ended it.
-        //
-        // A search with no words, and a search asked for newest first, have no
-        // ceiling at all: both are in date order with nothing to rank, so
-        // following every page of one really does walk every posting the
-        // conditions allow. That is said out loud on the first page rather than
-        // at the end, because the end may be a long way off and a person
-        // watching the row count climb deserves to know why before it gets
-        // there.
-        let saidNoCeiling = false;
-        // A search in date order walks every posting the conditions allow, with
-        // no ceiling of its own, which is the run the pull ceiling is about. A
-        // best-match search stops at its own `top` and is bounded already. The
-        // order is worked out the same way the server works it out: best match
-        // when there are words and the caller did not ask for newest, date order
-        // otherwise. The first request of a date-ordered run says so, and the
-        // server counts what matched before it fetches anything and refuses the
-        // whole run when the count is over what one command may pull
-        // (specs/feature-pull-ceiling.md, section 2). Only the first request
-        // carries the mark; the pages after it belong to a run already allowed.
-        const dateOrdered = q === '' || options['order'] === 'newest';
-        let openingRequest = true;
-        const every = await followEveryPage(
-          'pinloop search',
-          async (from) => {
-            const body = bodyFrom(query);
-            body['limit'] = String(PAGE_WHILE_FOLLOWING);
-            if (from !== undefined) body['cursor'] = from;
-            else delete body['cursor'];
-            if (dateOrdered && openingRequest) body['all'] = 'true';
-            const answer = await callAsAccount(pass, '/search', { method: 'POST', body });
-            // Marked as done only once a page has really arrived, so that a
-            // first page refused for the allowance and asked for again is still
-            // counted when it is served.
-            openingRequest = false;
-            if (!saidNoCeiling && interpretationOf(answer.json)?.['ceiling_applies'] === false) {
-              saidNoCeiling = true;
-              process.stderr.write(
-                'search --all: this search is sorted by date, so there is no limit on how ' +
-                  'many postings come back. It will keep fetching until it has every posting ' +
-                  'that matches. Press Ctrl-C to stop it.\n',
-              );
-            }
-            return answer;
-          },
-          textOption(options['cursor']),
-        );
-        rows = every.rows;
-        report = interpretationOf(every.bodies[0]);
-      } else {
-        const { json } = await callAsAccount(pass, '/search', {
-          method: 'POST',
-          body: bodyFrom(query),
-        });
-        rows = rowsOf(json);
-        report = interpretationOf(json);
-        cursor = cursorOf(json);
+      try {
+        if (options['all'] === true) {
+          // Every page, one after another, with nothing to ask the person about
+          // first: every posting this run can hand back has already been paid
+          // for, so following the whole set spends nothing
+          // (docs/postings-release-slice-4-criteria.md, the Standard block).
+          const every = await followEveryPage(
+            'pinloop viewed',
+            async (from) => {
+              const body = bodyFrom(query);
+              body['limit'] = String(PAGE_WHILE_FOLLOWING);
+              if (from !== undefined) body['cursor'] = from;
+              else delete body['cursor'];
+              body['all'] = 'true';
+              return callAsAccount(pass, '/viewed', { method: 'POST', body });
+            },
+            textOption(options['cursor']),
+          );
+          rows = every.rows;
+          report = interpretationOf(every.bodies[0]);
+          answered = every.bodies;
+        } else {
+          const { json } = await callAsAccount(pass, '/viewed', {
+            method: 'POST',
+            body: bodyFrom(query),
+          });
+          rows = rowsOf(json);
+          report = interpretationOf(json);
+          cursor = cursorOf(json);
+          answered = [json];
+        }
+      } catch (error) {
+        // A run this account was refused — a month of searches by meaning used
+        // up is the only way a viewed run is refused, because it takes no
+        // postings. Asked for JSON, that refusal is one field of the one object
+        // this command prints, so the thing reading the output reads it the
+        // same way it reads everything else.
+        if (options['json'] === true && error instanceof Failure && error.status === 402) {
+          printJson({ rows: [], cursor: null, refused: error.message, ...relayField(error.message) });
+          return;
+        }
+        throw error;
       }
 
       if (options['json']) {
-        // A JSON caller never sees the interpretation sentence above, but it
-        // still needs to know when the ceiling cut its results short, so that
-        // line goes to standard error here exactly as it does for a person —
-        // standard output stays nothing but the JSON.
         if (report && report['mode'] !== 'semantic') saySearchCoverage(report);
         const answer: Record<string, unknown> = { rows, cursor };
         if (report) answer['interpretation'] = report;
@@ -2706,34 +3454,32 @@ export function buildProgram(): Command {
         return;
       }
 
-      // What the search actually looked for goes to standard error, the same
-      // way filter's report of what it dropped does: it is for the person, and
-      // standard output has to stay nothing but the postings.
+      // What was really looked for goes to standard error, the same way a
+      // search's report does: it is for the person, and standard output has to
+      // stay nothing but the postings.
       if (report?.['mode'] === 'semantic') {
         saySemanticReport(report);
         // A preview searched for nothing, so there is nothing to say about how
         // many postings came back.
         if (report['preview_text'] !== undefined) return;
       } else if (report) {
-        // How much came back leads, and what the search looked for follows it.
         saySearchCoverage(report);
-        // The one line saying what the search looked for and how much came
-        // back. It is dimmed for a person, so it reads as a note about the list
-        // rather than as another row of it, and left exactly as it is for
-        // anything else reading.
+        // The one line saying what was looked for and how much came back,
+        // followed by the line saying what this run took. A viewed run takes
+        // nothing, and the line says so out loud rather than staying silent, so
+        // a coding agent always knows where the account stands.
+        const postingsLine = postingsUsedLine(answered, rows.length);
         process.stderr.write(
-          `${summaryLine(interpretationSentence(report, rows.length), screen.colours)}\n`,
+          `${summaryLine(interpretationSentence(report, rows.length), screen.colours)}\n` +
+            (postingsLine === undefined ? '' : `${postingsLine}\n`),
         );
-        // Then the one thing the sentence above cannot say, because it is about
-        // what was taken away rather than what was looked for: the postings this
-        // account has a verdict for were left out.
         if (report['unjudged'] === true) {
           process.stderr.write('leaving out postings you already judged\n');
         }
       }
 
       if (rows.length === 0) {
-        process.stdout.write('no postings matched that search\n');
+        process.stdout.write('no postings you already have match that search\n');
         return;
       }
       // A meaning search's rows each carry a match strength; it is printed as
@@ -2746,10 +3492,263 @@ export function buildProgram(): Command {
         );
       }
     });
+  withPostingFilters(viewedCommand);
 
+  const pullCommand = program
+    .command('pull')
+    .description(
+      'collect the newest postings matching these conditions and hand them over; ' +
+        '--from says which of the two places to collect from and is required',
+    )
+    .argument('[words...]', 'the words a posting has to contain')
+    .option('--in <part>', 'match the words in only this part of a posting: title')
+    .option('--country <country>', 'only postings in this country')
+    .option('--workplace <workplace>', 'only postings with this workplace kind')
+    .option('--employment <employment>', 'only postings with this employment label')
+    .option('--posted-after <date>', 'only postings posted on or after this date (YYYY-MM-DD)')
+    .option(
+      '--company <names>',
+      'only postings from these employers, by name: several separated by commas, ' +
+        'or --company written again for each one. A name may not contain a comma',
+      alsoThisEmployer,
+    )
+    .option('--limit <n>', 'how many postings to bring back')
+    .option('--cursor <cursor>', 'the cursor a previous pull handed back')
+    .option('--all', 'bring back every posting that matches, after the person has been asked')
+    .option('--confirm <token>', CONFIRM_OPTION_HELP)
+    .option('--json', 'print one JSON object holding the rows, instead of cards')
+    .action(async (words: string[], options: Record<string, string | boolean | undefined>) => {
+      // Which of the two places a posting comes from is settled here, before the
+      // saved login is even read, so a pull that did not say never reaches the
+      // server and nothing at all is taken (Andrew, 2026-09-13). The server
+      // refuses the same pull in the same sentence, for a copy of this program
+      // old enough not to carry this check.
+      refuseAPullWithNoPlace(options);
+      // The employer names are read and checked before the login pass is, so a
+      // `--company` nobody could act on never reaches the server and nothing is
+      // collected. The names go back onto the options under the same name they
+      // arrived under, trimmed and with a name written twice kept once, so the
+      // query built below carries exactly what the server will hold this pull to.
+      const employers = employersOn(options);
+      if (employers !== undefined) options['company'] = employers.join(',');
+      const pass = readPass();
+      nowDoing('pulling');
+      refuseAllWithLimit(options);
+      const query = queryFrom(options, [
+        ['limit', 'limit'],
+        ['cursor', 'cursor'],
+        ['confirm', 'confirm'],
+        ['in', 'in'],
+        ['country', 'country'],
+        ['workplace', 'workplace'],
+        ['employment', 'employment'],
+        ['postedAfter', 'posted_after'],
+        // On a pull these are employers' names, sent on word for word, rather
+        // than the employer ids `pinloop search` takes. Several names travel as
+        // one piece of text with commas between them.
+        ['company', 'company'],
+        // The four slice 4 added, sent under the same names a search sends them
+        // under. Nothing is checked here: the server is what knows which values
+        // it serves, and it refuses a value it does not in a sentence naming
+        // every value it does, which this program prints as it stands.
+        ...POSTING_FILTER_FIELDS,
+      ]);
+      const q = words.join(' ').trim();
+      if (q !== '') query.set('q', q);
+      if (options['all'] === true) query.set('all', 'true');
+
+      let json: any;
+      try {
+        ({ json } = await callAsAccount(pass, '/pull', {
+          method: 'POST',
+          body: bodyFrom(query),
+        }));
+      } catch (error) {
+        // Asked for JSON, a refusal and a pull that could not be finished are
+        // both one field of the one object this command prints, so the thing
+        // reading the output reads them the same way it reads everything else
+        // rather than having to watch the error stream. Read by a person they
+        // stay where every other refusal is: the error stream, with the command
+        // ending in failure.
+        if (options['json'] === true && error instanceof Failure && error.status === 402) {
+          printJson({ rows: [], cursor: null, refused: error.message, ...relayField(error.message) });
+          return;
+        }
+        if (options['json'] === true && error instanceof Failure && error.status === 502) {
+          printJson({ rows: [], cursor: null, error: error.message });
+          throw new AlreadySaid(error.message);
+        }
+        throw error;
+      }
+
+      // The server stopped this pull so the person can be asked first: it asked
+      // for every page, or for a page larger than one ordinary one. Nothing came
+      // back and nothing was taken.
+      if (stoppedToAsk(json)) {
+        reportConfirmation(json, options['json'] === true, {
+          kind: 'pull',
+          words: commandWords(),
+        });
+        return;
+      }
+
+      const rows = rowsOf(json);
+      const numbers = json?.postings as Record<string, unknown> | undefined;
+
+      if (options['json'] === true) {
+        // The sentence a person has to hear rides inside the machine-readable
+        // answer too, under `tell_the_person`, because with --json the line it
+        // normally sits on is never printed at all and an agent piping the
+        // output used to see no sentence anywhere (Andrew, 2026-09-14). It is
+        // the identical text, read back out of the built line rather than built
+        // a second time, so the two copies cannot drift apart.
+        const relay =
+          numbers === undefined ? undefined : relayedSentence(pullLineFrom(numbers, rows.length));
+        printJson({
+          rows,
+          cursor: cursorOf(json),
+          ...(numbers === undefined ? {} : { postings: numbers }),
+          ...(relay === undefined ? {} : { tell_the_person: relay }),
+        });
+        return;
+      }
+
+      // The line saying what this pull brought back, what it took and what is
+      // left goes to the error stream, so standard output stays nothing but the
+      // postings. A server old enough to send none of those numbers prints no
+      // line at all, which is better than a line built out of guesses.
+      if (numbers !== undefined) {
+        process.stderr.write(
+          `${pullLineFrom(numbers, rows.length)}\n`,
+        );
+      }
+
+      // Which employers this pull was held to, said only when it was held to
+      // more than one. A single name is already sitting on the screen in the
+      // command the person typed; a hundred names came out of a list an agent
+      // built, and the person reading the postings cannot otherwise see them.
+      if (employers !== undefined && employers.length > 1) {
+        process.stderr.write(`${heldToEmployersLine(employers)}\n`);
+      }
+
+      if (rows.length === 0) {
+        process.stdout.write('no postings matched that pull\n');
+        return;
+      }
+      for (const card of rows) printCard(card as unknown as Card);
+    });
+  withPostingFilters(pullCommand);
+
+  const countCommand = program
+    .command('count')
+    .description('say how many postings match, and hand none of them over')
+    .argument('[words...]', 'the words a posting has to contain')
+    .option('--in <part>', 'match the words in only this part of a posting: title')
+    .option('--country <country>', 'only postings in this country')
+    .option('--workplace <workplace>', 'only postings with this workplace kind')
+    .option('--employment <employment>', 'only postings with this employment label')
+    .option('--posted-after <date>', 'only postings posted on or after this date (YYYY-MM-DD)')
+    .option(
+      '--company <employers>',
+      'only postings from these employers: names with --all, ids with --free. Give several ' +
+        'separated by commas, or write --company again for each one. A name may not contain a comma',
+      alsoThisEmployer,
+    )
+    .option('--free', 'count the postings Pinloop already holds')
+    .option('--all', 'count every posting available')
+    .option('--json', 'print one JSON object holding the number, instead of a line')
+    .action(async (words: string[], options: Record<string, string | boolean | undefined>) => {
+      // Read and checked before the login pass, exactly as on a pull, so a
+      // `--company` nobody could act on never reaches the server. With --free
+      // these are employer ids rather than names, and the same reading applies:
+      // ids are separated by commas too, and no id contains one.
+      const employers = employersOn(options);
+      if (employers !== undefined) options['company'] = employers.join(',');
+      const pass = readPass();
+      nowDoing('counting');
+      const query = queryFrom(options, [
+        ['in', 'in'],
+        ['country', 'country'],
+        ['workplace', 'workplace'],
+        ['employment', 'employment'],
+        ['postedAfter', 'posted_after'],
+        ['company', 'company'],
+        // The four slice 4 added. They narrow a count over Pinloop’s own
+        // postings and a count over every posting available alike.
+        ...POSTING_FILTER_FIELDS,
+      ]);
+      const q = words.join(' ').trim();
+      if (q !== '') query.set('q', q);
+      if (options['free'] === true) query.set('free', 'true');
+      if (options['all'] === true) query.set('all', 'true');
+
+      const { json } = await callAsAccount(pass, '/count', {
+        method: 'POST',
+        body: bodyFrom(query),
+      });
+      const matching = Number(json?.matching ?? 0);
+      const window = json?.window as PullWindow | undefined;
+      // A count over everything available that named neither of the two places a
+      // posting comes from asked both and answered both numbers (Andrew,
+      // 2026-09-13). Both being present is what says this was that kind of
+      // count; a count that named a place, and a free count, carry neither.
+      const bothPlaces =
+        typeof json?.career_sites === 'number' && typeof json?.job_boards === 'number'
+          ? { careerSites: Number(json.career_sites), jobBoards: Number(json.job_boards) }
+          : undefined;
+
+      if (options['json'] === true) {
+        printJson({
+          ...(bothPlaces === undefined
+            ? {}
+            : { career_sites: bothPlaces.careerSites, job_boards: bothPlaces.jobBoards }),
+          matching,
+          ...(window === undefined ? {} : { window }),
+        });
+        return;
+      }
+      const line =
+        bothPlaces !== undefined && window !== undefined
+          ? bothFeedsCountLine(bothPlaces.careerSites, bothPlaces.jobBoards, window)
+          : window === undefined
+            ? countLine(matching)
+            : marketCountLine(matching, window);
+      process.stdout.write(`${line}\n`);
+      // Which employers that number covers, said only when the count was held to
+      // more than one, and on the error stream so the number itself stays the
+      // whole of what standard output carries.
+      //
+      // Not on a free count. There `--company` carries employer ids rather than
+      // names, and a line reading "held to postings from 7c1f… or 9b04…" names
+      // the employers by nothing a person recognises, which is the one thing a
+      // printed sentence must never do.
+      if (options['free'] !== true && employers !== undefined && employers.length > 1) {
+        process.stderr.write(`${heldToEmployersLine(employers)}\n`);
+      }
+    });
+  withPostingFilters(countCommand);
+
+  // `pinloop list` left the installed program in slice 4 of the postings
+  // release (docs/postings-release-slice-4-criteria.md, approved by Andrew
+  // 2026-09-12, criterion 3). `pinloop search` with no words does the same
+  // thing: it answers the newest postings first, picked out by the same exact
+  // conditions.
+  //
+  // The command is still declared, carrying every flag it used to carry, for
+  // two reasons. Commander has to read the flags a person typed before this
+  // can print them back inside the command to run instead. And the one place
+  // that says whether a routine may call a command holds an entry for every
+  // command this program has and for no command it does not
+  // (src/core/catalog.test.ts), while a routine somebody stored months ago
+  // still holds a list step that still has to run against the server.
+  //
+  // Nothing is sent. The flags the person typed are carried into the command
+  // named, in the order they typed them, so the line can be copied and run as
+  // it stands. A person whose flags belong to `pinloop viewed` is sent there
+  // instead of to `pinloop search`, where they would meet a second refusal.
   program
     .command('list')
-    .description('list postings by exact conditions, newest first, with no word matching')
+    .description('retired: run pinloop search with no words instead')
     .option('--employment <employment>', 'only postings with this employment label')
     .option('--country <country>', 'only postings in this country')
     .option('--workplace <workplace>', 'only postings with this workplace kind')
@@ -2763,76 +3762,12 @@ export function buildProgram(): Command {
       '--all',
       'follow every page and print them all at once, instead of one page and a cursor',
     )
-    .action(async (options: Record<string, string | boolean | undefined>) => {
-      const pass = readPass();
-      nowDoing('listing');
-      refuseAllWithLimit(options);
-      const query = queryFrom(options, [
-        ['employment', 'employment'],
-        ['country', 'country'],
-        ['workplace', 'workplace'],
-        ['postedAfter', 'posted_after'],
-        ['limit', 'limit'],
-        ['cursor', 'cursor'],
-      ]);
-      const within = options['within'];
-      if (typeof within === 'string' && within !== '') {
-        query.set('within', await withinSet(within, 'pinloop list'));
-      }
-      // Whose verdicts these are is decided by the server, from the login pass.
-      if (options['unjudged'] === true) query.set('unjudged', 'true');
-
-      let rows: Record<string, unknown>[];
-      let cursor: unknown = null;
-
-      if (options['all'] === true) {
-        // The first request of the run says that it is the first request of a
-        // run. The server counts how many postings the conditions match before
-        // it fetches anything and refuses the whole run when that count is over
-        // what one command may pull, so a run that cannot finish is refused in
-        // one sentence instead of being served the first of a hundred and
-        // eighty-six pages (specs/feature-pull-ceiling.md, section 2). Only the
-        // first request carries it: the pages after it belong to a run that was
-        // already allowed, and counting again on each of them would cost a
-        // second statement a page. A run given a starting cursor sends it on its
-        // first request too, because that run is just as long.
-        let openingRequest = true;
-        const every = await followEveryPage(
-          'pinloop list',
-          async (from) => {
-            const body = bodyFrom(query);
-            body['limit'] = String(PAGE_WHILE_FOLLOWING);
-            if (from !== undefined) body['cursor'] = from;
-            else delete body['cursor'];
-            if (openingRequest) body['all'] = 'true';
-            const answer = await callAsAccount(pass, '/list', { method: 'POST', body });
-            // Marked as done only once a page has really arrived, so that a
-            // first page refused for the allowance and asked for again is still
-            // counted when it is served.
-            openingRequest = false;
-            return answer;
-          },
-          textOption(options['cursor']),
-        );
-        rows = every.rows;
-      } else {
-        const { json } = await callAsAccount(pass, '/list', {
-          method: 'POST',
-          body: bodyFrom(query),
-        });
-        rows = rowsOf(json);
-        cursor = cursorOf(json);
-      }
-
-      if (options['json']) {
-        printJson({ rows, cursor });
-        return;
-      }
-      if (rows.length === 0) {
-        process.stdout.write('no postings matched those conditions\n');
-        return;
-      }
-      for (const card of rows) printCard(card as unknown as Card);
+    .action(async () => {
+      const moved = firstFlagThatMovedToViewed();
+      throw new Failure(
+        `pinloop list is now pinloop search with no words. ` +
+          `Run: ${theSameCommandAs(moved === undefined ? 'search' : 'viewed')}`,
+      );
     });
 
   program
@@ -3353,6 +4288,14 @@ function addJudgeCommands(program: Command): void {
         );
       }
       process.stderr.write(`${pieces.join('; ')}\n`);
+      // The one sentence saying why the run stopped short, handed to the coding
+      // agent to read out word for word. It is sent by the server only to an
+      // account that could buy Pro, so a paying account and the owner account
+      // read the line above and nothing after it (Andrew, 2026-09-14).
+      const say = typeof json?.tell_the_person === 'string' ? json.tell_the_person : '';
+      if (say !== '') {
+        process.stderr.write(`${relayParagraph(say, OPEN_THE_PAGE).trim()}\n`);
+      }
       sayUnknownCost(json);
       return;
     }
@@ -4706,7 +5649,7 @@ function addScheduleCommands(program: Command): void {
  * The `pinloop watch` verbs: the rows that run a stored routine over the
  * postings that arrived since the last time that row looked.
  *
- * A watch says: run this routine every hour, over only the postings that were
+ * A watch says: run this routine every six hours, over only the postings that were
  * written into our database since I last looked. It takes no cadence at all. A
  * person who wants a routine on a cadence of their own stores a schedule
  * instead, and typing a cadence flag here is refused on this machine before any
@@ -4721,7 +5664,7 @@ function addScheduleCommands(program: Command): void {
 function addWatchCommands(program: Command): void {
   const watch = program
     .command('watch')
-    .description('run a stored routine every hour over the postings that just arrived');
+    .description('run a stored routine every six hours over the postings that just arrived');
 
   /** The path of one watch on the server, with the name safely encoded. */
   const watchPath = (name: string) => `/watch/${encodeURIComponent(name)}`;
@@ -4747,11 +5690,19 @@ function addWatchCommands(program: Command): void {
       // is the whole point of keeping the two apart.
       return `started ${startedAt} and has not finished`;
     }
-    const arrived = withSeparators(Number(outcome['arrived'] ?? 0));
     const matched = withSeparators(Number(outcome['matched'] ?? 0));
     const stepsOf = fractionIn(outcome['coverage']);
     const steps = stepsOf === undefined ? '' : `, ${stepsOf} steps ran`;
-    const counts = `${arrived} arrived, ${matched} matched${steps}`;
+    // A firing of a watch that goes out and collects reports different numbers
+    // from one that reads the postings Pinloop already holds
+    // (docs/postings-release-slice-5-criteria.md, the third line of its Standard
+    // block): how many rows it brought back, how many of those had never been
+    // sent before the last look, and how many the routine ended with.
+    const counts =
+      outcome['pulled'] === undefined
+        ? `${withSeparators(Number(outcome['arrived'] ?? 0))} arrived, ${matched} matched${steps}`
+        : `${withSeparators(Number(outcome['pulled'] ?? 0))} pulled, ` +
+          `${withSeparators(Number(outcome['new'] ?? 0))} new, ${matched} matched${steps}`;
     if (outcome['ok'] === true) return `${counts}, completed`;
     return `${counts}, refused: ${String(outcome['error'] ?? '')}`;
   }
@@ -4759,25 +5710,34 @@ function addWatchCommands(program: Command): void {
   /** One watch printed the way a person reads it. */
   function printWatch(row: Record<string, unknown>): void {
     process.stdout.write(`your '${String(row['name'])}' watch\n`);
-    process.stdout.write(`  runs your '${String(row['routine'])}' routine every hour\n`);
+    process.stdout.write(`  runs your '${String(row['routine'])}' routine every six hours\n`);
     process.stdout.write(`  next run ${String(row['next_due_at'])}\n`);
     // The moment the watch has already looked up to. Without it nobody can tell
     // what the next firing is going to cover.
     process.stdout.write(`  watching from ${String(row['arrival_cutoff'])}\n`);
     process.stdout.write(`  ${firingLine(row)}\n`);
+    // A watch whose routine only reads the postings Pinloop has already collected
+    // says so, and says what to store instead to have it go out and collect for
+    // itself (docs/postings-release-slice-5-criteria.md, criterion 2). The server
+    // works out which watches those are and hands the sentence over; a watch that
+    // already collects is handed none.
+    const notice = row['notice'];
+    if (typeof notice === 'string' && notice !== '') {
+      process.stdout.write(`  ${notice}\n`);
+    }
   }
 
   /**
    * What a person is told when they type a flag that sets a cadence.
    *
-   * A watch checks every hour and there is nothing to choose, so rather than
+   * A watch checks every six hours and there is nothing to choose, so rather than
    * ignoring the flag or storing a watch that does not do what was typed, the
    * command refuses here, on this machine, and points at the command that does
    * take a cadence, written out with the names the person just typed in it.
    */
   function cadenceRefusal(name: string, routine: string): string {
     return (
-      'a watch checks every hour and takes no cadence. To run a routine on a cadence ' +
+      'a watch checks every six hours and takes no cadence. To run a routine on a cadence ' +
       `of your own, store a schedule instead: pinloop schedule put ${name} ` +
       `--routine ${routine} --every-hours <hours>`
     );
@@ -4820,7 +5780,7 @@ function addWatchCommands(program: Command): void {
         body: { routine, ...(confirming === undefined ? {} : { confirm: confirming }) },
       });
       // No row was written: the routine this watch names reaches a judge step,
-      // so the person is asked before it starts looking every hour on its own.
+      // so the person is asked before it starts looking every six hours on its own.
       if (stoppedToAsk(json)) {
         reportConfirmation(json, options['json'] === true, {
           kind: 'watch-put',
@@ -4835,7 +5795,7 @@ function addWatchCommands(program: Command): void {
       }
       const stored = rowsOf(json)[0] ?? {};
       process.stdout.write(
-        `stored your '${name}' watch: runs your '${String(stored['routine'])}' routine every hour ` +
+        `stored your '${name}' watch: runs your '${String(stored['routine'])}' routine every six hours ` +
           `over the postings that arrive after ${String(stored['arrival_cutoff'])}, first run ` +
           `${String(stored['next_due_at'])}\n`,
       );
@@ -5265,6 +6225,10 @@ export async function main(argv: string[] = process.argv): Promise<number> {
     screen = buildScreen(true);
     argv = argv.filter((one) => one !== '--plain');
   }
+  // The words the person typed, kept for the one command that prints itself
+  // back: a search stopped so the person can be asked first ends with the whole
+  // command to run again, ending in --confirm and the token.
+  typedWords = argv.slice(2);
   giveTheCursorBackOnCtrlC();
   // `pinloop --version` is answered here, before commander is built and before
   // anything reaches the network, so it still answers when the server is down
@@ -5276,6 +6240,10 @@ export async function main(argv: string[] = process.argv): Promise<number> {
     return 0;
   }
   try {
+    // `pinloop search` carrying one of the six flags that moved to `pinloop
+    // viewed` is turned away here, before the command tree reads the words, so
+    // the person is told where the flag went rather than that it is unknown.
+    refuseFlagsThatMovedToViewed();
     await buildProgram().parseAsync(argv);
     screen.finish();
     printUpdateLine();
@@ -5288,6 +6256,14 @@ export async function main(argv: string[] = process.argv): Promise<number> {
     // The reader closed the pipe. Nothing more is written, nothing is said, and
     // the command reports the success it had up to that point.
     if (isBrokenPipe(error)) return 0;
+    // A failure whose words are already on standard output, inside the one JSON
+    // object the run printed. The run still ends in failure; saying the same
+    // sentence again on the error stream would put it in front of a reader that
+    // has already been given it.
+    if (error instanceof AlreadySaid) {
+      printUpdateLine();
+      return 1;
+    }
     const said = error instanceof Error ? error.message : String(error);
     process.stderr.write(`${said}\n`);
     printUpdateLine();

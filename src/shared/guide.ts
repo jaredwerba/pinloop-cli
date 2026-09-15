@@ -50,11 +50,40 @@ import { GUIDE_TEXT, SIGNED_OUT_SENTENCE, staleSkillNotice } from './guide-text.
  */
 export const NON_COMMAND_PARTS: readonly string[] = Object.freeze([
   'overview',
+  'method',
+  // The four worked examples of the loop, added 2026-09-14. They sit directly
+  // after the method and print whenever the method prints, because they are
+  // what makes the method concrete: an agent that reads the method on its own
+  // keeps handing a person five postings that fit half of what was asked for.
+  'worked-examples',
   'asking',
   'json',
   'limits',
   'examples',
 ]);
+
+/**
+ * The heading a part prints under, where that heading is not the part's own
+ * name.
+ *
+ * There are two of these. The first, added 2026-09-13, is the part keyed
+ * `method`, which holds the way to use Pinloop well and prints under the heading
+ * "How to use Pinloop well". The two differ because the two jobs differ. A
+ * heading is read by eye in a wall of instructions and wants to say what the
+ * part is about, and a part name is typed after `pinloop guide` and wants to be
+ * one short word. The onboarding points a coding agent at this part by its
+ * heading, and `pinloop guide method` prints it on its own.
+ *
+ * The second, added 2026-09-14, is the part keyed `worked-examples`, which
+ * prints under the heading the approved text was written with, "Worked examples
+ * of the loop". That heading is here rather than at the top of the written text
+ * so the part prints under one heading rather than under a generated one and a
+ * typed-out one both.
+ */
+const PART_HEADINGS: Record<string, string> = {
+  method: 'How to use Pinloop well',
+  'worked-examples': 'Worked examples of the loop',
+};
 
 /** What a caller hands the builder. */
 export type GuideOptions = {
@@ -97,7 +126,7 @@ export function commandsIn(program: Command): string[] {
 
 /** One part, printed under a heading a person can find by eye. */
 function section(name: string, text: Record<string, string>, isCommand: boolean): string {
-  const heading = isCommand ? `pinloop ${name}` : name;
+  const heading = isCommand ? `pinloop ${name}` : (PART_HEADINGS[name] ?? name);
   const underline = '-'.repeat(heading.length);
   return `${heading}\n${underline}\n\n${text[name]!.trim()}`;
 }

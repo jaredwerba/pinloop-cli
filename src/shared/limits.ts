@@ -62,9 +62,18 @@ export const RATE_LIMIT_REQUESTS = 120;
  *
  * A command that would pull more than this is refused before a single page is
  * fetched, in the one sentence pullCeilingRefusal writes
- * (specs/feature-pull-ceiling.md, section 2). It covers the two commands that
- * page through the bought corpus, `pinloop list` and `pinloop search`, and it
- * covers a whole `--all` run rather than one page of one.
+ * (specs/feature-pull-ceiling.md, section 2). It covers the three commands that
+ * page through postings — `pinloop list`, `pinloop search` and `pinloop pull` —
+ * and it covers a whole `--all` run rather than one page of one.
+ *
+ * What it is measured against is how many postings the command would hand over,
+ * never how many exist (Andrew, 2026-09-14). A run over every page would hand
+ * over everything that matches, so for that run the two numbers are the same. An
+ * ordinary page would hand over the page size somebody typed, which can never be
+ * more than a hundred, so an ordinary page is never refused by this ceiling
+ * however many postings sit behind it. Until 2026-09-14 `pinloop pull --limit 2`
+ * over conditions matching 41,897 postings was refused for asking for 41,897
+ * postings, when it was asking for two.
  *
  * Why five thousand: a page holds at most MAX_PAGE_SIZE postings, which is 100,
  * so 5,000 postings is 50 requests. An account may make RATE_LIMIT_REQUESTS
@@ -74,3 +83,29 @@ export const RATE_LIMIT_REQUESTS = 120;
  * finishes in a few seconds without ever being told to wait.
  */
 export const PULL_CEILING = 5_000;
+
+/**
+ * How many times one account that pays nothing may ask how many postings
+ * exist, in one day.
+ *
+ * Asking hands no posting over, so it is bounded by the day rather than by the
+ * month: each ask is one request against a hard monthly limit on requests, and a
+ * coding agent in a loop could otherwise use a month of them in an afternoon.
+ *
+ * It moved here from src/server/limits.ts on 2026-09-13, when the part of the
+ * instructions telling a coding agent how to narrow a query with counts began
+ * stating it out loud (Andrew's ruling that date). src/server/limits.ts exports
+ * it again under the same name, so every file that already read it there is
+ * unchanged.
+ *
+ * A paying account gets a higher number, PAID_MARKET_COUNTS_PER_DAY below
+ * (Andrew's ruling, 2026-09-14).
+ */
+export const MARKET_COUNTS_PER_DAY = 50;
+
+/**
+ * How many times one account with a live paid subscription may ask how many
+ * postings exist, in one day. Set by Andrew 2026-09-14, replacing the earlier
+ * rule that every account, paying or not, got the same fifty.
+ */
+export const PAID_MARKET_COUNTS_PER_DAY = 200;

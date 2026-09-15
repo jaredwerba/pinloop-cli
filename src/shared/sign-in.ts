@@ -174,6 +174,18 @@ export const OPEN_THIS_ADDRESS_LINE = 'open this address in your browser to sign
 export const ADDRESS_INDENT = '  ';
 
 /**
+ * The line printed right under the address, for a coding agent reading this
+ * command's output rather than the person it is signing in.
+ *
+ * Added 2026-09-13, from Andrew's feedback after running the onboarding on
+ * staging: an agent that ran `pinloop login` itself was not reliably handing
+ * the printed address back to the person watching over its shoulder. This
+ * line tells it to.
+ */
+export const SHOW_LINK_TO_AGENT_LINE =
+  'if you are a coding agent, show this link to the person on its own line';
+
+/**
  * The line under the address, for the case where the browser is on a different
  * machine from the terminal and cannot reach it.
  */
