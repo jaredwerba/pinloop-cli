@@ -116,10 +116,10 @@ export const BILLING_CODE_LIFETIME_MS = 10 * 60 * 1000;
  * The line printed above the address, with the address on its own indented line
  * under it.
  *
- * It names no price itself. The comparison above it does, for an account that is
- * not already paying (Andrew, 2026-09-14): what a person runs `pinloop upgrade`
- * to find out is what Pro costs and what it gives, and until that date the whole
- * output was this line and an address. This line stays true
+ * It names no price, and nothing is printed above it (Andrew, 2026-09-15). From
+ * 2026-09-14 to 2026-09-15 an account that was not paying read a comparison of
+ * the free plan against Pro above this line; those numbers now print only under
+ * what `pinloop` typed on its own prints. This line stays true
  * whichever of the two addresses the server hands back, because the terminal
  * does not know which it got: setting up a subscription happens on Pinloop's own
  * payment page, and changing or cancelling one happens on Stripe's page, and

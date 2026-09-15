@@ -76,9 +76,7 @@ import { buildGuide, NON_COMMAND_PARTS } from '../shared/guide.ts';
 import { allowanceLines, SIGNED_OUT_SENTENCE } from '../shared/guide-text.ts';
 import {
   OPEN_THE_PAGE,
-  proComparisonBlock,
   proOfferFrom,
-  proOfferSpokenSentence,
   relayParagraph,
   relayedSentence,
 } from '../shared/plan-text.ts';
@@ -3054,23 +3052,12 @@ export function buildProgram(): Command {
       if (url === '') {
         throw new Failure('the Pinloop server handed back no address to open. Try again.');
       }
-      // The comparison goes above the address, for an account that is not
-      // already paying (Andrew, 2026-09-14). Until that day this command printed
-      // one sentence and a web address, so somebody who ran `pinloop upgrade` to
-      // find out what Pro cost learned nothing until the browser loaded. An
-      // account that already pays is sent no offer and reads the address alone,
-      // because the address it gets is Stripe's own page for changing a card or
-      // cancelling.
-      const offer = proOfferFrom(json?.offer);
-      if (offer !== undefined) {
-        process.stdout.write(`${proComparisonBlock(offer)}\n`);
-      }
+      // One sentence and the address, for every account (Andrew, 2026-09-15).
+      // From 2026-09-14 to 2026-09-15 an account that was not paying also read a
+      // comparison of the free plan against Pro here. Those numbers now print in
+      // one place only, under what `pinloop` typed on its own prints, so this
+      // command goes back to opening the page and nothing else.
       process.stdout.write(billingLines(url));
-      if (offer !== undefined) {
-        process.stdout.write(
-          `\n${relayParagraph(proOfferSpokenSentence(offer), 'Then give them the address on its own line.').trim()}\n`,
-        );
-      }
       openInBrowser(url);
     });
 

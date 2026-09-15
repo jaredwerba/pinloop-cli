@@ -103,8 +103,8 @@ import {
 import {
   firstDayLine,
   firstDaySentence,
+  proOfferBlock,
   proOfferFrom,
-  proSummaryLine,
   relayParagraph,
 } from './plan-text.ts';
 import { postingsSummaryLine } from './postings-text.ts';
@@ -223,13 +223,16 @@ export function allowanceLines(allowances: unknown, plan?: unknown): string[] {
       );
     }
   }
-  // The one line that says what paying would change, printed only for an account
-  // that could actually buy Pro. An account already on Pro and the owner account
-  // are sent no offer at all and read nothing here (Andrew, 2026-09-14).
+  // The block that says what the free plan gives and what Pro gives, set apart
+  // by a blank line under the lines above, printed only for an account that
+  // could actually buy Pro. An account already on Pro and the owner account are
+  // sent no offer at all and read nothing here (Andrew, 2026-09-14). Since
+  // 2026-09-15 this is the only place those numbers print: `pinloop upgrade`
+  // prints the address and nothing else.
   const offer = proOfferFrom(((plan ?? {}) as Record<string, unknown>)['offer']);
   if (offer !== undefined) {
     lines.push('');
-    lines.push(proSummaryLine(offer));
+    lines.push(proOfferBlock(offer));
   }
   return lines;
 }
@@ -1408,12 +1411,9 @@ reusing an old address. An account that already subscribes gets a one-time
 address into Stripe's own page, which is where a card is replaced, past charges
 are read, and the subscription is cancelled.
 
-For an account that is not already paying, this command prints a comparison above
-the address: what Pro costs a month and, line by line, what each of this
-account's numbers becomes on Pro against what the free plan gives. Read that
-comparison out to the person as it is printed. An account that already pays gets
-no comparison, because the address it gets is Stripe's own page for changing a
-card or cancelling and there is nothing above Pro to buy.
+It prints no numbers, for any account. What the free plan gives and what Pro
+gives are printed by "pinloop" typed on its own, so read those out when the
+person is deciding, and run this command only to open the page.
 
 Nothing more is printed in the terminal afterwards, whatever the person does in
 the browser. A subscription that starts raises every one of this account's limits
@@ -1427,10 +1427,10 @@ at the keyboard.
 When somebody asks what the free plan gives and what paying adds, do not answer
 from memory and do not answer in words like "higher limits". Type "pinloop" on
 its own. It prints this account's own numbers and, for an account that is not
-paying, what each of those numbers becomes on Pro and what Pro costs a month.
-Read those numbers out to the person as they are printed, both sides, and then
-ask whether they want the page opened. Say what each number counts rather than
-the bare figure. Read out the number the command printed and then say what it is
+paying, a block saying what the free plan gives, what Pro gives and
+what Pro costs a month. Read that block out to the person as it is printed, both
+sides, and when they say they want Pro, run "pinloop upgrade", which only opens
+the page. Say what each number counts rather than the bare figure. Read out the number the command printed and then say what it is
 a number of, which is job postings a day they have not seen before, and add that
 anything they have already been shown stays free to read however often. A bare
 figure with no noun on it reads as though the whole product handed over that many

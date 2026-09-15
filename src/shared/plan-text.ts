@@ -18,8 +18,9 @@
  * The first is that a sentence written for the person names no command. The
  * person does not have to know that commands exist: they talk to a coding agent
  * and the agent types. So a sentence a person hears says what they can say out
- * loud — "say 'upgrade Pinloop' and I will open the page" — and the command
- * itself sits outside the quotes, in the half addressed to the agent.
+ * loud — "say 'upgrade Pinloop' and I'll open the page where you can
+ * subscribe" — and the command itself sits outside the quotes, in the half
+ * addressed to the agent.
  *
  * The second is that no number stands on its own and the free number never
  * appears without the Pro number and the price beside it. "10 postings instead
@@ -179,9 +180,11 @@ function ordinal(value: number): string {
 /**
  * What the person can say out loud to get the page opened, which is the ending
  * every offer sentence has. It names no command, because the person talks and
- * the agent types (Andrew, 2026-09-14).
+ * the agent types (Andrew, 2026-09-14). The words changed on 2026-09-15, when
+ * Andrew approved the block `pinloop` typed on its own prints, so that every
+ * offer ends on the same sentence that block ends on.
  */
-const THE_ASK = "If you want Pro, say 'upgrade Pinloop' and I will open the page.";
+const THE_ASK = "Say 'upgrade Pinloop' and I'll open the page where you can subscribe.";
 
 /** What the agent does after it has said the sentence. */
 export const OPEN_THE_PAGE = 'Run `pinloop upgrade` when they say yes.';
@@ -375,82 +378,51 @@ export function watchesArePaidSentence(offer: ProOffer, everyHours: number): str
 }
 
 // ---------------------------------------------------------------------------
-// The two moments the person reads for themselves rather than hearing relayed
+// The one moment the person reads for themselves rather than hearing relayed
 // ---------------------------------------------------------------------------
 
 /**
- * The one line the bare `pinloop` command prints under this account's own
- * numbers, for an account that could buy Pro.
+ * What the free plan gives and what Pro gives, printed by the bare `pinloop`
+ * command under this account's own numbers, for an account that could buy Pro.
  *
- * This output is the one thing in the product written for the person rather than
- * for the coding agent, so it is printed rather than relayed, and it names no
- * command for the same reason every relayed sentence does not.
+ * Andrew approved this wording on 2026-09-15, and it replaced two builders at
+ * once: the one paragraph `pinloop` typed on its own used to print, and the
+ * comparison `pinloop upgrade` used to print above the address. Since that day
+ * the numbers print in one place only, and `pinloop upgrade` goes back to
+ * printing the address and nothing else.
+ *
+ * Every number is read out of the offer the server sent rather than typed here,
+ * so the day a price or a limit moves, every copy of the command already
+ * installed prints the new one. This output is written for the person rather
+ * than for the coding agent, so it is printed rather than relayed, and it names
+ * no command for the same reason every relayed sentence does not.
  */
-export function proSummaryLine(offer: ProOffer): string {
+export function proOfferBlock(offer: ProOffer): string {
+  const freePer = offer.free.postingsPeriod === 'day' ? 'a day' : 'a month';
+  const proPer = offer.pro.postingsPeriod === 'day' ? 'a day' : 'a month';
+  const freeSemantic =
+    offer.free.semantic === NO_MONTHLY_LIMIT
+      ? offer.free.semantic
+      : withCommas(Number(offer.free.semantic));
   const meaning =
     offer.pro.semantic === NO_MONTHLY_LIMIT
-      ? `searches by meaning with no monthly limit instead of ${offer.free.semantic} a month`
+      ? `searches by meaning with no monthly limit instead of ${freeSemantic} a month`
       : `${withCommas(Number(offer.pro.semantic))} searches by meaning a month instead of ` +
-        `${offer.free.semantic}`;
-  return (
-    `Pro is $${offer.priceUsd} a month: ${withCommas(offer.pro.postings)} job postings a ` +
-    `month you have not seen before instead of the free plan's ` +
-    `${withCommas(offer.free.postings)} a day, ${withCommas(offer.pro.fullJudgments)} ` +
-    `postings read in full by an AI model each month instead of ` +
-    `${withCommas(offer.free.fullJudgments)}, ${meaning}, and saved work that runs on ` +
-    `Pinloop's servers while you are away instead of none. Say 'upgrade Pinloop' to your ` +
-    `coding agent and it will open the page.`
-  );
-}
-
-/**
- * The comparison `pinloop upgrade` prints above the address it opens, for an
- * account that is not already paying.
- *
- * Every line of it names the free number beside the Pro number, because the
- * whole point of the block is a person deciding, and a column of Pro numbers
- * with nothing to read them against decides nothing.
- */
-export function proComparisonBlock(offer: ProOffer): string {
-  const meaning =
-    offer.pro.semantic === NO_MONTHLY_LIMIT
-      ? `searches by meaning with no monthly limit, instead of ${offer.free.semantic} a month`
-      : `${withCommas(Number(offer.pro.semantic))} searches by meaning a month, instead of ` +
-        `${offer.free.semantic}`;
+        `${freeSemantic}`;
   const lines = [
-    `Pro is $${offer.priceUsd} a month. Against the free plan:`,
-    `  ${withCommas(offer.pro.postings)} job postings a month you have not seen before, ` +
-      `instead of ${withCommas(offer.free.postings)} a day`,
-    `  ${withCommas(offer.pro.fullJudgments)} job postings read in full by an AI model each ` +
-      `month, or ${withCommas(offer.pro.quickJudgments)} screened quickly, instead of ` +
-      `${withCommas(offer.free.fullJudgments)} and ${withCommas(offer.free.quickJudgments)}`,
-    `  ${meaning}`,
-    `  ${withCommas(offer.pro.pullsPerDay)} times a day your coding agent can go out and ` +
-      `collect new postings, instead of ${withCommas(offer.free.pullsPerDay)}`,
-    `  ${withCommas(offer.pro.countsPerDay)} times a day it can ask how many postings match ` +
-      `you, instead of ${withCommas(offer.free.countsPerDay)}`,
-    `  up to ${withCommas(offer.pro.routines)} saved pieces of work running on Pinloop's ` +
-      `servers while you are away, instead of none`,
-    `Anything you have already been shown stays free to read on either plan, however often.`,
+    `The free plan gives you ${withCommas(offer.free.postings)} new job postings ${freePer}. ` +
+      `Pro is $${offer.priceUsd} a month:`,
+    `- ${withCommas(offer.pro.postings)} new job postings ${proPer} instead of ` +
+      `${withCommas(offer.free.postings)} ${freePer}`,
+    `- you can ask AI to judge ${withCommas(offer.pro.fullJudgments)} postings a month ` +
+      `against your resume instead of ${withCommas(offer.free.fullJudgments)}`,
+    `- ${meaning}`,
+    `- up to ${withCommas(offer.pro.routines)} searches that keep running on their own ` +
+      `while you are away instead of none`,
+    ALREADY_SEEN_IS_FREE,
+    THE_ASK,
   ];
-  return `${lines.join('\n')}\n`;
-}
-
-/** The sentence a coding agent says out loud when it opens the upgrade page. */
-export function proOfferSpokenSentence(offer: ProOffer): string {
-  const meaning =
-    offer.pro.semantic === NO_MONTHLY_LIMIT
-      ? 'searches by meaning with no monthly limit'
-      : `${withCommas(Number(offer.pro.semantic))} searches by meaning a month`;
-  return (
-    `Pro is $${offer.priceUsd} a month. It gives you ${withCommas(offer.pro.postings)} job ` +
-    `postings a month you have not seen before instead of the free plan's ` +
-    `${withCommas(offer.free.postings)} a day, ${withCommas(offer.pro.fullJudgments)} ` +
-    `postings read in full by an AI model each month instead of ` +
-    `${withCommas(offer.free.fullJudgments)}, ${meaning}, and up to ` +
-    `${withCommas(offer.pro.routines)} saved pieces of work that run on Pinloop's servers ` +
-    `while you are away. Here is the page.`
-  );
+  return lines.join('\n');
 }
 
 // ---------------------------------------------------------------------------
