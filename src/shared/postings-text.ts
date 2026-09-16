@@ -531,13 +531,8 @@ export function tooManyCountsRefusal(limit: number, offer?: ProOffer): string {
   return said + relayParagraph(tooManyCountsSentence(offer), OPEN_THE_PAGE);
 }
 
-/** The one line `pinloop count --free` prints: how many Pinloop already holds. */
-export function countLine(matching: number): string {
-  return `${withCommas(matching)} match.`;
-}
-
 /**
- * The one line `pinloop count --all --from ...` prints: how many postings exist
+ * The one line `pinloop count --from ...` prints: how many postings exist
  * in the window it asked over, and which window that was.
  *
  * This is the line for a count that was pointed at one of the two places a
@@ -549,7 +544,7 @@ export function marketCountLine(matching: number, window: PullWindow): string {
 }
 
 /**
- * The one line `pinloop count --all` prints when nobody said which of the two
+ * The one line `pinloop count` prints when nobody said which of the two
  * places to count (Andrew, 2026-09-13).
  *
  * A posting is either on an employer's own hiring page or on a job board, never
@@ -762,7 +757,7 @@ export function searchWatchNotice(routineName: string): string {
 }
 
 // ---------------------------------------------------------------------------
-// The employer names `pinloop pull` and `pinloop count --all` are given
+// The employer names `pinloop pull` and `pinloop count` are given
 // (Andrew, 2026-09-14)
 // ---------------------------------------------------------------------------
 
