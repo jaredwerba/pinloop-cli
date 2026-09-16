@@ -126,7 +126,7 @@ import {
 import { openInBrowser, waitForBrowserSignIn } from './browser-login.ts';
 import { BILLING_PATH, billingLines } from '../shared/billing.ts';
 import { fractionOf, postingNamed, withSeparators } from './format.ts';
-import { companyRow, postingRow, summaryLine, tabRow, verdictRow } from './rows.ts';
+import { postingRow, summaryLine, tabRow, verdictRow } from './rows.ts';
 import { openScreen, type Screen } from './screen.ts';
 import { CLI_VERSION } from './version.ts';
 import {
@@ -936,30 +936,6 @@ function printCard(card: Card, extraLines: string[] = []): void {
   add(card.url);
   for (const line of extraLines) add(line);
   process.stdout.write(`${lines.join('\n')}\n\n`);
-}
-
-/**
- * One employer, printed the way a person reads it: its id, its name, the website
- * its postings come from, and how many postings it currently has.
- *
- * The id comes first because it is what this verb exists to hand over. Company
- * names in the corpus are messy — "Google" and "Google LLC" are two separate
- * employers — so somebody looks the employer up here, picks the right row by its
- * name and its posting count, and then gives that row's id to `pinloop search
- * --company`. Every id is the same width, so putting it in the first column
- * makes it easy to pick out and copy however long the names beside it run.
- */
-function printCompany(row: Record<string, unknown>): void {
-  if (alignedRows) {
-    process.stdout.write(`${companyRow(row, screen.colours, terminalWidth())}\n`);
-    return;
-  }
-  const count = Number(row['posting_count'] ?? 0);
-  const pieces: string[] = [String(row['id'] ?? ''), String(row['name'] ?? '')];
-  const domain = row['website_domain'];
-  if (domain !== null && domain !== undefined && String(domain) !== '') pieces.push(String(domain));
-  pieces.push(`${count} ${count === 1 ? 'posting' : 'postings'}`);
-  process.stdout.write(`${pieces.join(' | ')}\n`);
 }
 
 /**
@@ -2181,19 +2157,25 @@ function companyIdsIn(value: unknown): string[] {
 }
 
 /**
- * The employers a search was held to, said only when it was held to any. One
- * employer is named by its id, because that is the id the person handed over and
- * the one they would check; several are counted, because a line carrying twenty
- * ids is unreadable and the ids are already in the person's own command.
+ * The employers a search was held to, said only when it was held to any.
+ *
+ * A single employer is named the way the person themselves would recognise
+ * it: the name they typed on `--company`, when this search resolved one, since
+ * an id they never typed and would have to look up again is not something they
+ * can check at a glance (printed-message rule 3, 2026-08-21). A search held by
+ * `--company-id` instead has no typed name to fall back on, so that single
+ * employer is still named by its id, exactly as it always was. Several
+ * employers are counted rather than listed, because a line carrying twenty ids
+ * is unreadable and they are already sitting in the person's own command.
  *
  * A report that claims a restriction in a shape this program cannot read is
  * still reported, without the ids. A restriction the person cannot see is worse
  * than one described vaguely.
  */
-function companyClause(value: unknown): string | undefined {
+function companyClause(value: unknown, typedName?: string): string | undefined {
   if (value === null || value === undefined || value === false || value === '') return undefined;
   const ids = companyIdsIn(value);
-  if (ids.length === 1) return `within company ${ids[0]}`;
+  if (ids.length === 1) return `within company ${typedName ? `"${typedName}"` : ids[0]}`;
   if (ids.length > 1) return `within ${ids.length} companies`;
   return 'within the companies the request named';
 }
@@ -2221,9 +2203,13 @@ function companyClause(value: unknown): string | undefined {
  * falls back to the older guess: a page exactly as long as the ceiling is a page
  * the ceiling probably ended.
  */
-function interpretationSentence(report: Record<string, unknown>, rowCount: number): string {
+function interpretationSentence(
+  report: Record<string, unknown>,
+  rowCount: number,
+  typedCompanyName?: string,
+): string {
   const words = Array.isArray(report['words']) ? (report['words'] as any[]) : [];
-  const within = companyClause(report['company']);
+  const within = companyClause(report['company'], typedCompanyName);
 
   let said: string;
   if (words.length === 0) {
@@ -3122,8 +3108,15 @@ export function buildProgram(): Command {
     .option('--top <n>', 'how many postings the server may consider before it stops')
     .option('--in <part>', 'search only this part of a posting: title')
     .option(
-      '--company <ids>',
-      'only postings from these employers: their ids separated by commas, as "pinloop companies" prints them',
+      '--company <name>',
+      'only postings from one employer, by name: a name that exactly matches one stored ' +
+        'employer is used automatically, and a name that could mean more than one is refused ' +
+        'with every one of them named',
+    )
+    .option(
+      '--company-id <ids>',
+      'only postings from these employers: their ids separated by commas, from a company id ' +
+        'already on hand (for example, one a --company refusal named). Bypasses name matching entirely',
     )
     .option('--json', 'print one JSON object holding the rows, instead of cards')
     .option(
@@ -3153,7 +3146,12 @@ export function buildProgram(): Command {
         ['order', 'order'],
         ['top', 'top'],
         ['in', 'in'],
+        // A name on `--company` and ids on `--company-id` travel under two
+        // different names all the way to the server, which is what lets it
+        // tell the two apart and let `--company-id` bypass name matching
+        // entirely (Andrew, 2026-09-16).
         ['company', 'company'],
+        ['companyId', 'company_id'],
         // The four things a posting says about itself. Nothing is checked here
         // on purpose, exactly as with the two above it: the server is the one
         // that knows which values it serves, and it answers a value it will not
@@ -3303,8 +3301,10 @@ export function buildProgram(): Command {
         // nothing, so a coding agent always knows where the account stands
         // rather than reading a silence it has to guess at.
         const postingsLine = postingsUsedLine(answered, rows.length);
+        const typedCompanyName =
+          typeof options['company'] === 'string' ? options['company'] : undefined;
         process.stderr.write(
-          `${summaryLine(interpretationSentence(report, rows.length), screen.colours)}\n` +
+          `${summaryLine(interpretationSentence(report, rows.length, typedCompanyName), screen.colours)}\n` +
             (postingsLine === undefined ? '' : `${postingsLine}\n`),
         );
         // Then the one thing the sentence above cannot say, because it is about
@@ -3354,7 +3354,8 @@ export function buildProgram(): Command {
     .option('--in <part>', 'search only this part of a posting: title')
     .option(
       '--company <ids>',
-      'only postings from these employers: their ids separated by commas, as "pinloop companies" prints them',
+      'only postings from these employers: their ids separated by commas, from a company id ' +
+        'already on hand (for example, one a search --company refusal named)',
     )
     .option(
       '--semantic',
@@ -3821,57 +3822,6 @@ export function buildProgram(): Command {
       for (const missing of notFound) {
         process.stderr.write(`${String(missing)}: no posting with that id\n`);
       }
-    });
-
-  program
-    .command('companies')
-    .description('find employers by words in their name, the one with the most postings first')
-    .argument('<words...>', 'the words an employer name has to contain')
-    .option('--limit <n>', 'how many employers to show')
-    .option('--cursor <cursor>', 'the cursor a previous companies lookup handed back')
-    .option('--json', 'print one JSON object holding the rows, instead of one line each')
-    .option(
-      '--all',
-      'follow every page and print them all at once, instead of one page and a cursor',
-    )
-    .action(async (words: string[], options: Record<string, string | boolean | undefined>) => {
-      const pass = readPass();
-      refuseAllWithLimit(options);
-      const query = queryFrom(options, [
-        ['limit', 'limit'],
-        ['cursor', 'cursor'],
-      ]);
-      const q = words.join(' ').trim();
-      if (q !== '') query.set('q', q);
-      nowDoing('looking up employers');
-
-      let rows: Record<string, unknown>[];
-      let cursor: unknown = null;
-      if (options['all'] === true) {
-        rows = (
-          await everyPageOf(
-            pass,
-            'pinloop companies',
-            '/companies',
-            query,
-            textOption(options['cursor']),
-          )
-        ).rows;
-      } else {
-        const { json } = await callAsAccount(pass, `/companies?${query.toString()}`);
-        rows = rowsOf(json);
-        cursor = cursorOf(json);
-      }
-
-      if (options['json']) {
-        printJson({ rows, cursor });
-        return;
-      }
-      if (rows.length === 0) {
-        process.stdout.write('no employers matched those words\n');
-        return;
-      }
-      for (const row of rows) printCompany(row);
     });
 
   /**

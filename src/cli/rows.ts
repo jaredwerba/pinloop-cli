@@ -57,14 +57,6 @@ export type PostingRow = {
   url?: string | null;
 };
 
-/** One employer, as `pinloop companies` prints it. */
-export type CompanyRow = {
-  id?: string | null;
-  name?: string | null;
-  website_domain?: string | null;
-  posting_count?: number | null;
-};
-
 /** One tab, as `pinloop tab list` prints it. */
 export type TabListRow = {
   name?: string | null;
@@ -112,25 +104,6 @@ export function postingRow(row: PostingRow, colours: Colours, _columns: number):
     .filter((one): one is string => one !== undefined && one !== '')
     .join(BETWEEN_ID_AND_LINK);
   return `${first}\n${INDENT}${colours.dim(reach)}`;
-}
-
-/**
- * One employer as two rows, with its whole id on the second.
- *
- * The whole id and not the first eight characters, because handing that id to
- * `pinloop search --company` is the only reason this list exists. Employer names
- * in the corpus are messy — "Google" and "Google LLC" are two separate rows —
- * so a person picks the right employer by its name and its posting count and
- * then copies the id underneath it.
- */
-export function companyRow(row: CompanyRow, colours: Colours, _columns: number): string {
-  const count = Number(row.posting_count ?? 0);
-  const facts = joined([
-    said(row.website_domain),
-    `${count} posting${count === 1 ? '' : 's'}`,
-  ]);
-  const first = joined([colours.bold(said(row.name) ?? ''), colours.dim(facts)]);
-  return `${first}\n${INDENT}${colours.dim(said(row.id) ?? '')}`;
 }
 
 /** One tab as a single row: its name, how much it holds, and what it is for. */

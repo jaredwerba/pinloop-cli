@@ -629,9 +629,8 @@ names everybody says first, the chip makers, the cloud and database
 companies, the large consumer apps, the enterprise software houses, the ride
 and delivery platforms, the payments companies, the streaming services, the
 big game studios, and the large hardware makers, about a hundred names in
-all, each written the way "pinloop companies" shows the employer writes it.
-That is a choice made on the person's behalf, so it gets said out loud before
-any posting is spent.
+all, each typed the way the employer is commonly known. That is a choice made
+on the person's behalf, so it gets said out loud before any posting is spent.
 
 The INTERN label was put on each posting by a reading of it, and a reading
 misses internships whenever the posting does not call itself one in a way the
@@ -898,16 +897,17 @@ of them in the suburbs and some of them nowhere near the city. It cannot be
 pulled on as it stands, but it is the number the employer route is measured
 against.
 
-Count seven, the employers. "pinloop companies" with words like Northwestern,
-Rush, UChicago, Advocate, Loyola, Cook County, Lurie, Endeavor, Sinai,
-Ascension and UI Health shows how each system's name is written and which of
-them has postings at all. About fifteen names come out of that, and --company
-takes all of them at once, so one count covers the whole list: the title
-words of count one, --category Healthcare, --posted-after six months ago, and
-every name on --company. It sees 1,900 and 900. Those are registered nurse
-postings at employers whose hospitals are in the city, which is closer to
-what was asked than a word match, and the job boards hold fewer of them than
-the career sites because hospital systems post on their own pages first.
+Count seven, the employers. --company on pull takes a name and goes out with
+it exactly as typed, so each hospital system's most common name —
+Northwestern, Rush, UChicago, Advocate, Loyola, Cook County, Lurie, Endeavor,
+Sinai, Ascension, UI Health — is tried as written rather than looked up first.
+About fifteen names survive that, and --company takes all of them at once, so
+one count covers the whole list: the title words of count one, --category
+Healthcare, --posted-after six months ago, and every name on --company. It
+sees 1,900 and 900. Those are registered nurse postings at employers whose
+hospitals are in the city, which is closer to what was asked than a word
+match, and the job boards hold fewer of them than the career sites because
+hospital systems post on their own pages first.
 
 Count eight, how the two routes overlap: the same fifteen names on --company
 with Chicago as a body word instead of the title words, --category
@@ -921,8 +921,7 @@ mostly from staffing and travel nurse agencies. That decides that the pull
 goes through the employers and comes from career sites, and that the agencies
 get one clause in what the agent says.
 
-Eight counts, and one "pinloop companies" run, which counts against nothing.
-If the day's counts are short, count two goes first and count five second,
+Eight counts in all. If the day's counts are short, count two goes first and count five second,
 because neither changes the pull: RN stays in the title words either way,
 and the employment label stays off either way.
 
@@ -1487,8 +1486,10 @@ CA is not refused at all, it simply matches nothing and comes back empty.
 --country holds one country per run. Typing it twice does not search both; the
 last one silently wins, so run one country at a time. A posting may carry several
 countries, so a posting matched on Germany can well be listed under Portugal too.
---company on "pinloop search" and "pinloop viewed" takes employer ids separated
-by commas, as "pinloop companies" prints them. On "pinloop pull" and "pinloop
+--company on "pinloop search" takes one employer's name, matched against
+Pinloop's own stored companies; --company-id takes their ids directly,
+separated by commas, bypassing that matching. --company on "pinloop viewed"
+takes employer ids separated by commas. On "pinloop pull" and "pinloop
 count", the same option takes employers' names instead.
 
 --company takes one or more employers wherever it appears, and a posting matches
@@ -1773,12 +1774,6 @@ read back rather than judged again counts against nothing. Type "pinloop" on its
 to read how much is left.
 
 ${CONFIRM_EXPLANATION}`,
-
-  companies: `Finds employers by the words in their name, the one with the most postings first.
-It hands back employers rather than postings, and each line carries the employer
-id that search's --company option takes. --limit and --cursor page through the
-answer, --all follows every page at once, and --json prints one JSON object
-holding the rows.`,
 
   // -------------------------------------------------------------------------
   // The account's own documents
