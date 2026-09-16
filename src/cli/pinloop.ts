@@ -1318,9 +1318,12 @@ function leftAmount(remaining: unknown): { text: string; plural: boolean } {
  * The two ways to spend the shared judging allowance after this run. The
  * server's judging allowance counts one quick judgment as one unit and one
  * full judgment as two units (src/server/limits.ts, FULL_JUDGMENT_COSTS).
- * `confirm_left` gives the capacity before this run in the kind being run, so
- * the CLI converts that capacity back into shared units, subtracts this run,
- * and projects the same remainder into both kinds.
+ * `confirm_left` gives the capacity before this run in the kind being run. The
+ * CLI subtracts the proposed run first, then converts the post-run capacity
+ * into the other kind. A full-run response has already rounded down to whole
+ * full judgments, so the quick figure is the number of quick judgments that
+ * the reported full capacity guarantees, rather than an overstatement based
+ * on a fractional full judgment the server did not return.
  */
 function remainingJudgmentAlternatives(
   remaining: unknown,
@@ -1340,11 +1343,10 @@ function remainingJudgmentAlternatives(
     return { full: unknownAmount, quick: unknownAmount };
   }
 
-  const costPerRunKind = kind === 'quick' ? 1 : 2;
-  const unitsAfter = Math.max(0, before * costPerRunKind - count * costPerRunKind);
+  const sameKindAfter = Math.max(0, before - count);
   return {
-    full: leftAmount(Math.floor(unitsAfter / 2)),
-    quick: leftAmount(Math.floor(unitsAfter)),
+    full: leftAmount(kind === 'quick' ? Math.floor(sameKindAfter / 2) : sameKindAfter),
+    quick: leftAmount(kind === 'quick' ? sameKindAfter : sameKindAfter * 2),
   };
 }
 
@@ -1652,8 +1654,8 @@ function reportConfirmation(json: any, asJson: boolean, gate: ConfirmGate): void
     const alternatives = remainingJudgmentAlternatives(remaining, count, kind);
     lines.push(
       `Confirming would use ${judgmentPhrase(count, kind)} from your shared monthly allowance. ` +
-        `Afterward, you would have enough allowance for either ${alternatives.full.text} more ` +
-        `full judgment${alternatives.full.plural ? 's' : ''} or ${alternatives.quick.text} more ` +
+        `Afterward, you would have enough allowance for either ${alternatives.full.text} ` +
+        `full judgment${alternatives.full.plural ? 's' : ''} or ${alternatives.quick.text} ` +
         `quick judgment${alternatives.quick.plural ? 's' : ''} this month. ` +
         'Those are two ways to spend the same remaining allowance, not separate balances.',
     );
