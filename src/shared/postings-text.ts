@@ -498,7 +498,10 @@ export function pullStopAndAskMessage({
     : `so ${withCommas(wouldBeLeft)} would be left`;
   const said =
     `this would take ${withCommas(wouldTake)} postings, and this account has ${withCommas(left)} ` +
-    `left ${stretch(period)}, ${outcome}. Put the choice to the ` +
+    `left ${stretch(period)}, ${outcome}. Search reads postings Pinloop already has; only ` +
+    `postings new to this account use its allowance. This pull can collect more matching ` +
+    `postings, and every posting it returns uses allowance, including a posting this account ` +
+    `already has. Put the choice to the ` +
     `person in one plain sentence before you go ahead. To go ahead, run:\n${command}`;
   if (offer === undefined || !cannotRun) return said;
   return said + relayParagraph(cannotRunOnFreeSentence(offer, wouldTake), OPEN_THE_PAGE);

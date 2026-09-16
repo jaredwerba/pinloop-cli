@@ -1583,10 +1583,10 @@ before "pinloop pull" as well, because collecting a posting this account already
 holds counts all over again.`,
 
   pull: `Goes out and collects the newest postings matching your conditions right now, and
-hands them over. Searching looks through the postings Pinloop has already
-collected; a pull is Pinloop going out to collect, so it counts one posting out of
-this account's number of them for every row it brings back, including a row this
-account has already been handed. Every row it brings back is written onto this
+hands them over. Search reads postings Pinloop already has; only postings new to
+this account use its allowance. Pull can collect more matching postings, and every
+posting it returns uses allowance, including a posting this account already has.
+Every row it brings back is written onto this
 account's own permanent list of postings, which is what makes that row free from
 then on to "pinloop viewed", "pinloop fetch", judging and tabs.
 
