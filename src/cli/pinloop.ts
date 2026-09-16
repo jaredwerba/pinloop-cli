@@ -83,7 +83,6 @@ import {
 import {
   bothFeedsCountLine,
   companyNeedsAnEmployerRefusal,
-  countLine,
   employerNamesFrom,
   heldToEmployersLine,
   marketCountLine,
@@ -3678,18 +3677,15 @@ export function buildProgram(): Command {
     .option('--posted-after <date>', 'only postings posted on or after this date (YYYY-MM-DD)')
     .option(
       '--company <employers>',
-      'only postings from these employers: names with --all, ids with --free. Give several ' +
+      'only postings from these employers, by name. Give several ' +
         'separated by commas, or write --company again for each one. A name may not contain a comma',
       alsoThisEmployer,
     )
-    .option('--free', 'count the postings Pinloop already holds')
-    .option('--all', 'count every posting available')
     .option('--json', 'print one JSON object holding the number, instead of a line')
     .action(async (words: string[], options: Record<string, string | boolean | undefined>) => {
       // Read and checked before the login pass, exactly as on a pull, so a
-      // `--company` nobody could act on never reaches the server. With --free
-      // these are employer ids rather than names, and the same reading applies:
-      // ids are separated by commas too, and no id contains one.
+      // `--company` nobody could act on never reaches the server. Names are
+      // separated by commas, and a name may not contain one.
       const employers = employersOn(options);
       if (employers !== undefined) options['company'] = employers.join(',');
       const pass = readPass();
@@ -3707,8 +3703,7 @@ export function buildProgram(): Command {
       ]);
       const q = words.join(' ').trim();
       if (q !== '') query.set('q', q);
-      if (options['free'] === true) query.set('free', 'true');
-      if (options['all'] === true) query.set('all', 'true');
+      query.set('all', 'true');
 
       const { json } = await callAsAccount(pass, '/count', {
         method: 'POST',
@@ -3738,19 +3733,13 @@ export function buildProgram(): Command {
       const line =
         bothPlaces !== undefined && window !== undefined
           ? bothFeedsCountLine(bothPlaces.careerSites, bothPlaces.jobBoards, window)
-          : window === undefined
-            ? countLine(matching)
-            : marketCountLine(matching, window);
+          : marketCountLine(matching, window!);
       process.stdout.write(`${line}\n`);
       // Which employers that number covers, said only when the count was held to
       // more than one, and on the error stream so the number itself stays the
       // whole of what standard output carries.
       //
-      // Not on a free count. There `--company` carries employer ids rather than
-      // names, and a line reading "held to postings from 7c1f… or 9b04…" names
-      // the employers by nothing a person recognises, which is the one thing a
-      // printed sentence must never do.
-      if (options['free'] !== true && employers !== undefined && employers.length > 1) {
+      if (employers !== undefined && employers.length > 1) {
         process.stderr.write(`${heldToEmployersLine(employers)}\n`);
       }
     });

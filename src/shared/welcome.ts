@@ -61,7 +61,7 @@
  * 'guide' step's announcement now names the vendor's real feeds (Greenhouse,
  * Lever and Workday, alongside boards like LinkedIn) so the size claim reads
  * as a mechanism rather than a number, and the 'peek' step now runs
- * `pinloop count --all` before the pull, so the person sees how many
+ * `pinloop count` before the pull, so the person sees how many
  * postings actually match them before Pinloop spends any of their daily
  * postings showing five. The closing step's pitch for Pro now refers back to
  * that count instead of stating judging or postings numbers on their own.
@@ -243,7 +243,7 @@ over the world. Then say that you are choosing how to narrow the search from
 what they told you, the words, the kind of job, the place, and employers only
 if they named some, and tell them what you chose.
 
-Run pinloop count --all with the words and filters, and --posted-after set to
+Run pinloop count with the words and filters, and --posted-after set to
 the date thirty days ago. Then tell them the number plainly. For example:
 "There are 4,200 postings matching that from the last month!"
 

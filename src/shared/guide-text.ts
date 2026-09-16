@@ -357,8 +357,8 @@ anytime that posting comes up again. A quick screen's verdict is saved too, and 
 later quick screen on the same posting reads it back for free, but a later full
 judgment ignores it and judges that posting again, taking more out of the month.
 Then say what the free way is, which is open to you as well:
-run "pinloop viewed", "pinloop count --free", "pinloop fetch", "pinloop filter"
-and "pinloop profile get", read the postings this account already holds and the
+run "pinloop viewed", "pinloop fetch", "pinloop filter" and "pinloop profile get",
+read the postings this account already holds and the
 same profile without taking anything out of the month, form your own opinion, and
 store that opinion with "pinloop judgment put" if it is worth keeping, after which
 Pinloop counts that posting judged exactly as one it judged itself. Wait for the
@@ -452,7 +452,7 @@ unless you say so.
 
 HOW THE WORDS YOU TYPE ARE MATCHED, AND WHY THEY ARE THE BLUNT PART
 
-On "pinloop count --all" and on "pinloop pull", the words you type go out as one
+On "pinloop count" and on "pinloop pull", the words you type go out as one
 condition over the whole text of a posting, the job description included, or
 over the job title alone when you add --in title. Matching the whole description
 is very loose. Almost every posting that deals with the public says the word
@@ -532,7 +532,7 @@ anything.
 2. Build the query out of the fixed conditions above. Add words only where the
 conditions leave something out.
 
-3. Count it with "pinloop count --all". A count hands over no posting and takes
+3. Count it with "pinloop count". A count hands over no posting and takes
 nothing out of this account's postings. Leave --from off and it counts both
 places a posting can come from and prints both numbers.
 
@@ -1156,12 +1156,11 @@ an account with fewer left than an ordinary page, hands back what is left rather
 than being refused. A --limit somebody typed is still refused whole when it is
 larger than what is left.
 
-"pinloop search", "pinloop viewed" and "pinloop count --free" go out to collect
-nothing, so none of the three has a limit of its own on how many times a day it
-may be run; the requests a minute above are the only ceiling over them. "pinloop
-pull" and "pinloop count --all" do go out, and each has its own limit on how many
-times a day one account may run it. Type "pinloop" on its own to read how many of
-each are left today.
+"pinloop search" and "pinloop viewed" go out to collect nothing, so neither has
+a limit of its own on how many times a day it may be run; the requests a minute
+above are the only ceiling over them. "pinloop pull" and "pinloop count" do go
+out, and each has its own limit on how many times a day one account may run it.
+Type "pinloop" on its own to read how many of each are left today.
 
 A judge run that asks for more postings than the month's judging usage limit
 covers judges as many as it covers and then stops, and it ends by saying how
@@ -1259,13 +1258,7 @@ preferences document changes the verdicts, so store them before trusting a run.
 
 3. COUNT FIRST, THEN GO AND COLLECT (described, not pasted)
 
-$ pinloop count nurse --country Ireland --free
-
-That asks how many of the postings Pinloop has already collected match. It hands
-over no posting, counts nothing against the account, and may be run as often as
-you like. It prints one line: a number and the word match.
-
-$ pinloop count nurse --country Ireland --all
+$ pinloop count nurse --country Ireland
 
 That asks how many nursing postings in Ireland exist over the last thirty days,
 or since the day --posted-after names when it names one. With no --from it counts
@@ -1494,9 +1487,9 @@ CA is not refused at all, it simply matches nothing and comes back empty.
 --country holds one country per run. Typing it twice does not search both; the
 last one silently wins, so run one country at a time. A posting may carry several
 countries, so a posting matched on Germany can well be listed under Portugal too.
---company here takes employer ids separated by commas, as "pinloop companies"
-prints them; on "pinloop pull" and on "pinloop count --all" the same option takes
-employers' names instead.
+--company on "pinloop search" and "pinloop viewed" takes employer ids separated
+by commas, as "pinloop companies" prints them. On "pinloop pull" and "pinloop
+count", the same option takes employers' names instead.
 
 --company takes one or more employers wherever it appears, and a posting matches
 when it is from any one of them rather than from all of them. Give several by
@@ -1636,13 +1629,10 @@ words you were going to pull on. Reading postings this account has already been
 handed takes nothing out of it at all, and a pull that brings back a posting the
 account already has still counts against it.
 
-Second, ask "pinloop count --free" how many of the postings Pinloop already
-holds match the conditions you have in mind, and "pinloop count --all" how many
-exist over the last thirty days. Leave --from off that count and it prints both
-places on one line, which is how you decide which --from the pull itself gets.
-Neither question hands over a posting and neither takes anything out of the
-account, and the two answers together are what tell you whether a pull is worth
-running at all.
+Second, ask "pinloop count" how many postings exist over the last thirty days.
+Leave --from off that count and it prints both places on one line, which is how
+you decide which --from the pull itself gets. The count hands over no posting and
+takes nothing out of the account.
 
 Third, narrow the conditions before you run the pull. Every row a pull brings
 back is one posting out of this account's number of them, so the conditions
@@ -1674,15 +1664,8 @@ How many pulls this account may run a day, and how many postings it may be
 handed in a month, are not written here: type "pinloop" on its own and it prints
 what is left and the day each one returns to full.`,
 
-  count: `Says how many postings match your conditions, and hands none of them over. It
-takes exactly one of two flags and refuses a call carrying neither or both, in a
-sentence naming both flags and what each one does.
-
---free counts the postings Pinloop has already collected. It goes out to collect
-nothing, takes nothing out of this account, and may be run as often as you like.
-Run it before every pull.
-
---all counts every posting available over the last thirty days, or since the day
+  count: `Says how many postings match your conditions, and hands none of them over.
+It counts every posting available over the last thirty days, or since the day
 --posted-after names when it names one. It takes nothing out of this account's
 postings either, but it does go out to ask, so it has a limit of its own on how
 many times a day one account may run it, separate from the day's pulls and the
@@ -1699,20 +1682,18 @@ place and prints the one number in the usual "1,592 match in the last month."
 shape. Counting both still counts as one of the day's counts, because it is one
 command.
 
-The conditions are the ten a pull takes. --company follows the same split the
-two commands follow: with --all it is employers' names, and with --free it is
-the employer ids a search takes. Either way it takes one or more of them,
-separated by commas or written as --company again for each one, and a posting
-counts when it is from any one of them. One count takes at most 200 of them, so
-a hundred employers are one count rather than a hundred counts.
+The conditions are the ten a pull takes. --company takes employers' names, one
+or more separated by commas or written as --company again for each one, and a
+posting counts when it is from any one of them. One count takes at most 200 of
+them, so a hundred employers are one count rather than a hundred counts.
 
 --json prints one object holding the number, and
 the window as well when the count covered every posting available; a count that
 asked both places carries career_sites and job_boards beside matching, which is
 the two added together.
 
-A count with --all that Pinloop cannot finish stops in the same words a pull
-does, takes nothing out of the account, and ends in failure.`,
+A count that Pinloop cannot finish stops in the same words a pull does, takes
+nothing out of the account, and ends in failure.`,
 
   list: `This command is retired: run "pinloop search" instead, which takes the same
 conditions and the same flags with no words after it and hands back the same
