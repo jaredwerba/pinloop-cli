@@ -1,11 +1,17 @@
 {
   "name": "pinloop",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "The Pinloop command line: enable your coding agent to run your whole job search.",
   "type": "module",
   "bin": {
     "pinloop": "./dist/cli/pinloop.js"
   },
+  "files": [
+    "dist",
+    "src",
+    "assets",
+    "demo.gif"
+  ],
   "homepage": "https://pinloop.ai",
   "scripts": {
     "build": "tsc"
