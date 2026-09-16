@@ -1314,6 +1314,40 @@ function leftAmount(remaining: unknown): { text: string; plural: boolean } {
   return { text: String(remaining), plural: true };
 }
 
+/**
+ * The two ways to spend the shared judging allowance after this run. The
+ * server's judging allowance counts one quick judgment as one unit and one
+ * full judgment as two units (src/server/limits.ts, FULL_JUDGMENT_COSTS).
+ * `confirm_left` gives the capacity before this run in the kind being run, so
+ * the CLI converts that capacity back into shared units, subtracts this run,
+ * and projects the same remainder into both kinds.
+ */
+function remainingJudgmentAlternatives(
+  remaining: unknown,
+  count: number,
+  kind: string,
+): { full: ReturnType<typeof leftAmount>; quick: ReturnType<typeof leftAmount> } {
+  if (String(remaining).toLowerCase() === 'unlimited') {
+    return {
+      full: { text: 'unlimited', plural: true },
+      quick: { text: 'unlimited', plural: true },
+    };
+  }
+
+  const before = Number(remaining);
+  if (!Number.isFinite(before)) {
+    const unknownAmount = leftAmount(remaining);
+    return { full: unknownAmount, quick: unknownAmount };
+  }
+
+  const costPerRunKind = kind === 'quick' ? 1 : 2;
+  const unitsAfter = Math.max(0, before * costPerRunKind - count * costPerRunKind);
+  return {
+    full: leftAmount(Math.floor(unitsAfter / 2)),
+    quick: leftAmount(Math.floor(unitsAfter)),
+  };
+}
+
 /** The exact-figure rate a fact is stated with: "once an hour" / "once every 24 hours". */
 function rateFactual(hours: number): string {
   return hours === 1 ? 'once an hour' : `once every ${hours} hours`;
@@ -1612,11 +1646,16 @@ function reportConfirmation(json: any, asJson: boolean, gate: ConfirmGate): void
       );
     }
 
-    // Point 2: what confirming would spend, and what would still be left.
-    const remainingAmount = leftAmount(remaining);
+    // Point 2: what confirming would spend, and what the same shared allowance
+    // could still buy afterward. The two figures are alternatives, not two
+    // balances that can both be spent.
+    const alternatives = remainingJudgmentAlternatives(remaining, count, kind);
     lines.push(
-      `confirming would use ${judgmentPhrase(count, kind)}, leaving room for ` +
-        `${remainingAmount.text} more ${kind} judgment${remainingAmount.plural ? 's' : ''} this month`,
+      `Confirming would use ${judgmentPhrase(count, kind)} from your shared monthly allowance. ` +
+        `Afterward, you would have enough allowance for either ${alternatives.full.text} more ` +
+        `full judgment${alternatives.full.plural ? 's' : ''} or ${alternatives.quick.text} more ` +
+        `quick judgment${alternatives.quick.plural ? 's' : ''} this month. ` +
+        'Those are two ways to spend the same remaining allowance, not separate balances.',
     );
 
     // Point 3: what a judgment gives that reading the material yourself does
@@ -1657,7 +1696,7 @@ function reportConfirmation(json: any, asJson: boolean, gate: ConfirmGate): void
         'Pinloop to run a real judgment — using its own already-built instructions for reading ' +
         `a profile against a posting well${reuseClause} — which would spend ` +
         `${judgmentPhrase(count, kind)} and leave ` +
-        `${remainingAmount.text} for the rest of the month, or have you read the ` +
+        `${alternatives[kind === 'quick' ? 'quick' : 'full'].text} for the rest of the month, or have you read the ` +
         'material yourself and give them a quick, unsaved opinion for free instead (you can ' +
         "still save that opinion afterward with `pinloop judgment put` if it's worth keeping) " +
         '— then wait for their answer before running this again with --confirm',
