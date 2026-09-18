@@ -5006,13 +5006,18 @@ function addTabCommands(program: Command): void {
     .description('give one tab a different name, keeping everything in it')
     .argument('<name>', 'the tab to rename')
     .argument('<new-name>', 'what to call it instead')
+    .option('--description <text>', 'replace the tab\'s description too; leave this out to keep it')
     .option('--json', 'print one JSON object holding the renamed tab, instead of a line')
     .action(
       async (name: string, to: string, options: Record<string, string | boolean | undefined>) => {
         const pass = readPass();
+        const body: Record<string, unknown> = { to };
+        const description = textOption(options['description']);
+        if (description !== undefined) body['description'] = description;
+
         const { json } = await callAsAccount(pass, `${tabPath(name)}/rename`, {
           method: 'POST',
-          body: { to },
+          body,
         });
         if (options['json']) {
           printJson({ rows: rowsOf(json), cursor: cursorOf(json) });
