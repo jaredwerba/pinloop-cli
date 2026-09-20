@@ -110,6 +110,7 @@ import { PROGRESS_CONTENT_TYPE, type ProgressEvent } from '../shared/progress-ev
 import { dropReason } from '../shared/verdicts.ts';
 import { compareVersions, isVersion } from '../shared/version.ts';
 import {
+  ACCOUNT_PAGE_PATH,
   ADDRESS_INDENT,
   FINISH_WITH_CODE_LINE,
   HANDOFF_TRADE_PATH,
@@ -119,11 +120,12 @@ import {
   PASSWORD_FLAGS_REFUSAL,
   PASTE_THE_CODE_LINE,
   SHOW_LINK_TO_AGENT_LINE,
+  accountPageLines,
   loggedInLine,
   signedOutLine,
   type DeliveredPass,
 } from '../shared/sign-in.ts';
-import { openInBrowser, waitForBrowserSignIn } from './browser-login.ts';
+import { openInBrowser, signInPageBaseUrl, waitForBrowserSignIn } from './browser-login.ts';
 import { BILLING_PATH, billingLines } from '../shared/billing.ts';
 import { fractionOf, postingNamed, withSeparators } from './format.ts';
 import { postingRow, summaryLine, tabRow, verdictRow } from './rows.ts';
@@ -3084,6 +3086,37 @@ export function buildProgram(): Command {
       // one place only, under what `pinloop` typed on its own prints, so this
       // command goes back to opening the page and nothing else.
       process.stdout.write(billingLines(url));
+      openInBrowser(url);
+    });
+
+  /**
+   * `pinloop account`: open the page where a person downloads everything Pinloop
+   * holds about them and deletes their account.
+   *
+   * The command opens one address and prints it, and that is the whole of it. It
+   * deletes nothing, it downloads nothing, it sends no pass anywhere, and it
+   * asks the Pinloop server nothing at all: the address is built here out of the
+   * website address this copy of the command was given. Nobody has to be signed
+   * in at the terminal for it to work, which matters because somebody who wants
+   * their data out or their account gone is often somebody who never signed in
+   * on this machine in the first place.
+   *
+   * Downloading and deleting stay on the page rather than moving into a command.
+   * The delete button acts on a browser sign-in the person made minutes earlier,
+   * and a pass sitting in a file on a laptop is not that, so a terminal has
+   * nothing it could send that would stand in for a person deciding right then.
+   *
+   * The address is printed as well as opened, for the two reasons `pinloop
+   * login` and `pinloop billing` print theirs: the person running the command is
+   * often a coding agent while the human is looking at a browser on another
+   * screen, and a rented machine reached over SSH has no browser at all.
+   */
+  program
+    .command('account')
+    .description('open the page where you download your Pinloop data or delete your account')
+    .action(() => {
+      const url = `${signInPageBaseUrl()}${ACCOUNT_PAGE_PATH}`;
+      process.stdout.write(accountPageLines(url));
       openInBrowser(url);
     });
 

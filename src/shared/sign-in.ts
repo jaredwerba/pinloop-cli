@@ -81,6 +81,23 @@ export const SIGN_IN_PAGE_PATH = '/login';
  */
 export const CALLBACK_PAGE_PATH = '/auth/callback';
 
+/**
+ * The page where a person downloads everything Pinloop holds about them as one
+ * file, and where they delete their account. `pinloop account` opens it.
+ *
+ * It lives beside the sign-in page rather than anywhere else because a person
+ * has to sign in on the page itself before either button does anything, and
+ * because the two pages are reached from the same website address this file
+ * already names. The page's own words are in src/site/account.html and the
+ * server hands it to a browser at GET /account.
+ *
+ * Deleting an account is only ever possible on this page, never from the
+ * terminal. The delete button acts on a browser sign-in made a few minutes
+ * earlier, and a pass saved on a machine months ago is not that, so there is
+ * nothing for a command to send.
+ */
+export const ACCOUNT_PAGE_PATH = '/account';
+
 /** Asks Pinloop to email a 6-digit code to one address. Nobody is signed in yet. */
 export const SEND_CODE_PATH = '/auth/send-code';
 
@@ -172,6 +189,32 @@ export const OPEN_THIS_ADDRESS_LINE = 'open this address in your browser to sign
 
 /** How far the printed web address is indented under the line above it. */
 export const ADDRESS_INDENT = '  ';
+
+/**
+ * The one line `pinloop account` prints above the address of the account page.
+ *
+ * It names the two things the page is for, because a person who types this
+ * command is either after their own data or after getting rid of the account,
+ * and the page holds both. It promises nothing about what the command itself
+ * does to the account, because the command does nothing to the account: it
+ * opens an address and prints it.
+ */
+export const ACCOUNT_PAGE_OPEN_LINE =
+  'open this address in your browser to download your Pinloop data or delete your account:';
+
+/**
+ * The two lines `pinloop account` writes to standard output: the sentence, then
+ * the address alone on an indented line.
+ *
+ * The address is always printed, even on a machine where the command also opens
+ * the browser itself, for the two reasons `pinloop login` and `pinloop billing`
+ * print theirs: the person running the command is often a coding agent while the
+ * human is looking at a browser on another screen, and a rented machine reached
+ * over SSH has no browser at all.
+ */
+export function accountPageLines(url: string): string {
+  return `${ACCOUNT_PAGE_OPEN_LINE}\n${ADDRESS_INDENT}${url}\n`;
+}
 
 /**
  * The line printed right under the address, for a coding agent reading this

@@ -1065,9 +1065,9 @@ an object whose "error" field holds that sentence, and the command ends in
 failure. A search and a pull also carry a "postings" field holding the same
 numbers the printed line says out loud.
 
-Five commands take no --json, because they hand back no rows: login, logout,
-billing, profile put and profile delete. Three more take none because they print
-prose: welcome, skill and guide.`,
+Six commands take no --json, because they hand back no rows: login, logout,
+billing, account, profile put and profile delete. Three more take none because
+they print prose: welcome, skill and guide.`,
 
   limits: `One page is at most 100 postings, and a page nobody gives a size to is twenty.
 When you want everything rather than one page, add --all and the command follows
@@ -1389,6 +1389,24 @@ It contacts no server: that file is the whole of what being signed in on a
 machine means, so deleting it is the whole of signing out. Run on a machine that
 has no saved login, it says so and reports success. It signs out this machine
 only; a pass saved on another machine is untouched.`,
+
+  account: `Opens the page on pinloop.ai where the person downloads everything Pinloop holds
+about them as one file, and where they delete their account. It takes no option.
+
+It prints that web address and exits at once, and on a machine that has a browser
+it opens the address as well as printing it. Read the address out to the person,
+because on a machine with no browser printing it is the whole of what happens.
+
+The command itself does nothing to the account. It downloads nothing, it deletes
+nothing, it sends nothing to the Pinloop server, and it works when nobody is
+signed in at this terminal. Everything happens on the page, after the person
+signs in there in the browser, and there is no command anywhere that deletes an
+account: deleting one acts on a browser sign-in the person made minutes earlier,
+which a terminal has no way to stand in for.
+
+Nothing more is printed in the terminal afterwards, whatever the person does on
+the page. An account that has been deleted is gone along with everything stored
+in it, and a paid subscription is cancelled at the same moment.`,
 
   billing: `Opens the page where the person sets up, changes or cancels their Pinloop
 subscription. "pinloop upgrade" is a second name for the same command and prints
