@@ -44,9 +44,9 @@ const BLOCKED_TITLE =
 const SELLER_TITLE =
   /\b(account executive|account manager|strategic account|enterprise account|commercial account)\b/i;
 
-/** Product class the master resume is aimed at. */
+/** Product class. Bare "infrastructure" and bare "AI" are not enough: the first pull was building-systems AE seats. */
 const INFRA_TITLE =
-  /\b(cloud|infrastructure|gpu|iaas|paas|ai|hyperscal|data platform|kubernetes)\b/i;
+  /\b(cloud|gpu|iaas|paas|hyperscal|data center|kubernetes)\b/i;
 
 /**
  * Employers already targeted in ~/resumes/, plus the infrastructure sellers
@@ -86,14 +86,52 @@ export const TARGET_EMPLOYERS: readonly string[] = [
 
 const US = /^(united states|usa|u\.s\.a\.|u\.s\.|us)$/i;
 
+/**
+ * Last segment of a location Pinloop stores as a city string, not as a country.
+ * "Boston, MA" and "Vienna, Vienna, Austria" are locations. They are not the
+ * countries field. Substituting one for the other rejects Boston.
+ */
+const US_STATE_ABBREV = new Set([
+  'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA',
+  'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
+  'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT',
+  'VA', 'WA', 'WV', 'WI', 'WY', 'DC',
+]);
+
+/** A location that names one of these, and is not a US place, is abroad. */
+const FOREIGN_COUNTRY =
+  /\b(austria|germany|france|spain|portugal|netherlands|belgium|sweden|norway|denmark|finland|ireland|united kingdom|england|scotland|wales|canada|mexico|india|australia|brazil|singapore|japan|china|poland|romania|serbia|switzerland|israel)\b/i;
+
 function text(value: string | null | undefined): string {
   return typeof value === 'string' ? value.trim() : '';
 }
 
+function listed(value: string[] | null | undefined): string[] {
+  if (!Array.isArray(value)) return [];
+  return value.map((one) => text(one)).filter((one) => one !== '');
+}
+
+/** Country field only. Locations are cities and must not fill this in. */
 function countriesOf(row: PostingFacts): string[] {
-  const listed = row.countries ?? row.locations ?? [];
+  const named = listed(row.countries);
   const extra = text(row.country);
-  return [...listed.map((one) => text(one)).filter((one) => one !== ''), ...(extra === '' ? [] : [extra])];
+  return extra === '' ? named : [...named, extra];
+}
+
+function lastSegment(location: string): string {
+  const parts = location.split(',').map((part) => part.trim()).filter((part) => part !== '');
+  return parts[parts.length - 1] ?? '';
+}
+
+function locationIsUnitedStates(location: string): boolean {
+  if (isUnitedStates(location)) return true;
+  if (/\b(boston|cambridge|massachusetts|new england)\b/i.test(location)) return true;
+  const last = lastSegment(location);
+  return last.length === 2 && US_STATE_ABBREV.has(last.toUpperCase());
+}
+
+function foreignLocation(locations: string[]): string | undefined {
+  return locations.find((location) => !locationIsUnitedStates(location) && FOREIGN_COUNTRY.test(location));
 }
 
 function isUnitedStates(value: string): boolean {
@@ -118,8 +156,10 @@ export function screenPosting(row: PostingFacts, index: number): ScreenResult {
   const employment = text(row.employment).toUpperCase();
   const experience = text(row.experience);
   const countries = countriesOf(row);
+  const locations = listed(row.locations);
   const knownCountry = countries.length > 0;
   const inUs = countries.some(isUnitedStates);
+  const abroad = knownCountry ? undefined : foreignLocation(locations);
   const seller = SELLER_TITLE.test(title);
   const infra = INFRA_TITLE.test(title);
   const employer = employerHit(company);
@@ -138,6 +178,13 @@ export function screenPosting(row: PostingFacts, index: number): ScreenResult {
       ...base,
       screen: 'no',
       reason: `country is ${countries.join(', ')}, not United States`,
+    };
+  }
+  if (abroad !== undefined) {
+    return {
+      ...base,
+      screen: 'no',
+      reason: `location is ${abroad}, which names a country other than the United States, and the posting stores no United States country`,
     };
   }
   if (experience === '0-2') {

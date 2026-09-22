@@ -29,8 +29,8 @@ function monthsAgo(months: number, now: Date): string {
 const SELLER =
   '((Account AND Executive) OR (Account AND Manager))';
 
-/** The product class on the master resume headline. */
-const INFRA = '(Cloud OR Infrastructure OR GPU OR AI OR IaaS)';
+/** Product class that survived the first live pull. Bare "infrastructure" matched building systems. */
+const INFRA = '(Cloud OR GPU OR IaaS OR Hyperscale)';
 
 /**
  * Employers to count one at a time. A comma-joined list is refused in full
@@ -74,7 +74,7 @@ export function fitPlan(now: Date = new Date()): FitQuery[] {
     {
       name: 'title-seller-infra',
       why:
-        'The primary pool: account executive or account manager, and cloud, AI, GPU, IaaS, or infrastructure, in the title. No category and no employment label, so unlabeled postings stay in.',
+        'The primary pool: account executive or account manager, and cloud, GPU, IaaS, or hyperscale, in the title. Bare infrastructure and bare AI are left out. The first pull with those words came back as building-systems seats.',
       command: `pinloop count ${sellerInfra} ${country}`,
     },
     {
