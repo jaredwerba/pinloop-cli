@@ -2104,6 +2104,20 @@ you hold is behind, run "pinloop guide --skill" with the version number written
 in your saved copy; the instructions then open with a notice when yours is
 older, and print nothing extra when it is current.`,
 
+  fit: `Local to this fork. It does not search and it does not judge. It prints the
+count plan for the AE seats this copy is tuned for, screens postings already
+in hand, and writes the profile documents judge reads.
+
+With no action, or with "plan", it prints the counts to run before any pull,
+and the one pull to run after those counts come back small enough to spend.
+"docs" writes the profile documents onto this machine and does not upload them.
+"load" uploads those documents with "pinloop profile put", and refuses until
+"pinloop login" has been run. "score" reads Pinloop JSON from standard input
+and screens each posting as no, weak, fair, or strong. That screen is not a
+judge verdict. --json prints the same answers as JSON.
+
+The plan names no dollar figure. The resume stays on this machine until load.`,
+
   guide: `Prints these instructions. With no part named it prints all of them; with the
 name of a command after it, like "pinloop guide judge", it prints that command's
 part only. It works whether or not anybody is signed in. --skill takes the

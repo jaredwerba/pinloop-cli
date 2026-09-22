@@ -131,6 +131,7 @@ import { fractionOf, postingNamed, withSeparators } from './format.ts';
 import { postingRow, summaryLine, tabRow, verdictRow } from './rows.ts';
 import { openScreen, type Screen } from './screen.ts';
 import { CLI_VERSION } from './version.ts';
+import { addFitCommand } from '../fit/run.ts';
 import {
   CONFIG_DIR_ENV_VAR,
   CREDENTIALS_FILENAME,
@@ -4028,6 +4029,7 @@ export function buildProgram(): Command {
 
   addJudgeCommands(program);
   addProfileCommands(program);
+  addFitCommand(program);
   addRoutineCommands(program);
   addScheduleCommands(program);
   addWatchCommands(program);
