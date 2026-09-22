@@ -2118,6 +2118,43 @@ judge verdict. --json prints the same answers as JSON.
 
 The plan names no dollar figure. The resume stays on this machine until load.`,
 
+  'intake boards': `Local to this fork. It fetches postings from public board APIs, such as
+"greenhouse:token", "lever:token" and "ashby:token", screens each one, and
+stores them on this machine. With no specs typed it uses this fork's default
+board list. Nothing here touches the Pinloop server, and nothing is collected
+on a timer: a posting is stored because this command ran. --json prints the
+counts, the errors and the rows added.`,
+
+  'intake serve': `Local to this fork. It runs a small HTTP endpoint on this machine, by default
+127.0.0.1:7788, that stores postings other tools push to it. POST to / with one
+row or a rows array, and GET /status to read today's counts. The endpoint keeps
+running until the process is stopped.`,
+
+  'intake day': `Local to this fork. It reads back the postings intake has stored, from today
+or the last --days days, printing each with its screen verdict, title, employer
+and source. --screen strong (or weak, fair or no) keeps only rows with that
+verdict, and --json prints the rows as JSON.`,
+
+  'intake brief': `Local to this fork. Given the url of a posting intake has stored, it prints
+the stored description rendered as the section-0 block the resume factory reads.
+It touches no network and invents nothing: if no posting with that url was
+stored in the last --days days, it says so and prints nothing in its place.
+--out writes the block to a file instead of standard output.`,
+
+  'intake compact': `Local to this fork. It deletes stored intake day files older than --keep-days
+(7 by default) and strips stored descriptions older than 48 hours, keeping the
+description of any url that has been shortlisted. It prints what it removed and
+the bytes before and after; --json prints the same as JSON.`,
+
+  'intake status': `Local to this fork. It prints today's stored intake count, the day's target,
+and how the stored rows break down by screen verdict. It reads only what
+intake has stored on this machine.`,
+
+  mcp: `Local to this fork. It runs the MCP server over standard input and standard
+output, exposing intake and fit as MCP tools, so another tool on this machine
+can drive them without a shell. It keeps running until its standard input
+closes.`,
+
   guide: `Prints these instructions. With no part named it prints all of them; with the
 name of a command after it, like "pinloop guide judge", it prints that command's
 part only. It works whether or not anybody is signed in. --skill takes the

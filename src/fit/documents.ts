@@ -20,13 +20,25 @@ export type FitDocument = {
 };
 
 const PHONE = /\(\d{3}\)\s*\d{3}-\d{4}/g;
+/** Dollar figures, quota percentages, and rank lines stay in the local resume. */
+const DOLLAR = /\$\s*[\d,.]+\s*(?:K|M|MM|B|USD|ARR|annual(?:ly)?|pipeline)?\b/gi;
+const QUOTA_PCT = /\b\d{1,3}(?:\.\d)?\s?%\s*(?:of\s*)?quota\b/gi;
+const PERCENT = /\b\d{1,3}(?:\.\d)?\s?%/g;
+const RANK = /\btop\s*\d+\s*(?:of|out of)\s*[\d,]+/gi;
+const CLUB = /(?:2\s*[×x]\s*)?president['’]s?\s+club(?:\s*\(fy\d{2}(?:,\s*fy\d{2})*\))?/gi;
 
-/** Drops the template's instruction blocks and the phone number. */
 export function backgroundFromResume(markdown: string): string {
   const withoutBlocks = markdown
     .replace(/\[GROKBOT[\s\S]*?\[GROKBOT_OUTPUT\]/g, '')
     .replace(/\[GROKBOT[^\]]*\][^\n]*/g, '');
-  return withoutBlocks.replace(PHONE, '[phone omitted]').trim() + '\n';
+  return withoutBlocks
+    .replace(PHONE, '[phone omitted]')
+    .replace(DOLLAR, '[figure omitted]')
+    .replace(QUOTA_PCT, '[quota omitted]')
+    .replace(PERCENT, '[percent omitted]')
+    .replace(RANK, '[rank omitted]')
+    .replace(CLUB, '[recognition omitted]')
+    .trim() + '\n';
 }
 
 export function defaultResumePath(): string {

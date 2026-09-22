@@ -1,0 +1,3000 @@
+{
+  "rows": [
+    {
+      "id": "greenhouse:anthropic:5391376008",
+      "title": "Account Executive - DNB",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5391381008",
+      "title": "Account Executive - Public Sector (ASEAN)",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:4461450008",
+      "title": "Account Executive, AI Native",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5391313008",
+      "title": "Account Executive, Startups",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5400138008",
+      "title": "Account Executive, Startups",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5391499008",
+      "title": "Canada Public Sector Account Executive",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Canada, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5391340008",
+      "title": "Enterprise Account Executive - DNB",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is South Korea, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5225003008",
+      "title": "Enterprise Account Executive - Energy & Utilities",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5341664008",
+      "title": "Enterprise Account Executive - FSI",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is South Korea, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5391322008",
+      "title": "Enterprise Account Executive - Industries Generalist",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Australia, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5391372008",
+      "title": "Enterprise Account Executive - Industries Generalist (ASEAN)",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5287249008",
+      "title": "Enterprise Account Executive - Life Sciences",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5218573008",
+      "title": "Enterprise Account Executive - Retail",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5219967008",
+      "title": "Enterprise Account Executive - Retail / CPG / Trading",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5391336008",
+      "title": "Enterprise Account Executive - Retail/CPG",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is South Korea, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5391293008",
+      "title": "Enterprise Account Executive, Automotive",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is France, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5428032008",
+      "title": "Enterprise Account Executive, Banking",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Switzerland, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5248895008",
+      "title": "Enterprise Account Executive, Digital Native Business",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5118189008",
+      "title": "Enterprise Account Executive, DoW/IC",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5194670008",
+      "title": "Enterprise Account Executive, Federal Civilian Sales",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5196023008",
+      "title": "Enterprise Account Executive, Federal Civilian Sales - Commerce & Interior",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5196014008",
+      "title": "Enterprise Account Executive, Federal Civilian Sales - Transport & Land",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5160180008",
+      "title": "Enterprise Account Executive, Federal Partners Sales",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5391297008",
+      "title": "Enterprise Account Executive, Financial Services",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Germany, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5104753008",
+      "title": "Enterprise Account Executive, Financial Services & Insurance",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5391301008",
+      "title": "Enterprise Account Executive, Industries",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Germany, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5391289008",
+      "title": "Enterprise Account Executive, Insurance",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5237973008",
+      "title": "Enterprise Account Executive, Manufacturing",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5428030008",
+      "title": "Enterprise Account Executive, Pharmaceuticals & Life Sciences",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Germany, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5426621008",
+      "title": "Enterprise Account Executive, Public Sector, DACH",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Germany, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5104756008",
+      "title": "Enterprise Account Executive, System Integrators",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5096041008",
+      "title": "Enterprise Account Executive, Telecommunications",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:4423394008",
+      "title": "Growth Account Executive, AI Native",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5079916008",
+      "title": "Growth Account Executive, Startups",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5391309008",
+      "title": "Growth Account Executive, Startups",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5282833008",
+      "title": "Manager, Account Executive - Financial Services",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:4931772008",
+      "title": "Mid-Market Account Executive, Industries",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5077996008",
+      "title": "Mid-Market Account Executive, Tech",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5291731008",
+      "title": "Partner Account Manager",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5171950008",
+      "title": "Partner Sales Manager, Systems Integrators",
+      "company": "Anthropic",
+      "screen": "weak",
+      "reason": "Anthropic is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:anthropic:5391344008",
+      "title": "Sales Director, Enterprise",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is South Korea, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5221916008",
+      "title": "Sales Manager, Nonprofit, EMEA",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5415461008",
+      "title": "Scaled Growth Account Executive, AI Native",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5082402008",
+      "title": "Senior Partner Account Manager –Global Systems Integrator Alliances",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5391233008",
+      "title": "Senior Partner Sales Manager, Systems Integrators - EMEA & North",
+      "company": "Anthropic",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:anthropic:5058191008",
+      "title": "Strategic Account Executive, Asset & Wealth Management",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5074997008",
+      "title": "Strategic Account Executive, Healthcare",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5379806008",
+      "title": "Strategic Account Executive, Industries",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:4986288008",
+      "title": "Strategic Account Executive, Insurance",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5041290008",
+      "title": "Strategic Account Executive, Investment Banking & Capital Markets",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5074995008",
+      "title": "Strategic Account Executive, Life Sciences",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5041299008",
+      "title": "Strategic Account Executive, Retail & Commercial Banking",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5108111008",
+      "title": "Strategic Account Executive, Tech",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5126008008",
+      "title": "Strategic Account Executive, Tech",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:anthropic:5133331008",
+      "title": "Strategic Growth Account Executive",
+      "company": "Anthropic",
+      "screen": "strong",
+      "reason": "seller title at Anthropic"
+    },
+    {
+      "id": "greenhouse:appian:8213846",
+      "title": "Account Executive",
+      "company": "Appian Corporation",
+      "screen": "no",
+      "reason": "country is Italy, not United States"
+    },
+    {
+      "id": "greenhouse:appian:8030538",
+      "title": "Account Executive",
+      "company": "Appian Corporation",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:appian:7841078",
+      "title": "Account Executive - Northern Europe",
+      "company": "Appian Corporation",
+      "screen": "no",
+      "reason": "country is Sweden, not United States"
+    },
+    {
+      "id": "greenhouse:appian:8069139",
+      "title": "Account Executive - Northern Europe",
+      "company": "Appian Corporation",
+      "screen": "no",
+      "reason": "country is Netherlands, not United States"
+    },
+    {
+      "id": "greenhouse:appian:8077286",
+      "title": "Enterprise Account Executive - 4th Estate",
+      "company": "Appian Corporation",
+      "screen": "strong",
+      "reason": "seller title at Appian"
+    },
+    {
+      "id": "greenhouse:appian:8127009",
+      "title": "Enterprise Account Executive - 4th Estate",
+      "company": "Appian Corporation",
+      "screen": "strong",
+      "reason": "seller title at Appian"
+    },
+    {
+      "id": "greenhouse:appian:8079403",
+      "title": "Enterprise Account Executive - Department of Homeland Security",
+      "company": "Appian Corporation",
+      "screen": "strong",
+      "reason": "seller title at Appian"
+    },
+    {
+      "id": "greenhouse:appian:8127018",
+      "title": "Enterprise Account Executive - Department of Homeland Security",
+      "company": "Appian Corporation",
+      "screen": "strong",
+      "reason": "seller title at Appian"
+    },
+    {
+      "id": "greenhouse:appian:8180829",
+      "title": "Enterprise Account Executive - Financial Services",
+      "company": "Appian Corporation",
+      "screen": "strong",
+      "reason": "seller title at Appian"
+    },
+    {
+      "id": "greenhouse:appian:8035233",
+      "title": "Enterprise Account Executive - HHS",
+      "company": "Appian Corporation",
+      "screen": "strong",
+      "reason": "seller title at Appian"
+    },
+    {
+      "id": "greenhouse:appian:8077282",
+      "title": "Enterprise Account Executive - Intelligence Community",
+      "company": "Appian Corporation",
+      "screen": "strong",
+      "reason": "seller title at Appian"
+    },
+    {
+      "id": "greenhouse:appian:8127023",
+      "title": "Enterprise Account Executive - Intelligence Community",
+      "company": "Appian Corporation",
+      "screen": "strong",
+      "reason": "seller title at Appian"
+    },
+    {
+      "id": "greenhouse:appian:8127015",
+      "title": "Enterprise Account Executive - US Army",
+      "company": "Appian Corporation",
+      "screen": "strong",
+      "reason": "seller title at Appian"
+    },
+    {
+      "id": "greenhouse:appian:8077278",
+      "title": "Enterprise Account Executive - US Army",
+      "company": "Appian Corporation",
+      "screen": "strong",
+      "reason": "seller title at Appian"
+    },
+    {
+      "id": "greenhouse:appian:7997452",
+      "title": "Partner Account Director - Public Sector",
+      "company": "Appian Corporation",
+      "screen": "weak",
+      "reason": "Appian is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:appian:7981980",
+      "title": "Partner Sales Director",
+      "company": "Appian Corporation",
+      "screen": "no",
+      "reason": "country is Germany, not United States"
+    },
+    {
+      "id": "greenhouse:appian:8066946",
+      "title": "Partner Sales Director, UKI",
+      "company": "Appian Corporation",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:appian:7973751",
+      "title": "Senior Partner Account Manager – Public Sector Distribution",
+      "company": "Appian Corporation",
+      "screen": "strong",
+      "reason": "seller title at Appian"
+    },
+    {
+      "id": "ashby:braintrust:c1233d75-570e-463e-ad94-c265c3d10be7",
+      "title": "Account Executive, Digital Natives (West Region)",
+      "company": "Braintrust",
+      "screen": "strong",
+      "reason": "seller title at Braintrust"
+    },
+    {
+      "id": "ashby:braintrust:7f372e5a-0870-4662-b5c6-7f76c1234fda",
+      "title": "Enterprise Account Executive (East Region)",
+      "company": "Braintrust",
+      "screen": "strong",
+      "reason": "seller title at Braintrust"
+    },
+    {
+      "id": "ashby:braintrust:2389a7b5-399e-479d-9da3-66e3d30e0a72",
+      "title": "Enterprise Account Executive (West Region)",
+      "company": "Braintrust",
+      "screen": "strong",
+      "reason": "seller title at Braintrust"
+    },
+    {
+      "id": "ashby:braintrust:c3face66-22e6-4cde-bf72-f88f0387b498",
+      "title": "Strategic Account Executive (Central Region)",
+      "company": "Braintrust",
+      "screen": "strong",
+      "reason": "seller title at Braintrust"
+    },
+    {
+      "id": "ashby:braintrust:1eff314f-8261-484b-9ead-e44646d79003",
+      "title": "Strategic Account Executive (Central Region)",
+      "company": "Braintrust",
+      "screen": "strong",
+      "reason": "seller title at Braintrust"
+    },
+    {
+      "id": "ashby:braintrust:bc066755-93a0-4a87-a15c-342cbc4c9157",
+      "title": "Strategic Account Executive (East Region)",
+      "company": "Braintrust",
+      "screen": "strong",
+      "reason": "seller title at Braintrust"
+    },
+    {
+      "id": "ashby:braintrust:19d791ab-1e90-4182-8a96-df697b8adf19",
+      "title": "Strategic Account Executive (West Region)",
+      "company": "Braintrust",
+      "screen": "strong",
+      "reason": "seller title at Braintrust"
+    },
+    {
+      "id": "ashby:braintrust:94d1dc5e-e62b-4294-b6fa-de025b1ed30a",
+      "title": "Strategic Account Executive, EMEA",
+      "company": "Braintrust",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:coreweave:4688540006",
+      "title": "Account Executive - Greenfield",
+      "company": "CoreWeave",
+      "screen": "strong",
+      "reason": "seller title at CoreWeave"
+    },
+    {
+      "id": "greenhouse:coreweave:4690150006",
+      "title": "Account Executive - Greenfield - Toronto",
+      "company": "CoreWeave",
+      "screen": "no",
+      "reason": "country is Canada, not United States"
+    },
+    {
+      "id": "greenhouse:coreweave:4705797006",
+      "title": "Account Manager - Engaged - New York",
+      "company": "CoreWeave",
+      "screen": "strong",
+      "reason": "seller title at CoreWeave"
+    },
+    {
+      "id": "greenhouse:coreweave:4705794006",
+      "title": "Account Manager, Engaged - Austin",
+      "company": "CoreWeave",
+      "screen": "strong",
+      "reason": "seller title at CoreWeave"
+    },
+    {
+      "id": "greenhouse:coreweave:4705779006",
+      "title": "Account Manager, Engaged - Seattle",
+      "company": "CoreWeave",
+      "screen": "strong",
+      "reason": "seller title at CoreWeave"
+    },
+    {
+      "id": "greenhouse:coreweave:4705786006",
+      "title": "Account Manager, Engaged - Sunnyvale",
+      "company": "CoreWeave",
+      "screen": "strong",
+      "reason": "seller title at CoreWeave"
+    },
+    {
+      "id": "greenhouse:coreweave:4701504006",
+      "title": "Sales Manager, Greenfield",
+      "company": "CoreWeave",
+      "screen": "weak",
+      "reason": "CoreWeave is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:coreweave:4686509006",
+      "title": "Strategic Account Manager",
+      "company": "CoreWeave",
+      "screen": "strong",
+      "reason": "seller title at CoreWeave"
+    },
+    {
+      "id": "ashby:crusoe:60417d4a-e972-4973-ba51-ef6e3fadb7c2",
+      "title": "Enterprise Account Executive",
+      "company": "Crusoe",
+      "screen": "strong",
+      "reason": "seller title at Crusoe"
+    },
+    {
+      "id": "ashby:crusoe:90beaf70-84d5-484d-8686-44c7dceff271",
+      "title": "Enterprise Account Executive, NYC",
+      "company": "Crusoe",
+      "screen": "strong",
+      "reason": "seller title at Crusoe"
+    },
+    {
+      "id": "ashby:crusoe:d27a721b-6a93-4272-84f6-6e9f608e293a",
+      "title": "Senior Sales Director",
+      "company": "Crusoe",
+      "screen": "weak",
+      "reason": "Crusoe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:databricks:8438918002",
+      "title": "(GCR) Emerging Enterprise Startup Core Account Executive",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:6918763002",
+      "title": "Account Executive",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is India, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8758263002",
+      "title": "Account Executive, Commercial - Hunter",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:7726495002",
+      "title": "Account Executive, Singapore",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8441865002",
+      "title": "Core Account Executive - Public Sector",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Australia, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8737153002",
+      "title": "Digital Natives Account Executive",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8644183002",
+      "title": "DNB Geo Hunter Account Executive",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:7716357002",
+      "title": "Emerging Enterprise Account Executive",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8194916002",
+      "title": "Emerging Enterprise Account Executive",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8695183002",
+      "title": "Enterprise Account Executive - CMEG",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8819012002",
+      "title": "Enterprise Account Executive - Federal",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Australia, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8610933002",
+      "title": "Enterprise Account Executive - Financial Services",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8440900002",
+      "title": "Enterprise Account Executive - FSI",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8588516002",
+      "title": "Enterprise Account Executive - Gaming",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:7841080002",
+      "title": "Enterprise Account Executive - Media",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8440922002",
+      "title": "Enterprise Account Executive - Public Sector",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8206138002",
+      "title": "Enterprise Account Executive - Public Sector",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "location is Remote - United Kingdom, which names a country other than the United States, and the posting stores no United States country"
+    },
+    {
+      "id": "greenhouse:databricks:8641388002",
+      "title": "Enterprise Account Executive - QSR",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8814526002",
+      "title": "Enterprise Account Executive - RCT",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8582321002",
+      "title": "Enterprise Account Executive - Retail",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8440917002",
+      "title": "Enterprise Account Executive - Retail/CPG",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8596447002",
+      "title": "Enterprise Account Executive - South Africa",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8808527002",
+      "title": "Enterprise Account Executive - Telecommunications",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8700398002",
+      "title": "Enterprise Account Executive - UK Public Sector",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8737171002",
+      "title": "Enterprise Account Executive – Utilities",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8589349002",
+      "title": "Enterprise Account Executive, Benelux",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Netherlands, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8816440002",
+      "title": "Enterprise Account Executive, Dept. of Transportation",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8686323002",
+      "title": "Enterprise Account Executive, Healthcare",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8736885002",
+      "title": "Enterprise Account Executive, Nordics",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Sweden, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8631661002",
+      "title": "Enterprise Account Executive, State and Local",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8604250002",
+      "title": "Enterprise Account Executive, State and Local",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8582323002",
+      "title": "Enterprise Core Account Executive, Public Sector",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Canada, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8770533002",
+      "title": "Enterprise Geo Hunter Account Executive - Financial Services",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8642499002",
+      "title": "Enterprise Hunter Account Executive, Benelux",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Netherlands, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8394014002",
+      "title": "Enterprise Sales Director, Utilities & Telco",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8707779002",
+      "title": "Geo Core Account Executive, Central America & Caribbean",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:7856268002",
+      "title": "Hunter Account Executive - Philippines",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8652588002",
+      "title": "Named Core Account Executive",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Canada, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8693555002",
+      "title": "Named Core Account Executive",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Canada, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8700402002",
+      "title": "Named Core Account Executive - Retail",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Germany, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8537058002",
+      "title": "Named Core Account Executive (Public Sector)",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8770524002",
+      "title": "Named Core Account Executive-Manufacturing",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8536436002",
+      "title": "Named Enterprise Account Executive",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Sweden, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8536432002",
+      "title": "Named Enterprise Account Executive",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "location is Remote - Denmark, which names a country other than the United States, and the posting stores no United States country"
+    },
+    {
+      "id": "greenhouse:databricks:8660983002",
+      "title": "Named Enterprise Account Executive, Financial Services",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Italy, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8639997002",
+      "title": "Partner Sales Director, Manufacturing & Energy",
+      "company": "Databricks",
+      "screen": "weak",
+      "reason": "Databricks is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:databricks:8506061002",
+      "title": "Pre-sales Manager, Field Engineering - Named Accounts",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "location is Remote - Denmark, which names a country other than the United States, and the posting stores no United States country"
+    },
+    {
+      "id": "greenhouse:databricks:8438936002",
+      "title": "Startup Hunter Account Executive",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8643831002",
+      "title": "Startup Hunter Account Executive",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Canada, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8815165002",
+      "title": "Strategic Account Executive",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8622413002",
+      "title": "Strategic Account Executive - Consumer Goods Industry",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8431457002",
+      "title": "Strategic Account Executive-TELCO",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8626215002",
+      "title": "Strategic Account Executive, Life Science",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Denmark, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8652590002",
+      "title": "Strategic Account Executive, Public Sector",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Canada, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8736883002",
+      "title": "Strategic Account Executive, Transportation and Logistics",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Denmark, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8766584002",
+      "title": "Strategic Core Account Executive",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8628029002",
+      "title": "Strategic Core Account Executive",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is France, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8656210002",
+      "title": "Strategic Core Account Executive - Automotive/OEM",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Germany, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8353248002",
+      "title": "Strategic Core Account Executive - Banking, m/f/d",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Germany, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8431459002",
+      "title": "Strategic Core Account Executive - CMEG - Telco",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8466807002",
+      "title": "Strategic Core Account Executive - Financial Services",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Canada, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8353246002",
+      "title": "Strategic Core Account Executive - Insurance, m/f/d",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Germany, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8458710002",
+      "title": "Strategic Core Account Executive - Retail",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8193165002",
+      "title": "Strategic Core Account Executive, Federal System Integrators",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8191741002",
+      "title": "Strategic Core Account Executive, Monterrey",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Mexico, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8644185002",
+      "title": "Strategic DNB Hunter Account Executive (China)",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is China, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8585188002",
+      "title": "Strategic DNB Hunter Account Executive (China)",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8633152002",
+      "title": "Strategic Enterprise Account Executive - CMEG",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8770530002",
+      "title": "Strategic Enterprise Account Executive - Financial Services",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8596443002",
+      "title": "Strategic Enterprise Account Executive - Insurance",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:databricks:8648999002",
+      "title": "Strategic Enterprise Account Executive, Life Sciences",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8599138002",
+      "title": "Strategic Enterprise Account Executive, Life Sciences",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8645718002",
+      "title": "Strategic Enterprise Account Executive, Life Sciences",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8790046002",
+      "title": "Strategic Enterprise Account Executive, Life Sciences",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8770526002",
+      "title": "Strategic Enterprise Account Executive, State and Local",
+      "company": "Databricks",
+      "screen": "strong",
+      "reason": "seller title at Databricks"
+    },
+    {
+      "id": "greenhouse:databricks:8737167002",
+      "title": "Strategic Hunter Account Executive",
+      "company": "Databricks",
+      "screen": "no",
+      "reason": "country is France, not United States"
+    },
+    {
+      "id": "ashby:fireworks:1e8064d8-27ed-41b9-9d7a-1f9129e24ce0",
+      "title": "Account Executive, AI Native Team",
+      "company": "Fireworks",
+      "screen": "strong",
+      "reason": "seller title at Fireworks"
+    },
+    {
+      "id": "ashby:fireworks:fab3e536-5f1d-4ecc-8446-899e8c056672",
+      "title": "Account Executive, AI Native Team",
+      "company": "Fireworks",
+      "screen": "strong",
+      "reason": "seller title at Fireworks"
+    },
+    {
+      "id": "ashby:fireworks:85e542b8-6349-48a7-b1b4-3818baf945aa",
+      "title": "Enterprise Account Executive",
+      "company": "Fireworks",
+      "screen": "strong",
+      "reason": "seller title at Fireworks"
+    },
+    {
+      "id": "ashby:fireworks:2facf9c7-9d73-4828-bbab-8adc37708f4c",
+      "title": "Enterprise Account Executive, EMEA",
+      "company": "Fireworks",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "ashby:fireworks:0e0c2c47-6aa2-4b8c-98f9-19fc51bc2ea2",
+      "title": "Enterprise Account Executive, Singapore",
+      "company": "Fireworks",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "ashby:fireworks:b6366240-4106-4898-ac07-af0c266b78f2",
+      "title": "Senior Account Executive, AI Native Team",
+      "company": "Fireworks",
+      "screen": "strong",
+      "reason": "seller title at Fireworks"
+    },
+    {
+      "id": "ashby:fireworks:1c4bd96f-108a-4217-a30d-f110ce54bb46",
+      "title": "Senior Sales Manager, AI Native",
+      "company": "Fireworks",
+      "screen": "weak",
+      "reason": "Fireworks is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:fireworks:a2a1cdd0-c79c-4023-b8ba-3c1349aedbdb",
+      "title": "Strategic Pursuits Account Executive, AI Native",
+      "company": "Fireworks",
+      "screen": "strong",
+      "reason": "seller title at Fireworks"
+    },
+    {
+      "id": "greenhouse:launchdarkly:7993283003",
+      "title": "Corporate Account Executive",
+      "company": "LaunchDarkly",
+      "screen": "strong",
+      "reason": "seller title at LaunchDarkly"
+    },
+    {
+      "id": "greenhouse:launchdarkly:7978738003",
+      "title": "Corporate Account Executive - EMEA",
+      "company": "LaunchDarkly",
+      "screen": "strong",
+      "reason": "seller title at LaunchDarkly"
+    },
+    {
+      "id": "greenhouse:launchdarkly:7999776003",
+      "title": "Enterprise Acquisition Account Executive",
+      "company": "LaunchDarkly",
+      "screen": "strong",
+      "reason": "seller title at LaunchDarkly"
+    },
+    {
+      "id": "greenhouse:launchdarkly:7978697003",
+      "title": "Mid Market Account Executive - EMEA",
+      "company": "LaunchDarkly",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:launchdarkly:7803175003",
+      "title": "Mid-Market Account Executive",
+      "company": "LaunchDarkly",
+      "screen": "strong",
+      "reason": "seller title at LaunchDarkly"
+    },
+    {
+      "id": "greenhouse:launchdarkly:7588897003",
+      "title": "Mid-Market Account Executive - Singapore",
+      "company": "LaunchDarkly",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:launchdarkly:7986944003",
+      "title": "Senior Enterprise Account Executive - Central",
+      "company": "LaunchDarkly",
+      "screen": "strong",
+      "reason": "seller title at LaunchDarkly"
+    },
+    {
+      "id": "greenhouse:launchdarkly:7991855003",
+      "title": "Senior Enterprise Account Executive - East",
+      "company": "LaunchDarkly",
+      "screen": "strong",
+      "reason": "seller title at LaunchDarkly"
+    },
+    {
+      "id": "greenhouse:launchdarkly:7999676003",
+      "title": "Senior Enterprise Account Executive - Singapore",
+      "company": "LaunchDarkly",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:launchdarkly:7894901003",
+      "title": "Strategic Account Executive - East",
+      "company": "LaunchDarkly",
+      "screen": "strong",
+      "reason": "seller title at LaunchDarkly"
+    },
+    {
+      "id": "greenhouse:mercury:6167549004",
+      "title": "Account Executive",
+      "company": "Mercury",
+      "screen": "strong",
+      "reason": "seller title at Mercury"
+    },
+    {
+      "id": "greenhouse:mercury:6199479004",
+      "title": "Account Executive - Technology",
+      "company": "Mercury",
+      "screen": "strong",
+      "reason": "seller title at Mercury"
+    },
+    {
+      "id": "greenhouse:mercury:6141465004",
+      "title": "Senior Account Executive - Credit & Lending Products",
+      "company": "Mercury",
+      "screen": "strong",
+      "reason": "seller title at Mercury"
+    },
+    {
+      "id": "greenhouse:nebius:4825124101",
+      "title": "Account Executive",
+      "company": "Nebius",
+      "screen": "strong",
+      "reason": "seller title at Nebius"
+    },
+    {
+      "id": "greenhouse:nebius:4957029101",
+      "title": "Account Executive - South Korea",
+      "company": "Nebius",
+      "screen": "no",
+      "reason": "country is South Korea, not United States"
+    },
+    {
+      "id": "greenhouse:nebius:4971914101",
+      "title": "Account Executive, AI Native West",
+      "company": "Nebius",
+      "screen": "strong",
+      "reason": "seller title at Nebius"
+    },
+    {
+      "id": "greenhouse:nebius:4959063101",
+      "title": "Account Executive, Digital Native",
+      "company": "Nebius",
+      "screen": "strong",
+      "reason": "seller title at Nebius"
+    },
+    {
+      "id": "greenhouse:nebius:4951568101",
+      "title": "Founding Commercial Account Executive, EMEA - Tavily",
+      "company": "Nebius",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:nebius:4960970101",
+      "title": "Founding Enterprise Account Executive, UK - Tavily",
+      "company": "Nebius",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:nebius:4864470101",
+      "title": "Head of Sales Engineering - Token Factory",
+      "company": "Nebius",
+      "screen": "weak",
+      "reason": "Nebius is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:nebius:4967033101",
+      "title": "Partner Field Sales Manager",
+      "company": "Nebius",
+      "screen": "weak",
+      "reason": "Nebius is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:nebius:4831199101",
+      "title": "Technical Account Manager - Token Factory",
+      "company": "Nebius",
+      "screen": "strong",
+      "reason": "seller title at Nebius"
+    },
+    {
+      "id": "greenhouse:nebius:4816975101",
+      "title": "Technical Account Manager - Token Factory",
+      "company": "Nebius",
+      "screen": "strong",
+      "reason": "seller title at Nebius"
+    },
+    {
+      "id": "ashby:openai:b5399d89-a3d1-4d2b-b6d7-f50e052f0d38",
+      "title": "Account Director, Commercial",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:52263a22-1621-4dbb-9a11-ae4490f2acc8",
+      "title": "Account Director, Digital Native",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is South Korea, not United States"
+    },
+    {
+      "id": "ashby:openai:fbb68247-eb54-4ad1-94b4-26e0dc24fd23",
+      "title": "Account Director, Digital Native Enterprise",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:673ca4f5-b5dc-448f-be3c-4f888a6d13ed",
+      "title": "Account Director, Digital Native Large Enterprise",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:07fb9365-8e80-48fe-86df-08d60dd46f43",
+      "title": "Account Director, Digital Native New Business",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:d085d2ec-0256-4ecf-b493-81ea34942e51",
+      "title": "Account Director, Digital Natives",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is India, not United States"
+    },
+    {
+      "id": "ashby:openai:b65d4fb6-1624-4518-bf94-e57ddaa35193",
+      "title": "Account Director, Digital Natives",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "ashby:openai:6245809c-5646-4226-9f20-7bc88a4135aa",
+      "title": "Account Director, Digital Natives",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Australia, not United States"
+    },
+    {
+      "id": "ashby:openai:f5c3b504-3982-4d67-99ba-315b9e14f196",
+      "title": "Account Director, Digital Natives - France",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is France, not United States"
+    },
+    {
+      "id": "ashby:openai:4e51e1ac-3fe0-46b5-b036-6143826ecfa5",
+      "title": "Account Director, Digital Natives - Nordics",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Sweden, not United States"
+    },
+    {
+      "id": "ashby:openai:f4467078-033c-4638-ac7e-69a532276d85",
+      "title": "Account Director, Digital Natives Growth",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:9b64afcc-c0e0-4b2f-acce-4212b02da23a",
+      "title": "Account Director, Education",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Australia, not United States"
+    },
+    {
+      "id": "ashby:openai:de19228c-1120-4f70-9bbf-e66ec59cb666",
+      "title": "Account Director, Enterprise - Tokyo",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "ashby:openai:570df8ac-dacb-4686-b59c-ef48eed0580c",
+      "title": "Account Director, FSI - Japan",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "ashby:openai:569fcba5-c7a2-48ae-b580-e86e181adfd8",
+      "title": "Account Director, Government",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "location is Australia - Remote, which names a country other than the United States, and the posting stores no United States country"
+    },
+    {
+      "id": "ashby:openai:93d9be71-6502-4e48-94c2-1c17724e2bc7",
+      "title": "Account Director, Healthcare",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:dceee17e-1e37-448b-acd3-2f97e41a6af7",
+      "title": "Account Director, Higher Education",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:24ade569-b2eb-4879-b6d3-82407ac0efe7",
+      "title": "Account Director, Insurance",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:25920df6-571d-4e05-aa12-384453f406f8",
+      "title": "Account Director, Large Enterprise",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is South Korea, not United States"
+    },
+    {
+      "id": "ashby:openai:ea738090-a7e0-41bd-b619-afeff9fd18e0",
+      "title": "Account Director, Large Enterprise",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Germany, not United States"
+    },
+    {
+      "id": "ashby:openai:88a57561-561b-4a14-bc43-78bc7f144164",
+      "title": "Account Director, Large Enterprise",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "ashby:openai:eb4e4757-94b6-4c7d-a3ba-35fad40c0859",
+      "title": "Account Director, Large Enterprise",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is India, not United States"
+    },
+    {
+      "id": "ashby:openai:8c95db0d-982e-43cf-95e4-e30cb09e6c9c",
+      "title": "Account Director, Large Enterprise",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:18f58952-c242-4562-8732-073a0ae8029e",
+      "title": "Account Director, Large Enterprise - Tokyo",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "ashby:openai:10208545-58dd-4cdb-91e1-69b1c2cabe3c",
+      "title": "Account Director, Large Enterprise (FSI)",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "ashby:openai:0b32c370-a2bb-4784-a326-67dfbb130ef5",
+      "title": "Account Director, Life Sciences",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:0ca205c9-42ec-4c19-8d43-00700b8c7fd2",
+      "title": "Account Director, Manufacturing",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:8a3fdf98-ad82-4082-ace0-9edb89bc8f6d",
+      "title": "Account Director, Mid-Market",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "ashby:openai:71f97dd6-63bc-4f86-8c34-dcb71577069a",
+      "title": "Account Director, Mid-Market",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Australia, not United States"
+    },
+    {
+      "id": "ashby:openai:fa312d19-bb9e-4569-b5ed-aed8aa45cd3b",
+      "title": "Account Director, Mid-Market",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "location is India - Remote, which names a country other than the United States, and the posting stores no United States country"
+    },
+    {
+      "id": "ashby:openai:da4a6959-0a9a-4090-ae12-e06e45fe2f28",
+      "title": "Account Director, Mid-Market Enterprise",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:e6050096-9dcc-4054-8f3c-02af8b5bcbeb",
+      "title": "Account Director, Public Sector - Tokyo",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "ashby:openai:0b428c6d-7c06-4feb-82b6-5bbe5cda2a18",
+      "title": "Account Director, Startups",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:9c5161d9-6b13-4a88-b8b9-f17857965897",
+      "title": "Account Director, Startups",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Sweden, not United States"
+    },
+    {
+      "id": "ashby:openai:ac0922d9-4731-40a1-b8a3-17b912e1a13b",
+      "title": "Account Director, Startups (Mandarin-Speaking)",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "ashby:openai:32905f5c-9405-4073-bc65-c57fcf55a83d",
+      "title": "Account Director, Startups | Tokyo",
+      "company": "OpenAI",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "ashby:openai:72c497c3-0350-42d6-b538-abd9e9af9041",
+      "title": "Account Director, Startups Expansion",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:8b0ac3a0-53ac-49e7-9030-85d9b73d1012",
+      "title": "Account Director, State and Local Government",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:fd5522f1-8e39-4d60-8b8a-34fae61104cb",
+      "title": "Federal Account Director, Intelligence Community",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:dc0b907b-f833-4559-8fd8-d3d4c80b58d8",
+      "title": "Federal Account Director, National Security",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:openai:ad0b2114-d2be-4c64-9226-d60de56271a4",
+      "title": "Greenfield Sales Manager, Startups",
+      "company": "OpenAI",
+      "screen": "weak",
+      "reason": "OpenAI is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:scaleai:4646946005",
+      "title": "Enterprise Account Executive",
+      "company": "Scale AI",
+      "screen": "strong",
+      "reason": "seller title at Scale AI"
+    },
+    {
+      "id": "greenhouse:scaleai:4689917005",
+      "title": "Enterprise Account Executive (Financial Services)",
+      "company": "Scale AI",
+      "screen": "strong",
+      "reason": "seller title at Scale AI"
+    },
+    {
+      "id": "greenhouse:scaleai:4689919005",
+      "title": "Enterprise Account Executive (Healthcare & Life Sciences)",
+      "company": "Scale AI",
+      "screen": "strong",
+      "reason": "seller title at Scale AI"
+    },
+    {
+      "id": "ashby:snowflake:87a3a6ce-e7a2-4ec4-8b25-f17a49beff4d",
+      "title": "Account Executive",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:6161d7ee-d0ff-4f5b-b7e3-39422c3766e3",
+      "title": "Account Executive - Acquisition",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:b6b385f9-6d27-4e1c-b7d6-8529bf3a101a",
+      "title": "Account Executive - Acquisition",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:7f726564-1ee7-4100-a95b-a00f780be810",
+      "title": "Account Executive Energy & Utilities",
+      "company": "Snowflake",
+      "screen": "no",
+      "reason": "country is France, not United States"
+    },
+    {
+      "id": "ashby:snowflake:1d940622-e9ae-4b70-80ac-81a55d350fa7",
+      "title": "Account Executive, Commercial",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:70766c82-db27-4196-843a-072c89fb8693",
+      "title": "Account Executive, Commercial Acquisition",
+      "company": "Snowflake",
+      "screen": "no",
+      "reason": "country is Canada, not United States"
+    },
+    {
+      "id": "ashby:snowflake:8a6365f5-454f-4a9e-b72f-29b09c02d55b",
+      "title": "Account Executive, Commercial Acquisition",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:64b28409-695b-438f-8914-43794f5d1501",
+      "title": "Account Executive, Commercial Acquisition",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:911f7715-3143-4948-82e0-5fd0bcc5726a",
+      "title": "Account Executive, Enterprise",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:e70eb2d2-0029-442b-8f7f-edde190d91f0",
+      "title": "Account Executive, Enterprise",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:98e2259e-80ac-4e17-8548-6a75e72007a2",
+      "title": "Account Executive, Enterprise",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:274a32ad-6f89-4dcb-861b-fb652b64144f",
+      "title": "Account Executive, Enterprise Acquisition",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:e032672d-34b3-4b3c-bcc0-e75a4fdc522b",
+      "title": "Account Executive, Enterprise Acquisition",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:d7af975f-e2ee-4df7-b946-97320a1ba5c7",
+      "title": "Account Executive, Enterprise Acquisition",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:89588286-28f8-495c-99d6-cfe4a169c006",
+      "title": "Account Executive, Enterprise Acquisition",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:9c72fcbe-c6f4-470c-b2ff-9fca085cccfd",
+      "title": "Account Executive, Majors Acquisition",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:06a24de6-e015-4215-bd21-8c21409d6058",
+      "title": "Commercial Account Executive",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:06210ca6-b608-4087-8796-ea85f5ca84df",
+      "title": "Enteprise Account Executive, Acquisition - Malaysia",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:003fc756-8afe-4edd-a7b7-b735c7bd6e77",
+      "title": "Enterprise Account Executive - Acquisition",
+      "company": "Snowflake",
+      "screen": "no",
+      "reason": "location is SG-Singapore, which names a country other than the United States, and the posting stores no United States country"
+    },
+    {
+      "id": "ashby:snowflake:4401580a-c2d4-4dc4-9544-dfd4df65cb51",
+      "title": "Enterprise Account Executive - Acquisition",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:d1fe51bc-42b1-4f24-9e19-69eecfed06ae",
+      "title": "Enterprise Account Executive - Expansion",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:159f0c00-6eed-4d93-a5cc-462a81fa651d",
+      "title": "Enterprise Account Executive - Observability",
+      "company": "Snowflake",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "ashby:snowflake:2bda263c-000e-4369-894e-6f535cc9d098",
+      "title": "Enterprise Account Executive – South Africa (Dubai)",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:84590287-8ab6-48f8-acf5-f68c7816a11f",
+      "title": "Enterprise Account Executive (Automotive)",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:e093b7c6-3c7a-47ce-860c-7c65a6f56b8d",
+      "title": "Enterprise Account Executive, Observability",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:a86e6240-0a4c-45e0-bf0a-435bec348bca",
+      "title": "Enterprise Account Executive, Observe",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:67efc76a-fd66-4fa8-b2a6-473baaf31249",
+      "title": "Enterprise Account Executive, Observe",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:9b8581c8-764c-44cf-aa40-f866e650cf6e",
+      "title": "Enterprise Account Executive, Observe",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:472ec137-a049-4f78-92eb-997d1a63bf7f",
+      "title": "Enterprise Account Executive, Observe",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:8e68b4f3-04bc-4da8-b8db-7731a9100c7f",
+      "title": "Enterprise Account Executive, Observe",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:ad8cc54b-b75e-48c6-bab8-fe0a314eb98e",
+      "title": "Enterprise Expansion Account Executive",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:a4a787f7-75f3-43d9-b46b-3441817abacb",
+      "title": "Expansion Account Executive - Life Sciences, Belgium",
+      "company": "Snowflake",
+      "screen": "no",
+      "reason": "location is BE-Belgium-Remote, which names a country other than the United States, and the posting stores no United States country"
+    },
+    {
+      "id": "ashby:snowflake:c67fe2e1-f4b6-44ae-989a-f6e9058cb1f2",
+      "title": "Global Account Manager, Telco",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:c6b398be-85db-4390-9c41-563185039dfb",
+      "title": "Majors Account Executive",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:453c015f-5266-4d88-844e-51934405f263",
+      "title": "Senior Education Sales Manager",
+      "company": "Snowflake",
+      "screen": "weak",
+      "reason": "Snowflake is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:snowflake:58fdbe96-8cd1-4519-b1dc-640603707252",
+      "title": "Sr. Account Executive, Majors, Financial Services",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:60fe0e63-528f-42db-96cf-bb26324287c5",
+      "title": "Sr. Partner Sales Manager, Majors - FSI",
+      "company": "Snowflake",
+      "screen": "weak",
+      "reason": "Snowflake is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:snowflake:cdebc456-bb4f-4cc7-84fc-dccb8499a8f6",
+      "title": "Strategic Account Executive, Majors Acquisition",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:e91c99b3-175c-44bf-b30f-3adf815c2aa3",
+      "title": "Technical Account Manager, Observe",
+      "company": "Snowflake",
+      "screen": "strong",
+      "reason": "seller title at Snowflake"
+    },
+    {
+      "id": "ashby:snowflake:1e6bd889-a244-4c5d-b31d-86e0dff927f8",
+      "title": "Technical Services Sales Manager",
+      "company": "Snowflake",
+      "screen": "weak",
+      "reason": "Snowflake is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8178881",
+      "title": "Account Executive - Enterprise, Growth",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Israel, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8196264",
+      "title": "Account Executive - Global Adaptive Pricing",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8122192",
+      "title": "Account Executive - LATAM",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Mexico, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8108891",
+      "title": "Account Executive - SEA, Platforms (Grower)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8188088",
+      "title": "Account Executive Product - Billing (Japanese Fluency)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8181024",
+      "title": "Account Executive Product - Fraud & Risk",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8203649",
+      "title": "Account Executive Product - Issuing & Treasury",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8175830",
+      "title": "Account Executive Product - Tax",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8138044",
+      "title": "Account Executive, AI Sales",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8204645",
+      "title": "Account Executive, AI Startups - Grower",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8130725",
+      "title": "Account Executive, AI Startups (Hunter)",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8077887",
+      "title": "Account Executive, Bridge",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8123027",
+      "title": "Account Executive, Commercial (Grower)",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8141211",
+      "title": "Account Executive, Commercial Hunter",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:7789539",
+      "title": "Account Executive, Commercial Hunter (Japanese Fluency)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:7893199",
+      "title": "Account Executive, Cross Border China",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8201690",
+      "title": "Account Executive, DACH, Commercial (Existing Business)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:7994330",
+      "title": "Account Executive, Enterprise - Hunter",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:7825578",
+      "title": "Account Executive, Enterprise (DACH Market)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Germany, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8107136",
+      "title": "Account Executive, Enterprise (Grower)",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:7993151",
+      "title": "Account Executive, Enterprise (Grower)",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8165275",
+      "title": "Account Executive, Enterprise (Hunter)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8114458",
+      "title": "Account Executive, Enterprise Grower (Israel)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Israel, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8129956",
+      "title": "Account Executive, Enterprise Grower, Platforms (Israel)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Israel, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8202836",
+      "title": "Account Executive, Enterprise Hunter (French-speaking)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is France, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:7528816",
+      "title": "Account Executive, Enterprise Hunter (Japanese fluency)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Japan, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:7576967",
+      "title": "Account Executive, Enterprise Platforms (Grower)",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:7961609",
+      "title": "Account Executive, Enterprise Platforms, Hunter",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Israel, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8075473",
+      "title": "Account Executive, Enterprise Platforms, Tier 2 Grower",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8041894",
+      "title": "Account Executive, Enterprise Platforms, Tier 2 Grower",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8114155",
+      "title": "Account Executive, Existing Business",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8119697",
+      "title": "Account Executive, Existing Business (Central Eastern Europe)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "location is Poland - Remote OR Romania - Remote, which names a country other than the United States, and the posting stores no United States country"
+    },
+    {
+      "id": "greenhouse:stripe:8048193",
+      "title": "Account Executive, Financial Services, Grower",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8121421",
+      "title": "Account Executive, Funded Startups - Israel",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Israel, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8121419",
+      "title": "Account Executive, Funded Startups — Hunter, Italy",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8079514",
+      "title": "Account Executive, hunter",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8130052",
+      "title": "Account Executive, Hunter (Central Eastern Europe)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "location is Poland - Remote OR Romania - Remote, which names a country other than the United States, and the posting stores no United States country"
+    },
+    {
+      "id": "greenhouse:stripe:8114402",
+      "title": "Account Executive, Nordics",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Sweden, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8222009",
+      "title": "Account Executive, Platforms - Hunter",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:7456957",
+      "title": "Account Executive, Platforms (Existing Business)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Australia, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:7298935",
+      "title": "Account Executive, Platforms (Hunter)",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8129702",
+      "title": "Account Executive, Platforms Hunter (German fluency)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8041076",
+      "title": "Account Executive, Privy",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8049828",
+      "title": "Account Executive, Product - Link",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8078082",
+      "title": "Account Executive, Product - Managed Payments",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8144513",
+      "title": "Account Executive, Product - Terminal",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8190054",
+      "title": "Account Executive, Product (Capital) - Hunter",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8196259",
+      "title": "Account Executive, Product (Payouts) - Hunter",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8196269",
+      "title": "Account Executive, Product (Payouts) - Hunter",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8190050",
+      "title": "Account Executive, Product Sales - Billing",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:7958961",
+      "title": "Account Executive, Product Sales - Billing (Velocity)",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8175828",
+      "title": "Account Executive, Product Sales - Currency Management",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8190416",
+      "title": "Account Executive, Product Sales - Currency Management",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8196275",
+      "title": "Account Executive, Product Sales - Currency Management",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:7456716",
+      "title": "Account Executive, Product Sales - Issuing and Treasury",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8068746",
+      "title": "Account Executive, Product Sales - Money Management APAC",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8040940",
+      "title": "Account Executive, Product Sales - Optimised Checkout",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8190048",
+      "title": "Account Executive, Product Sales - Tax",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8211151",
+      "title": "Account Executive, Product Sales (Billing) - Grower",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8196254",
+      "title": "Account Executive, Product Sales (Billing) - Hunter",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8113687",
+      "title": "Account Executive, Product Sales (Data Pipeline)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8114738",
+      "title": "Account Executive, Product Sales (Data)",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:7389692",
+      "title": "Account Executive, Product Sales (Terminal)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8068744",
+      "title": "Account Executive, Product Sales- Money Management ANZ",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Australia, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8029043",
+      "title": "Account Executive, Product Sales, Metronome (Hunter)",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8207708",
+      "title": "Account Executive, Retail (Grower)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8114157",
+      "title": "Account Executive, SMB (Benelux)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8156996",
+      "title": "Account Executive, SMB (Grower)",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:7277406",
+      "title": "Account Executive, SMB (Hunter)",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:7576999",
+      "title": "Account Executive, SMB Grower",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8129958",
+      "title": "Account Executive, SMB Hunter (Central Eastern Europe)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8213057",
+      "title": "Account Executive, SMB Hunter (DACH)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8128552",
+      "title": "Account Executive, Startups (Grower)",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8119498",
+      "title": "Account Executive, Startups SaaS Platforms Grower",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8157577",
+      "title": "Account Executive, Strategic Platform Partnerships",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8110261",
+      "title": "Account Executive, Strategics",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8130729",
+      "title": "Account Executive, UK Velocity Hunter",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8128632",
+      "title": "Account Executive, Velocity Platforms (Hunter)",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8109607",
+      "title": "Enterprise Account Executive - Hunter",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8102346",
+      "title": "Enterprise Account Executive -Grower",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8220653",
+      "title": "Enterprise Account Executive, Privy",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8196271",
+      "title": "Enterprise Account Executive, Privy",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8029128",
+      "title": "Enterprise Account Executive, Revenue Suite (Grower)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Australia, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8156998",
+      "title": "Head of Sales, Billing",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8174150",
+      "title": "Sales Manager (Greater China)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:7368924",
+      "title": "Sales Manager, Account Executives - Startups (Grower)",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8191722",
+      "title": "Sales Manager, Commercial (Grower)",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8191716",
+      "title": "Sales Manager, Commercial (Hunter)",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8191710",
+      "title": "Sales Manager, Commercial Grower (Healthcare)",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8174158",
+      "title": "Sales Manager, Enterprise",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Australia, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8191714",
+      "title": "Sales Manager, Enterprise - Growth",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8191718",
+      "title": "Sales Manager, Enterprise - Hunter",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8191704",
+      "title": "Sales Manager, Enterprise - LATAM",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Mexico, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8176737",
+      "title": "Sales Manager, Enterprise (Grower)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is France, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8176724",
+      "title": "Sales Manager, Enterprise CEE",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Poland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8155376",
+      "title": "Sales Manager, Enterprise Platforms, Grower (Tier 1)",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8155378",
+      "title": "Sales Manager, Enterprise Platforms, Hunter Team",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8209647",
+      "title": "Sales Manager, Enterprise Platforms, T2 Grower",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8125729",
+      "title": "Sales Manager, Funded Startups",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Germany, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8191720",
+      "title": "Sales Manager, Key Accounts - Enterprise",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8070701",
+      "title": "Sales Manager, Product - Issuing & Treasury",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8181036",
+      "title": "Sales Manager, Product- Fraud & Risk",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8176728",
+      "title": "Sales Manager, SMB",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8176730",
+      "title": "Sales Manager, SMB (German Speaker)",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8112959",
+      "title": "Sales Manager, SMB (Hunter)",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8141677",
+      "title": "Sales Manager, SoEU, SMB",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Ireland, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8191706",
+      "title": "Sales Manager, Startups - Hunter",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8163534",
+      "title": "Senior Sales Manager, AI",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8201700",
+      "title": "Senior Sales Manager, AI",
+      "company": "Stripe",
+      "screen": "weak",
+      "reason": "Stripe is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "greenhouse:stripe:8194397",
+      "title": "Strategic Account Executive, AI Sales",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8129954",
+      "title": "Strategic Account Executive, Platforms",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8044158",
+      "title": "Technical Account Manager",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Australia, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:8023524",
+      "title": "Technical Account Manager",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "location is Mexico City, which names a country other than the United States, and the posting stores no United States country"
+    },
+    {
+      "id": "greenhouse:stripe:7955056",
+      "title": "Technical Account Manager - GCN",
+      "company": "Stripe",
+      "screen": "no",
+      "reason": "country is Singapore, not United States"
+    },
+    {
+      "id": "greenhouse:stripe:7918088",
+      "title": "Technical Account Manager, AI User Segment",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "greenhouse:stripe:8142304",
+      "title": "Technical Account Manager, Billing",
+      "company": "Stripe",
+      "screen": "strong",
+      "reason": "seller title at Stripe"
+    },
+    {
+      "id": "ashby:temporal:8d36eacb-61cf-466d-ba9a-d5849d3312eb",
+      "title": "Account Executive, EMEA",
+      "company": "Temporal",
+      "screen": "no",
+      "reason": "country is France, not United States"
+    },
+    {
+      "id": "ashby:temporal:ce519860-6e31-49c2-a4b4-f6e9a92c3f4b",
+      "title": "Account Executive, Growth - Scale (West)",
+      "company": "Temporal",
+      "screen": "strong",
+      "reason": "seller title at Temporal"
+    },
+    {
+      "id": "ashby:temporal:3314f805-4651-47af-a8c8-e67aac2c23c7",
+      "title": "Account Executive, Growth -Scale (East)",
+      "company": "Temporal",
+      "screen": "strong",
+      "reason": "seller title at Temporal"
+    },
+    {
+      "id": "ashby:temporal:1647a4bf-f7fd-4c7f-9135-953d022c03ad",
+      "title": "Director of Sales, New Logo",
+      "company": "Temporal",
+      "screen": "weak",
+      "reason": "Temporal is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:temporal:59a58e6a-d082-4b85-98f6-8dd069e26ae4",
+      "title": "Sales Manager (India)",
+      "company": "Temporal",
+      "screen": "weak",
+      "reason": "Temporal is a target employer, but the title is not an account-executive seat"
+    },
+    {
+      "id": "ashby:temporal:5858d6cf-1445-4a03-b057-a9c8526f6d48",
+      "title": "Senior Account Executive, Majors - West",
+      "company": "Temporal",
+      "screen": "strong",
+      "reason": "seller title at Temporal"
+    },
+    {
+      "id": "ashby:temporal:fea5e385-1ad8-47f1-8042-3c0760bb060e",
+      "title": "Senior Account Executive, Majors (Central)",
+      "company": "Temporal",
+      "screen": "strong",
+      "reason": "seller title at Temporal"
+    },
+    {
+      "id": "ashby:temporal:756726af-0461-4c08-98cc-6f83909e0fe1",
+      "title": "Senior Account Executive, Majors (East)",
+      "company": "Temporal",
+      "screen": "strong",
+      "reason": "seller title at Temporal"
+    },
+    {
+      "id": "ashby:temporal:2ebca428-89c2-4cd9-9b30-92bb6d20ad45",
+      "title": "Senior Account Executive, New Logo",
+      "company": "Temporal",
+      "screen": "no",
+      "reason": "country is Germany, not United States"
+    },
+    {
+      "id": "ashby:temporal:7a8a7ed9-b569-450a-a649-a80db834a8f3",
+      "title": "Senior Account Executive, New Logo - Chicago",
+      "company": "Temporal",
+      "screen": "strong",
+      "reason": "seller title at Temporal"
+    },
+    {
+      "id": "greenhouse:togetherai:4543435007",
+      "title": "Strategic Account Executive",
+      "company": "Together AI",
+      "screen": "strong",
+      "reason": "seller title at Together AI"
+    },
+    {
+      "id": "greenhouse:togetherai:5230846007",
+      "title": "Strategic Account Executive Inference EMEA",
+      "company": "Together AI",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:vercel:5752956004",
+      "title": "Account Executive-Startups, EMEA (French Speaker)",
+      "company": "Vercel",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:vercel:6136160004",
+      "title": "Account Executive, Commercial",
+      "company": "Vercel",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:vercel:5999792004",
+      "title": "Account Executive, Majors",
+      "company": "Vercel",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "greenhouse:vercel:5841911004",
+      "title": "Account Executive, Majors (APAC)",
+      "company": "Vercel",
+      "screen": "strong",
+      "reason": "seller title at Vercel"
+    },
+    {
+      "id": "greenhouse:vercel:6100103004",
+      "title": "Account Executive, Majors- Install Base (APAC)",
+      "company": "Vercel",
+      "screen": "strong",
+      "reason": "seller title at Vercel"
+    },
+    {
+      "id": "greenhouse:vercel:5042166004",
+      "title": "Commercial Account Executive, Greenfield",
+      "company": "Vercel",
+      "screen": "strong",
+      "reason": "seller title at Vercel"
+    },
+    {
+      "id": "greenhouse:vercel:6123443004",
+      "title": "Commercial Account Executive, Install Base",
+      "company": "Vercel",
+      "screen": "strong",
+      "reason": "seller title at Vercel"
+    },
+    {
+      "id": "greenhouse:vercel:5042174004",
+      "title": "Enterprise Account Executive",
+      "company": "Vercel",
+      "screen": "strong",
+      "reason": "seller title at Vercel"
+    },
+    {
+      "id": "greenhouse:vercel:6142097004",
+      "title": "Scaled Commercial Account Executive, Install base",
+      "company": "Vercel",
+      "screen": "strong",
+      "reason": "seller title at Vercel"
+    },
+    {
+      "id": "greenhouse:vercel:6112845004",
+      "title": "Senior Technical Account Manager",
+      "company": "Vercel",
+      "screen": "strong",
+      "reason": "seller title at Vercel"
+    },
+    {
+      "id": "greenhouse:vercel:6121381004",
+      "title": "Technical Account Manager",
+      "company": "Vercel",
+      "screen": "no",
+      "reason": "country is Germany, not United States"
+    },
+    {
+      "id": "ashby:writer:06fac7ac-22c2-426a-950b-68c1437f9271",
+      "title": "Enterprise account executive (UK)",
+      "company": "Writer",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "ashby:writer:0640539e-4cfd-40d9-8483-124fd440852b",
+      "title": "Enterprise account executive (West)",
+      "company": "Writer",
+      "screen": "strong",
+      "reason": "seller title at Writer"
+    },
+    {
+      "id": "ashby:writer:1a8a5bf3-bb31-43ef-967f-69e912727b63",
+      "title": "Strategic account executive (Central)",
+      "company": "Writer",
+      "screen": "no",
+      "reason": "country is Israel, not United States"
+    },
+    {
+      "id": "ashby:writer:a932ee39-2f5a-44ac-8cb5-494248a5faed",
+      "title": "Strategic account executive (East)",
+      "company": "Writer",
+      "screen": "strong",
+      "reason": "seller title at Writer"
+    },
+    {
+      "id": "ashby:writer:4c05877a-cb10-4d0e-a05d-430888c43787",
+      "title": "Strategic account executive (UK)",
+      "company": "Writer",
+      "screen": "no",
+      "reason": "country is United Kingdom, not United States"
+    },
+    {
+      "id": "ashby:writer:5a3f89bc-44c3-40b7-8da9-dfc23e9bb92c",
+      "title": "Strategic account executive (West)",
+      "company": "Writer",
+      "screen": "strong",
+      "reason": "seller title at Writer"
+    }
+  ]
+}

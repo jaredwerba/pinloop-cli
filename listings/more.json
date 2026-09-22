@@ -1,0 +1,1242 @@
+{
+  "scanned_at": "2026-09-22T18:15:49.202Z",
+  "seller": 122,
+  "boards": [
+    {
+      "ats": "lever",
+      "token": "palantir",
+      "company": "Palantir",
+      "jobs": 312,
+      "seller": 0,
+      "error": null
+    },
+    {
+      "ats": "lever",
+      "token": "sysdig",
+      "company": "Sysdig",
+      "jobs": 29,
+      "seller": 4,
+      "error": null
+    },
+    {
+      "ats": "lever",
+      "token": "matillion",
+      "company": "Matillion",
+      "jobs": 16,
+      "seller": 8,
+      "error": null
+    },
+    {
+      "ats": "lever",
+      "token": "spotify",
+      "company": "Spotify",
+      "jobs": 77,
+      "seller": 0,
+      "error": null
+    },
+    {
+      "ats": "greenhouse",
+      "token": "duolingo",
+      "company": "Duolingo",
+      "jobs": 81,
+      "seller": 0,
+      "error": null
+    },
+    {
+      "ats": "greenhouse",
+      "token": "instacart",
+      "company": "Instacart",
+      "jobs": 110,
+      "seller": 2,
+      "error": null
+    },
+    {
+      "ats": "greenhouse",
+      "token": "lyft",
+      "company": "Lyft",
+      "jobs": 178,
+      "seller": 6,
+      "error": null
+    },
+    {
+      "ats": "greenhouse",
+      "token": "robinhood",
+      "company": "Robinhood",
+      "jobs": 161,
+      "seller": 0,
+      "error": null
+    },
+    {
+      "ats": "greenhouse",
+      "token": "sofi",
+      "company": "SoFi",
+      "jobs": 55,
+      "seller": 0,
+      "error": null
+    },
+    {
+      "ats": "greenhouse",
+      "token": "gusto",
+      "company": "Gusto",
+      "jobs": 92,
+      "seller": 4,
+      "error": null
+    },
+    {
+      "ats": "greenhouse",
+      "token": "reddit",
+      "company": "Reddit",
+      "jobs": 153,
+      "seller": 8,
+      "error": null
+    },
+    {
+      "ats": "greenhouse",
+      "token": "dropbox",
+      "company": "Dropbox",
+      "jobs": 46,
+      "seller": 4,
+      "error": null
+    },
+    {
+      "ats": "greenhouse",
+      "token": "zscaler",
+      "company": "Zscaler",
+      "jobs": 376,
+      "seller": 81,
+      "error": null
+    },
+    {
+      "ats": "greenhouse",
+      "token": "netlify",
+      "company": "Netlify",
+      "jobs": 3,
+      "seller": 0,
+      "error": null
+    },
+    {
+      "ats": "greenhouse",
+      "token": "huntress",
+      "company": "Huntress",
+      "jobs": 35,
+      "seller": 3,
+      "error": null
+    },
+    {
+      "ats": "greenhouse",
+      "token": "planetscale",
+      "company": "PlanetScale",
+      "jobs": 13,
+      "seller": 0,
+      "error": null
+    },
+    {
+      "ats": "greenhouse",
+      "token": "starburst",
+      "company": "Starburst",
+      "jobs": 24,
+      "seller": 2,
+      "error": null
+    }
+  ],
+  "jobs": [
+    {
+      "title": "Account Executive",
+      "company": "Dropbox",
+      "location": "Remote - US: Select locations",
+      "url": "https://jobs.dropbox.com/listing/8159652?gh_jid=8159652",
+      "posted": "2026-09-01T13:20:17.000Z",
+      "ats": "greenhouse",
+      "board": "dropbox"
+    },
+    {
+      "title": "Senior Account Executive",
+      "company": "Dropbox",
+      "location": "Remote - US: Select locations",
+      "url": "https://jobs.dropbox.com/listing/8159724?gh_jid=8159724",
+      "posted": "2026-09-01T10:18:35.000Z",
+      "ats": "greenhouse",
+      "board": "dropbox"
+    },
+    {
+      "title": "Senior Account Executive - LATAM",
+      "company": "Dropbox",
+      "location": "Remote - US: Select locations",
+      "url": "https://jobs.dropbox.com/listing/8159659?gh_jid=8159659",
+      "posted": "2026-08-28T14:55:14.000Z",
+      "ats": "greenhouse",
+      "board": "dropbox"
+    },
+    {
+      "title": "Senior Account Executive UKI - Growth",
+      "company": "Dropbox",
+      "location": "Remote - Ireland; Remote - United Kingdom",
+      "url": "https://jobs.dropbox.com/listing/8051403?gh_jid=8051403",
+      "posted": "2026-07-16T13:44:42.000Z",
+      "ats": "greenhouse",
+      "board": "dropbox"
+    },
+    {
+      "title": "Expansion Account Manager Leader",
+      "company": "Gusto",
+      "location": "Atlanta, GA - Hybrid; Denver, CO - Hybrid; Phoenix, AZ - Hybrid",
+      "url": "https://job-boards.greenhouse.io/gusto/jobs/8069947",
+      "posted": "2026-08-03T13:54:49.000Z",
+      "ats": "greenhouse",
+      "board": "gusto"
+    },
+    {
+      "title": "Gusto Pro Core, Junior Account Manager",
+      "company": "Gusto",
+      "location": "Atlanta, GA - Hybrid; Denver, CO - Hybrid; Phoenix, AZ - Hybrid",
+      "url": "https://job-boards.greenhouse.io/gusto/jobs/8100353",
+      "posted": "2026-08-06T13:29:34.000Z",
+      "ats": "greenhouse",
+      "board": "gusto"
+    },
+    {
+      "title": "PEO Sales, Account Executive",
+      "company": "Gusto",
+      "location": "Atlanta, GA - Hybrid; Denver, CO - Hybrid; Phoenix, AZ - Hybrid; San Francisco, CA - Hybrid",
+      "url": "https://job-boards.greenhouse.io/gusto/jobs/8008902",
+      "posted": "2026-06-23T22:22:40.000Z",
+      "ats": "greenhouse",
+      "board": "gusto"
+    },
+    {
+      "title": "Technical Account Manager",
+      "company": "Gusto",
+      "location": "Scottsdale, AZ - Hybrid",
+      "url": "https://job-boards.greenhouse.io/gusto/jobs/8203030",
+      "posted": "2026-09-15T21:58:37.000Z",
+      "ats": "greenhouse",
+      "board": "gusto"
+    },
+    {
+      "title": "Account Executive I - Service Provider - Nordics",
+      "company": "Huntress",
+      "location": "Ireland",
+      "url": "https://job-boards.greenhouse.io/huntress/jobs/7854541003",
+      "posted": "2026-08-11T22:10:17.000Z",
+      "ats": "greenhouse",
+      "board": "huntress"
+    },
+    {
+      "title": "Account Executive I - Service Provider - Nordics Region",
+      "company": "Huntress",
+      "location": "United Kingdom",
+      "url": "https://job-boards.greenhouse.io/huntress/jobs/7854539003",
+      "posted": "2026-08-11T22:10:19.000Z",
+      "ats": "greenhouse",
+      "board": "huntress"
+    },
+    {
+      "title": "Channel Account Manager II, Service Provider",
+      "company": "Huntress",
+      "location": "United States of America",
+      "url": "https://job-boards.greenhouse.io/huntress/jobs/7990136003",
+      "posted": "2026-09-10T21:41:25.000Z",
+      "ats": "greenhouse",
+      "board": "huntress"
+    },
+    {
+      "title": "Senior Account Manager, Retail Media",
+      "company": "Instacart",
+      "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+      "url": "https://instacart.careers/job/?gh_jid=8214962",
+      "posted": "2026-09-21T16:45:24.000Z",
+      "ats": "greenhouse",
+      "board": "instacart"
+    },
+    {
+      "title": "Senior Account Manager, Retail Media",
+      "company": "Instacart",
+      "location": "United States - Remote",
+      "url": "https://instacart.careers/job/?gh_jid=8214941",
+      "posted": "2026-09-21T16:45:22.000Z",
+      "ats": "greenhouse",
+      "board": "instacart"
+    },
+    {
+      "title": "Account Manager, Automotive Vertical",
+      "company": "Lyft",
+      "location": "San Francisco, CA",
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8791500002?gh_jid=8791500002",
+      "posted": "2026-09-10T14:47:33.000Z",
+      "ats": "greenhouse",
+      "board": "lyft"
+    },
+    {
+      "title": "Account Manager, Automotive Vertical",
+      "company": "Lyft",
+      "location": "New York, NY",
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8792050002?gh_jid=8792050002",
+      "posted": "2026-09-10T14:47:35.000Z",
+      "ats": "greenhouse",
+      "board": "lyft"
+    },
+    {
+      "title": "Enterprise Account Manager",
+      "company": "Lyft",
+      "location": "New York, NY",
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8777403002?gh_jid=8777403002",
+      "posted": "2026-09-02T16:54:11.000Z",
+      "ats": "greenhouse",
+      "board": "lyft"
+    },
+    {
+      "title": "Enterprise Account Manager",
+      "company": "Lyft",
+      "location": "San Francisco, CA",
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8743132002?gh_jid=8743132002",
+      "posted": "2026-08-24T20:20:10.000Z",
+      "ats": "greenhouse",
+      "board": "lyft"
+    },
+    {
+      "title": "Programmatic Account Executive",
+      "company": "Lyft",
+      "location": "New York, NY",
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8626211002?gh_jid=8626211002",
+      "posted": "2026-07-15T20:04:08.000Z",
+      "ats": "greenhouse",
+      "board": "lyft"
+    },
+    {
+      "title": "Senior Account Executive",
+      "company": "Lyft",
+      "location": "Los Angeles, CA",
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8771516002?gh_jid=8771516002",
+      "posted": "2026-09-02T15:02:14.000Z",
+      "ats": "greenhouse",
+      "board": "lyft"
+    },
+    {
+      "title": "Enterprise Account Executive - Atlanta",
+      "company": "Matillion",
+      "location": "East Coast USA",
+      "url": "https://jobs.lever.co/matillion/c3171182-5c15-43da-bf47-00ee03cd8f53",
+      "posted": "2026-03-31T14:52:22.684Z",
+      "ats": "lever",
+      "board": "matillion"
+    },
+    {
+      "title": "Enterprise Account Executive - Boston",
+      "company": "Matillion",
+      "location": "East Coast USA",
+      "url": "https://jobs.lever.co/matillion/d1e30399-742d-4a36-be74-5008af810606",
+      "posted": "2026-03-31T14:39:38.480Z",
+      "ats": "lever",
+      "board": "matillion"
+    },
+    {
+      "title": "Enterprise Account Executive - Chicago",
+      "company": "Matillion",
+      "location": "Central USA",
+      "url": "https://jobs.lever.co/matillion/d2d936e3-c806-43e6-bcb6-7a4df4d13ef7",
+      "posted": "2026-03-31T14:46:26.009Z",
+      "ats": "lever",
+      "board": "matillion"
+    },
+    {
+      "title": "Enterprise Account Executive - New York City",
+      "company": "Matillion",
+      "location": "East Coast USA",
+      "url": "https://jobs.lever.co/matillion/4c186ae2-583d-47fa-81ba-a296beac85a7",
+      "posted": "2026-03-31T14:39:11.589Z",
+      "ats": "lever",
+      "board": "matillion"
+    },
+    {
+      "title": "Enterprise Account Executive - San Francisco",
+      "company": "Matillion",
+      "location": "San Francisco, CA",
+      "url": "https://jobs.lever.co/matillion/61c38e35-f7bc-459c-a738-6ca6e6fae724",
+      "posted": "2026-03-31T14:51:52.815Z",
+      "ats": "lever",
+      "board": "matillion"
+    },
+    {
+      "title": "Enterprise Account Executive - Texas",
+      "company": "Matillion",
+      "location": "Central USA",
+      "url": "https://jobs.lever.co/matillion/9e298c14-736c-4b0d-aee7-653655f3f5ee",
+      "posted": "2026-03-31T14:58:43.181Z",
+      "ats": "lever",
+      "board": "matillion"
+    },
+    {
+      "title": "Enterprise Account Manager",
+      "company": "Matillion",
+      "location": "Manchester",
+      "url": "https://jobs.lever.co/matillion/0e1a706e-f973-4ed7-8dde-c4c8a71bd0a0",
+      "posted": "2026-09-18T15:03:21.342Z",
+      "ats": "lever",
+      "board": "matillion"
+    },
+    {
+      "title": "Enterprise Account Manager",
+      "company": "Matillion",
+      "location": "Central USA",
+      "url": "https://jobs.lever.co/matillion/9be7759b-a575-45ab-baaa-8f1bb5b63679",
+      "posted": "2026-09-18T14:13:31.498Z",
+      "ats": "lever",
+      "board": "matillion"
+    },
+    {
+      "title": "Client Account Manager, Large Customer Sales (CPG)",
+      "company": "Reddit",
+      "location": "Chicago, IL; New York City, NY",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/8113265",
+      "posted": "2026-08-11T22:50:16.000Z",
+      "ats": "greenhouse",
+      "board": "reddit"
+    },
+    {
+      "title": "Client Account Manager, Large Customer Sales (Tech)",
+      "company": "Reddit",
+      "location": "Los Angeles, CA; San Francisco, CA",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/8049518",
+      "posted": "2026-09-09T16:59:25.000Z",
+      "ats": "greenhouse",
+      "board": "reddit"
+    },
+    {
+      "title": "Senior Client Account Manager, App Dev Enterprise",
+      "company": "Reddit",
+      "location": "New York City, NY",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/8171546",
+      "posted": "2026-09-09T21:26:15.000Z",
+      "ats": "greenhouse",
+      "board": "reddit"
+    },
+    {
+      "title": "Senior Client Account Manager, Global Strategic Accounts (Media & Entertainment)",
+      "company": "Reddit",
+      "location": "Los Angeles, CA; New York City, NY",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/8163400",
+      "posted": "2026-08-27T23:13:11.000Z",
+      "ats": "greenhouse",
+      "board": "reddit"
+    },
+    {
+      "title": "Senior Client Account Manager, Global Strategic Accounts (Tech/AI)",
+      "company": "Reddit",
+      "location": "San Francisco, CA",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/8017242",
+      "posted": "2026-08-27T19:45:41.000Z",
+      "ats": "greenhouse",
+      "board": "reddit"
+    },
+    {
+      "title": "Senior Client Account Manager, Global Strategic Accounts (UK)",
+      "company": "Reddit",
+      "location": "London, United Kingdom",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/8017263",
+      "posted": "2026-06-18T21:40:50.000Z",
+      "ats": "greenhouse",
+      "board": "reddit"
+    },
+    {
+      "title": "Senior Client Account Manager, Large Customer Sales (Pharma)",
+      "company": "Reddit",
+      "location": "Chicago, IL",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/7977257",
+      "posted": "2026-06-02T18:50:21.000Z",
+      "ats": "greenhouse",
+      "board": "reddit"
+    },
+    {
+      "title": "Senior Client Account Manager, Large Customer Sales (Pharma)",
+      "company": "Reddit",
+      "location": "New York City, NY",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/7746526",
+      "posted": "2026-06-02T18:50:22.000Z",
+      "ats": "greenhouse",
+      "board": "reddit"
+    },
+    {
+      "title": "Senior Enterprise Account Executive",
+      "company": "Starburst",
+      "location": "San Francisco",
+      "url": "https://job-boards.greenhouse.io/starburst/jobs/5382974008",
+      "posted": "2026-08-18T14:53:42.000Z",
+      "ats": "greenhouse",
+      "board": "starburst"
+    },
+    {
+      "title": "Senior Enterprise Account Executive, East",
+      "company": "Starburst",
+      "location": "Boston, MA",
+      "url": "https://job-boards.greenhouse.io/starburst/jobs/5238085008",
+      "posted": "2026-06-04T15:08:24.000Z",
+      "ats": "greenhouse",
+      "board": "starburst"
+    },
+    {
+      "title": "Enterprise Account Executive (US Central)",
+      "company": "Sysdig",
+      "location": "Flexible - USA",
+      "url": "https://jobs.lever.co/sysdig/117ca524-e188-4220-8342-d20a8f938fce",
+      "posted": "2026-08-21T12:47:13.970Z",
+      "ats": "lever",
+      "board": "sysdig"
+    },
+    {
+      "title": "Enterprise Account Executive (US North East)",
+      "company": "Sysdig",
+      "location": "Flexible - USA",
+      "url": "https://jobs.lever.co/sysdig/f92df8ef-3fc9-4a7e-ac62-d87ee4397a32",
+      "posted": "2026-09-04T07:01:08.581Z",
+      "ats": "lever",
+      "board": "sysdig"
+    },
+    {
+      "title": "Enterprise Account Executive (US West)",
+      "company": "Sysdig",
+      "location": "Flexible - USA",
+      "url": "https://jobs.lever.co/sysdig/ffb2a460-804d-4216-bd1b-524541e16dd1",
+      "posted": "2026-09-22T10:26:29.155Z",
+      "ats": "lever",
+      "board": "sysdig"
+    },
+    {
+      "title": "Inside Sales Representative (Junior Account Executive)",
+      "company": "Sysdig",
+      "location": "Flexible - United Kingdom",
+      "url": "https://jobs.lever.co/sysdig/f6e8848f-dc19-4577-96cd-fc9e55b56c9b",
+      "posted": "2026-09-07T15:56:00.158Z",
+      "ats": "lever",
+      "board": "sysdig"
+    },
+    {
+      "title": "Account Executive",
+      "company": "Zscaler",
+      "location": "Remote - Canberra, Australia",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5198260007",
+      "posted": "2026-08-17T08:31:19.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Commercial",
+      "company": "Zscaler",
+      "location": "Mumbai, IND",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5164593007",
+      "posted": "2026-07-10T04:54:15.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Commercial",
+      "company": "Zscaler",
+      "location": "Tokyo, JPN",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5156026007",
+      "posted": "2026-06-09T02:40:11.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Enterprise",
+      "company": "Zscaler",
+      "location": "Remote - Taiwan",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5156009007",
+      "posted": "2026-07-16T01:41:04.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Enterprise",
+      "company": "Zscaler",
+      "location": "Bangalore, IND",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5201253007",
+      "posted": "2026-08-04T04:50:14.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Enterprise - Bay Area",
+      "company": "Zscaler",
+      "location": "Remote - California, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5122280007",
+      "posted": "2026-05-05T19:10:15.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Enterprise, Atlanta GA",
+      "company": "Zscaler",
+      "location": "USA - Update Location",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5241887007",
+      "posted": "2026-09-22T13:11:10.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Enterprise, Florida",
+      "company": "Zscaler",
+      "location": "Remote - Florida, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5150437007",
+      "posted": "2026-08-10T15:09:54.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Enterprise, Quebec",
+      "company": "Zscaler",
+      "location": "Remote - Quebec, Canada",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5225441007",
+      "posted": "2026-09-03T14:14:01.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Fed Civilian",
+      "company": "Zscaler",
+      "location": "Remote - D.C., USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5207284007",
+      "posted": "2026-08-12T17:32:12.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Majors",
+      "company": "Zscaler",
+      "location": "Mumbai, IND",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/4714730007",
+      "posted": "2025-04-25T07:12:37.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Majors - Atlanta",
+      "company": "Zscaler",
+      "location": "Alpharetta, Georgia, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5198854007",
+      "posted": "2026-07-31T13:48:21.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Majors - Dallas, TX",
+      "company": "Zscaler",
+      "location": "Remote - Texas, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5198860007",
+      "posted": "2026-07-31T18:18:01.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Majors - Detroit",
+      "company": "Zscaler",
+      "location": "Remote - Michigan, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5066905007",
+      "posted": "2026-03-03T14:15:25.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Majors - Ohio",
+      "company": "Zscaler",
+      "location": "Remote - Ohio, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5173163007",
+      "posted": "2026-07-01T17:38:05.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Majors (FSI)",
+      "company": "Zscaler",
+      "location": "Singapore, SGP",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5205332007",
+      "posted": "2026-08-13T01:18:25.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Majors- Chicago",
+      "company": "Zscaler",
+      "location": "Remote - Illinois, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5198856007",
+      "posted": "2026-08-20T12:53:53.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Majors, MO or KS",
+      "company": "Zscaler",
+      "location": "Remote - Kansas, USA; Remote - Missouri, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5232607007",
+      "posted": "2026-09-11T17:55:36.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Strategic（大手顧客担当）",
+      "company": "Zscaler",
+      "location": "Tokyo, JPN",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5202975007",
+      "posted": "2026-08-07T01:54:22.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive - Strategic（大手顧客担当）",
+      "company": "Zscaler",
+      "location": "Tokyo, JPN",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5156033007",
+      "posted": "2026-06-17T04:57:37.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Commercial",
+      "company": "Zscaler",
+      "location": "Tokyo, JPN",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5215890007",
+      "posted": "2026-08-25T05:27:22.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Commercial",
+      "company": "Zscaler",
+      "location": "Landeshauptstadt München, DEU",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5197814007",
+      "posted": "2026-07-31T13:44:07.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Commercial",
+      "company": "Zscaler",
+      "location": "Tokyo, JPN",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5156030007",
+      "posted": "2026-07-13T08:17:06.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Commercial - Chicago",
+      "company": "Zscaler",
+      "location": "Remote - Illinois, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5236995007",
+      "posted": "2026-09-14T16:36:43.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Commercial - Mountain West",
+      "company": "Zscaler",
+      "location": "Remote - Colorado, USA; Remote - Montana, USA; Remote - Oregon, USA; Remote - Wyoming, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5203734007",
+      "posted": "2026-08-05T17:37:58.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Commercial - NorCal",
+      "company": "Zscaler",
+      "location": "Remote - California, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5221105007",
+      "posted": "2026-09-01T14:16:58.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Commercial (Nagoya)",
+      "company": "Zscaler",
+      "location": "Remote - Japan",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5179814007",
+      "posted": "2026-07-13T08:22:15.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Commercial (West)",
+      "company": "Zscaler",
+      "location": "Remote - Ôsaka, Japan",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5159494007",
+      "posted": "2026-07-13T08:28:37.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Data Security",
+      "company": "Zscaler",
+      "location": "City of London Corporation, GBR",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5199289007",
+      "posted": "2026-08-07T11:28:10.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Enterprise",
+      "company": "Zscaler",
+      "location": "Tokyo, JPN",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5170215007",
+      "posted": "2026-07-13T08:12:35.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Enterprise",
+      "company": "Zscaler",
+      "location": "Remote - Austria",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5139790007",
+      "posted": "2026-07-30T14:31:37.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Enterprise",
+      "company": "Zscaler",
+      "location": "Remote - Germany",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5177913007",
+      "posted": "2026-07-13T13:55:03.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Enterprise",
+      "company": "Zscaler",
+      "location": "Tokyo, JPN",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5233183007",
+      "posted": "2026-09-14T07:28:01.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Enterprise - AI",
+      "company": "Zscaler",
+      "location": "Tokyo, JPN",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5233185007",
+      "posted": "2026-09-14T07:51:15.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Enterprise - Expansion",
+      "company": "Zscaler",
+      "location": "Remote - Germany",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5231508007",
+      "posted": "2026-09-18T15:53:48.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Enterprise - Mid Atlantic",
+      "company": "Zscaler",
+      "location": "Remote - New Jersey, USA; Remote - New York, USA; Remote - Pennsylvania, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5204282007",
+      "posted": "2026-08-14T14:37:52.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Enterprise - NY/NJ",
+      "company": "Zscaler",
+      "location": "Remote - New York, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5193214007",
+      "posted": "2026-07-23T14:57:30.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Enterprise - Southern CA",
+      "company": "Zscaler",
+      "location": "Remote - California, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5225447007",
+      "posted": "2026-09-01T15:35:17.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Enterprise UK/I",
+      "company": "Zscaler",
+      "location": "City of London Corporation, GBR",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5234385007",
+      "posted": "2026-09-10T16:26:17.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Industry - Toyota",
+      "company": "Zscaler",
+      "location": "Japan - Update Location",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5233187007",
+      "posted": "2026-09-14T04:39:04.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Majors",
+      "company": "Zscaler",
+      "location": "Remote - Germany",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5197821007",
+      "posted": "2026-07-31T13:54:56.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Majors - Carolinas",
+      "company": "Zscaler",
+      "location": "Remote - North Carolina, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5087216007",
+      "posted": "2026-08-06T14:56:09.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Majors - New England",
+      "company": "Zscaler",
+      "location": "Remote - Massachusetts, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5189019007",
+      "posted": "2026-09-15T16:55:52.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Majors - NY/NJ",
+      "company": "Zscaler",
+      "location": "Remote - New Jersey, USA; Remote - New York, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5188451007",
+      "posted": "2026-07-22T17:30:12.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Majors - Romandy",
+      "company": "Zscaler",
+      "location": "Remote - Switzerland",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5197818007",
+      "posted": "2026-08-19T08:06:07.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Majors - Tennessee",
+      "company": "Zscaler",
+      "location": "Remote - Tennessee, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5188455007",
+      "posted": "2026-07-22T16:53:36.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Majors (Finance)",
+      "company": "Zscaler",
+      "location": "Tokyo, JPN",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5159496007",
+      "posted": "2026-07-13T08:04:49.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Majors（製造業）",
+      "company": "Zscaler",
+      "location": "Tokyo, JPN",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5119845007",
+      "posted": "2026-08-05T08:59:12.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Account Executive, Majors（製造業）",
+      "company": "Zscaler",
+      "location": "Tokyo, JPN",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5164504007",
+      "posted": "2026-07-13T08:00:59.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "AI Security - Account Executive",
+      "company": "Zscaler",
+      "location": "Tokyo, JPN",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5219179007",
+      "posted": "2026-08-26T01:48:41.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Commercial Account Executive",
+      "company": "Zscaler",
+      "location": "Remote - Switzerland",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5240854007",
+      "posted": "2026-09-22T14:22:03.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Commercial Account Executive",
+      "company": "Zscaler",
+      "location": "Madrid, ESP",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5200390007",
+      "posted": "2026-08-07T10:44:40.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Commercial Account Executive",
+      "company": "Zscaler",
+      "location": "Remote - United Arab Emirates",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5204157007",
+      "posted": "2026-09-20T18:10:48.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Commercial Account Executive",
+      "company": "Zscaler",
+      "location": "City of London Corporation, GBR",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5189003007",
+      "posted": "2026-08-07T10:46:11.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Commercial Account Executive - Public Sector (Western Canada)",
+      "company": "Zscaler",
+      "location": "Remote - Alberta, Canada; Remote - Saskatchewan, Canada",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5225445007",
+      "posted": "2026-09-03T13:52:07.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Commercial Account Executive, UK/I",
+      "company": "Zscaler",
+      "location": "City of London Corporation, GBR",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5230417007",
+      "posted": "2026-09-07T13:32:55.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Product Sales Account Executive",
+      "company": "Zscaler",
+      "location": "Mumbai, IND",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5219181007",
+      "posted": "2026-09-02T11:56:13.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Product Sales Account Executive - ZT Branch - SLED/Healthcare",
+      "company": "Zscaler",
+      "location": "Remote - Massachusetts, USA; Remote - New York, USA; Remote - North Carolina, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5153363007",
+      "posted": "2026-06-23T13:15:35.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive - Enterprise",
+      "company": "Zscaler",
+      "location": "Remote - Belgium",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5211134007",
+      "posted": "2026-08-20T12:47:40.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive - Enterprise",
+      "company": "Zscaler",
+      "location": "Remote - USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/4656399007",
+      "posted": "2026-09-09T19:12:37.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive - FED DoW",
+      "company": "Zscaler",
+      "location": "Remote - California, USA; Remote - D.C., USA; Remote - Hawaii, USA; Remote - North Carolina, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5225785007",
+      "posted": "2026-09-11T22:54:28.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive - Majors",
+      "company": "Zscaler",
+      "location": "Remote - USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/4662814007",
+      "posted": "2026-09-10T19:24:53.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive - SLED or Federal",
+      "company": "Zscaler",
+      "location": "Remote - USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5234995007",
+      "posted": "2026-09-10T19:49:43.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive 2 - Enterprise",
+      "company": "Zscaler",
+      "location": "USA - Update Location",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5209068007",
+      "posted": "2026-09-21T14:38:40.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive 2 - Enterprise",
+      "company": "Zscaler",
+      "location": "Remote - Netherlands",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5189009007",
+      "posted": "2026-08-10T10:43:39.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive 3 - Majors",
+      "company": "Zscaler",
+      "location": "Remote - Denmark",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5210195007",
+      "posted": "2026-08-17T09:51:30.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive 3 - Majors",
+      "company": "Zscaler",
+      "location": "Mexico - Update Location",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5232617007",
+      "posted": "2026-09-16T16:23:06.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive, Enterprise",
+      "company": "Zscaler",
+      "location": "Madrid, ESP",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5229760007",
+      "posted": "2026-09-03T17:04:48.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive, Enterprise",
+      "company": "Zscaler",
+      "location": "Ville de Paris, FRA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5197823007",
+      "posted": "2026-08-21T08:38:20.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive, Majors",
+      "company": "Zscaler",
+      "location": "City of London Corporation, GBR",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5232094007",
+      "posted": "2026-09-21T18:37:48.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive, Majors",
+      "company": "Zscaler",
+      "location": "Remote - Belgium",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5231974007",
+      "posted": "2026-09-20T19:38:07.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive, Majors",
+      "company": "Zscaler",
+      "location": "Remote - Sweden",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5193218007",
+      "posted": "2026-08-12T10:51:39.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Sales Account Executive, Public Sector Central Government",
+      "company": "Zscaler",
+      "location": "City of London Corporation, GBR",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5217013007",
+      "posted": "2026-08-20T15:44:12.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Specialist Account Executive - Zscaler SecOps",
+      "company": "Zscaler",
+      "location": "Remote - Germany",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5167464007",
+      "posted": "2026-07-08T12:35:43.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Specialist Account Executive - ZT Branch",
+      "company": "Zscaler",
+      "location": "Remote - Germany",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5153355007",
+      "posted": "2026-06-17T09:25:48.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Specialist Account Executive, Data Security",
+      "company": "Zscaler",
+      "location": "Bangalore, IND; Gurgaon, IND; Mumbai, IND",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5196227007",
+      "posted": "2026-08-13T10:46:32.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Specialist Account Executive, Sec Ops",
+      "company": "Zscaler",
+      "location": "City of London Corporation, GBR",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5208396007",
+      "posted": "2026-08-13T16:14:18.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Specialist Account Executive, SecOps - Commercial, IL/OH/CO",
+      "company": "Zscaler",
+      "location": "Remote - Colorado, USA; Remote - Illinois, USA; Remote - Ohio, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5216237007",
+      "posted": "2026-08-21T20:16:45.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Specialist Account Executive, SecOps - Enterprise, PA/MD/VA/DC/Fed",
+      "company": "Zscaler",
+      "location": "Remote - Maryland, USA; Remote - Pennsylvania, USA; Remote - Virginia, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5216235007",
+      "posted": "2026-08-21T20:20:01.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Specialist Account Executive, ZT Branch - Commercial, West + Central",
+      "company": "Zscaler",
+      "location": "Remote - California, USA; Remote - Colorado, USA; Remote - Illinois, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5196221007",
+      "posted": "2026-08-07T16:38:22.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    },
+    {
+      "title": "Specialist Account Executive, ZT Branch - Majors, East + South",
+      "company": "Zscaler",
+      "location": "Remote - Massachusetts, USA; Remote - New York, USA; Remote - North Carolina, USA; Remote - Texas, USA",
+      "url": "https://job-boards.greenhouse.io/zscaler/jobs/5199285007",
+      "posted": "2026-08-07T16:31:58.000Z",
+      "ats": "greenhouse",
+      "board": "zscaler"
+    }
+  ]
+}

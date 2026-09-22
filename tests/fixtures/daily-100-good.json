@@ -1,0 +1,832 @@
+{
+  "pulledAt": "2026-09-22T13:00:00.000Z",
+  "target": 100,
+  "count": 100,
+  "strong": 60,
+  "fair": 40,
+  "boardsHit": [
+    "coreweave",
+    "nebius",
+    "stripe",
+    "databricks",
+    "snowflake",
+    "vercel",
+    "temporal",
+    "launchdarkly",
+    "glean",
+    "writer",
+    "mercury",
+    "anthropic",
+    "openai",
+    "nvidia",
+    "commvault",
+    "crusoe",
+    "braintrust",
+    "modal",
+    "together",
+    "hashicorp"
+  ],
+  "boardsMissedCount": 0,
+  "jobs": [
+    {
+      "title": "Enterprise Account Executive — GPU Cloud",
+      "company": "CoreWeave",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/coreweave/jobs/400001",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive, Kubernetes",
+      "company": "CoreWeave",
+      "location": "Austin, TX",
+      "url": "https://boards.greenhouse.io/coreweave/jobs/400002",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Executive, AI Startups",
+      "company": "CoreWeave",
+      "location": "San Francisco, CA",
+      "url": "https://boards.greenhouse.io/coreweave/jobs/400003",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "CoreWeave",
+      "location": "Boston, MA",
+      "url": "https://boards.greenhouse.io/coreweave/jobs/400004",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "CoreWeave",
+      "location": "Seattle, WA",
+      "url": "https://boards.greenhouse.io/coreweave/jobs/400005",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, AI Infrastructure",
+      "company": "Nebius",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/nebius/jobs/400006",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Manager, IaaS Platform",
+      "company": "Nebius",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/nebius/jobs/400007",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Commercial Account Executive, Hyperscale Data Center",
+      "company": "Nebius",
+      "location": "Austin, TX",
+      "url": "https://boards.greenhouse.io/nebius/jobs/400008",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Nebius",
+      "location": "San Francisco, CA",
+      "url": "https://boards.greenhouse.io/nebius/jobs/400009",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Nebius",
+      "location": "Boston, MA",
+      "url": "https://boards.greenhouse.io/nebius/jobs/400010",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, AI Startups",
+      "company": "Stripe",
+      "location": "Chicago, IL",
+      "url": "https://boards.greenhouse.io/stripe/jobs/400011",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Enterprise Account Executive — GPU Cloud",
+      "company": "Stripe",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/stripe/jobs/400012",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive, Kubernetes",
+      "company": "Stripe",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/stripe/jobs/400013",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Stripe",
+      "location": "Austin, TX",
+      "url": "https://boards.greenhouse.io/stripe/jobs/400014",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Stripe",
+      "location": "San Francisco, CA",
+      "url": "https://boards.greenhouse.io/stripe/jobs/400015",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Commercial Account Executive, Hyperscale Data Center",
+      "company": "Databricks",
+      "location": "Seattle, WA",
+      "url": "https://boards.greenhouse.io/databricks/jobs/400016",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Executive, AI Infrastructure",
+      "company": "Databricks",
+      "location": "Chicago, IL",
+      "url": "https://boards.greenhouse.io/databricks/jobs/400017",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Manager, IaaS Platform",
+      "company": "Databricks",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/databricks/jobs/400018",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Databricks",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/databricks/jobs/400019",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Databricks",
+      "location": "Austin, TX",
+      "url": "https://boards.greenhouse.io/databricks/jobs/400020",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Strategic Account Executive, Kubernetes",
+      "company": "Snowflake",
+      "location": "Boston, MA",
+      "url": "https://boards.greenhouse.io/snowflake/jobs/400021",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Executive, AI Startups",
+      "company": "Snowflake",
+      "location": "Seattle, WA",
+      "url": "https://boards.greenhouse.io/snowflake/jobs/400022",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Enterprise Account Executive — GPU Cloud",
+      "company": "Snowflake",
+      "location": "Chicago, IL",
+      "url": "https://boards.greenhouse.io/snowflake/jobs/400023",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Snowflake",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/snowflake/jobs/400024",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Snowflake",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/snowflake/jobs/400025",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Manager, IaaS Platform",
+      "company": "Vercel",
+      "location": "San Francisco, CA",
+      "url": "https://boards.greenhouse.io/vercel/jobs/400026",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Commercial Account Executive, Hyperscale Data Center",
+      "company": "Vercel",
+      "location": "Boston, MA",
+      "url": "https://boards.greenhouse.io/vercel/jobs/400027",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Executive, AI Infrastructure",
+      "company": "Vercel",
+      "location": "Seattle, WA",
+      "url": "https://boards.greenhouse.io/vercel/jobs/400028",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Vercel",
+      "location": "Chicago, IL",
+      "url": "https://boards.greenhouse.io/vercel/jobs/400029",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Vercel",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/vercel/jobs/400030",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Enterprise Account Executive — GPU Cloud",
+      "company": "Temporal",
+      "location": "Austin, TX",
+      "url": "https://boards.greenhouse.io/temporal/jobs/400031",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive, Kubernetes",
+      "company": "Temporal",
+      "location": "San Francisco, CA",
+      "url": "https://boards.greenhouse.io/temporal/jobs/400032",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Executive, AI Startups",
+      "company": "Temporal",
+      "location": "Boston, MA",
+      "url": "https://boards.greenhouse.io/temporal/jobs/400033",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Temporal",
+      "location": "Seattle, WA",
+      "url": "https://boards.greenhouse.io/temporal/jobs/400034",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Temporal",
+      "location": "Chicago, IL",
+      "url": "https://boards.greenhouse.io/temporal/jobs/400035",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, AI Infrastructure",
+      "company": "LaunchDarkly",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/launchdarkly/jobs/400036",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Manager, IaaS Platform",
+      "company": "LaunchDarkly",
+      "location": "Austin, TX",
+      "url": "https://boards.greenhouse.io/launchdarkly/jobs/400037",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Commercial Account Executive, Hyperscale Data Center",
+      "company": "LaunchDarkly",
+      "location": "San Francisco, CA",
+      "url": "https://boards.greenhouse.io/launchdarkly/jobs/400038",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "LaunchDarkly",
+      "location": "Boston, MA",
+      "url": "https://boards.greenhouse.io/launchdarkly/jobs/400039",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "LaunchDarkly",
+      "location": "Seattle, WA",
+      "url": "https://boards.greenhouse.io/launchdarkly/jobs/400040",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, AI Startups",
+      "company": "Glean",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/glean/jobs/400041",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Enterprise Account Executive — GPU Cloud",
+      "company": "Glean",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/glean/jobs/400042",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive, Kubernetes",
+      "company": "Glean",
+      "location": "Austin, TX",
+      "url": "https://boards.greenhouse.io/glean/jobs/400043",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Glean",
+      "location": "San Francisco, CA",
+      "url": "https://boards.greenhouse.io/glean/jobs/400044",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Glean",
+      "location": "Boston, MA",
+      "url": "https://boards.greenhouse.io/glean/jobs/400045",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Commercial Account Executive, Hyperscale Data Center",
+      "company": "Writer",
+      "location": "Chicago, IL",
+      "url": "https://boards.greenhouse.io/writer/jobs/400046",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Executive, AI Infrastructure",
+      "company": "Writer",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/writer/jobs/400047",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Manager, IaaS Platform",
+      "company": "Writer",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/writer/jobs/400048",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Writer",
+      "location": "Austin, TX",
+      "url": "https://boards.greenhouse.io/writer/jobs/400049",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Writer",
+      "location": "San Francisco, CA",
+      "url": "https://boards.greenhouse.io/writer/jobs/400050",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Strategic Account Executive, Kubernetes",
+      "company": "Mercury",
+      "location": "Seattle, WA",
+      "url": "https://boards.greenhouse.io/mercury/jobs/400051",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Executive, AI Startups",
+      "company": "Mercury",
+      "location": "Chicago, IL",
+      "url": "https://boards.greenhouse.io/mercury/jobs/400052",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Enterprise Account Executive — GPU Cloud",
+      "company": "Mercury",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/mercury/jobs/400053",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Mercury",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/mercury/jobs/400054",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Mercury",
+      "location": "Austin, TX",
+      "url": "https://boards.greenhouse.io/mercury/jobs/400055",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Manager, IaaS Platform",
+      "company": "Anthropic",
+      "location": "Boston, MA",
+      "url": "https://boards.greenhouse.io/anthropic/jobs/400056",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Commercial Account Executive, Hyperscale Data Center",
+      "company": "Anthropic",
+      "location": "Seattle, WA",
+      "url": "https://boards.greenhouse.io/anthropic/jobs/400057",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Executive, AI Infrastructure",
+      "company": "Anthropic",
+      "location": "Chicago, IL",
+      "url": "https://boards.greenhouse.io/anthropic/jobs/400058",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Anthropic",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/anthropic/jobs/400059",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Anthropic",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/anthropic/jobs/400060",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Enterprise Account Executive — GPU Cloud",
+      "company": "OpenAI",
+      "location": "San Francisco, CA",
+      "url": "https://boards.greenhouse.io/openai/jobs/400061",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive, Kubernetes",
+      "company": "OpenAI",
+      "location": "Boston, MA",
+      "url": "https://boards.greenhouse.io/openai/jobs/400062",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Executive, AI Startups",
+      "company": "OpenAI",
+      "location": "Seattle, WA",
+      "url": "https://boards.greenhouse.io/openai/jobs/400063",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "OpenAI",
+      "location": "Chicago, IL",
+      "url": "https://boards.greenhouse.io/openai/jobs/400064",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "OpenAI",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/openai/jobs/400065",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, AI Infrastructure",
+      "company": "NVIDIA",
+      "location": "Austin, TX",
+      "url": "https://boards.greenhouse.io/nvidia/jobs/400066",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Manager, IaaS Platform",
+      "company": "NVIDIA",
+      "location": "San Francisco, CA",
+      "url": "https://boards.greenhouse.io/nvidia/jobs/400067",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Commercial Account Executive, Hyperscale Data Center",
+      "company": "NVIDIA",
+      "location": "Boston, MA",
+      "url": "https://boards.greenhouse.io/nvidia/jobs/400068",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "NVIDIA",
+      "location": "Seattle, WA",
+      "url": "https://boards.greenhouse.io/nvidia/jobs/400069",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "NVIDIA",
+      "location": "Chicago, IL",
+      "url": "https://boards.greenhouse.io/nvidia/jobs/400070",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, AI Startups",
+      "company": "Commvault",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/commvault/jobs/400071",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Enterprise Account Executive — GPU Cloud",
+      "company": "Commvault",
+      "location": "Austin, TX",
+      "url": "https://boards.greenhouse.io/commvault/jobs/400072",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive, Kubernetes",
+      "company": "Commvault",
+      "location": "San Francisco, CA",
+      "url": "https://boards.greenhouse.io/commvault/jobs/400073",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Commvault",
+      "location": "Boston, MA",
+      "url": "https://boards.greenhouse.io/commvault/jobs/400074",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Commvault",
+      "location": "Seattle, WA",
+      "url": "https://boards.greenhouse.io/commvault/jobs/400075",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Commercial Account Executive, Hyperscale Data Center",
+      "company": "Crusoe",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/crusoe/jobs/400076",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Executive, AI Infrastructure",
+      "company": "Crusoe",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/crusoe/jobs/400077",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Manager, IaaS Platform",
+      "company": "Crusoe",
+      "location": "Austin, TX",
+      "url": "https://boards.greenhouse.io/crusoe/jobs/400078",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Crusoe",
+      "location": "San Francisco, CA",
+      "url": "https://boards.greenhouse.io/crusoe/jobs/400079",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Crusoe",
+      "location": "Boston, MA",
+      "url": "https://boards.greenhouse.io/crusoe/jobs/400080",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Strategic Account Executive, Kubernetes",
+      "company": "Braintrust",
+      "location": "Chicago, IL",
+      "url": "https://boards.greenhouse.io/braintrust/jobs/400081",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Executive, AI Startups",
+      "company": "Braintrust",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/braintrust/jobs/400082",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Enterprise Account Executive — GPU Cloud",
+      "company": "Braintrust",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/braintrust/jobs/400083",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Braintrust",
+      "location": "Austin, TX",
+      "url": "https://boards.greenhouse.io/braintrust/jobs/400084",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Braintrust",
+      "location": "San Francisco, CA",
+      "url": "https://boards.greenhouse.io/braintrust/jobs/400085",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Manager, IaaS Platform",
+      "company": "Modal",
+      "location": "Seattle, WA",
+      "url": "https://boards.greenhouse.io/modal/jobs/400086",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Commercial Account Executive, Hyperscale Data Center",
+      "company": "Modal",
+      "location": "Chicago, IL",
+      "url": "https://boards.greenhouse.io/modal/jobs/400087",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Executive, AI Infrastructure",
+      "company": "Modal",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/modal/jobs/400088",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Modal",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/modal/jobs/400089",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Modal",
+      "location": "Austin, TX",
+      "url": "https://boards.greenhouse.io/modal/jobs/400090",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Enterprise Account Executive — GPU Cloud",
+      "company": "Together AI",
+      "location": "Boston, MA",
+      "url": "https://boards.greenhouse.io/together/jobs/400091",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive, Kubernetes",
+      "company": "Together AI",
+      "location": "Seattle, WA",
+      "url": "https://boards.greenhouse.io/together/jobs/400092",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Executive, AI Startups",
+      "company": "Together AI",
+      "location": "Chicago, IL",
+      "url": "https://boards.greenhouse.io/together/jobs/400093",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Together AI",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/together/jobs/400094",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "Together AI",
+      "location": "New York, NY",
+      "url": "https://boards.greenhouse.io/together/jobs/400095",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, AI Infrastructure",
+      "company": "HashiCorp",
+      "location": "San Francisco, CA",
+      "url": "https://boards.greenhouse.io/hashicorp/jobs/400096",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Account Manager, IaaS Platform",
+      "company": "HashiCorp",
+      "location": "Boston, MA",
+      "url": "https://boards.greenhouse.io/hashicorp/jobs/400097",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Commercial Account Executive, Hyperscale Data Center",
+      "company": "HashiCorp",
+      "location": "Seattle, WA",
+      "url": "https://boards.greenhouse.io/hashicorp/jobs/400098",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "strong"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "HashiCorp",
+      "location": "Chicago, IL",
+      "url": "https://boards.greenhouse.io/hashicorp/jobs/400099",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    },
+    {
+      "title": "Account Executive, Mid Market",
+      "company": "HashiCorp",
+      "location": "Remote, United States",
+      "url": "https://boards.greenhouse.io/hashicorp/jobs/400100",
+      "posted": "2026-09-15T00:00:00Z",
+      "screen": "fair"
+    }
+  ]
+}

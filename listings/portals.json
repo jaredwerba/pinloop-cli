@@ -1,0 +1,1773 @@
+{
+  "scanned_at": "2026-09-22T18:43:45.547Z",
+  "portals": [
+    {
+      "portal": "amazon",
+      "jobs": 100,
+      "seller": 81,
+      "error": null
+    },
+    {
+      "portal": "microsoft",
+      "jobs": 10,
+      "seller": 10,
+      "error": null
+    },
+    {
+      "portal": "nvidia",
+      "jobs": 200,
+      "seller": 50,
+      "error": null
+    },
+    {
+      "portal": "oracle",
+      "jobs": 200,
+      "seller": 42,
+      "error": null
+    },
+    {
+      "portal": "google",
+      "jobs": 20,
+      "seller": 3,
+      "error": null
+    },
+    {
+      "portal": "glean",
+      "jobs": 125,
+      "seller": 29,
+      "error": null
+    },
+    {
+      "portal": "voltagepark",
+      "jobs": 0,
+      "seller": 0,
+      "error": "ashby posting api HTTP 404"
+    }
+  ],
+  "seller": 215,
+  "misses": [
+    "voltagepark"
+  ],
+  "jobs": [
+    {
+      "title": "Account Executive – ARMY, US FED",
+      "company": "Amazon Web Services",
+      "location": "Arlington, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10516769/account-executive-army-us-fed",
+      "posted": "2026-08-27T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive – Navy & Marine Corps, US FED",
+      "company": "Amazon Web Services",
+      "location": "Arlington, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10532274/account-executive-navy-marine-corps-us-fed",
+      "posted": "2026-09-08T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive Amazon Business Mexico, AB Mexico",
+      "company": "Amazon Web Services",
+      "location": "Mexico City, Mexico City, MEX",
+      "url": "https://www.amazon.jobs/en/jobs/10532510/account-executive-amazon-business-mexico-ab-mexico",
+      "posted": "2026-09-08T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive II, PubSec GOV - State & Local, Amazon Business",
+      "company": "Amazon Web Services",
+      "location": "Minnesota, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10520766/account-executive-ii-pubsec-gov-state-local-amazon-business",
+      "posted": "2026-08-28T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, Amazon Ads Sales, CPG Amazon Ads Sales Account Executive",
+      "company": "Amazon Web Services",
+      "location": "Sao Paulo, Sao Paulo, BRA",
+      "url": "https://www.amazon.jobs/en/jobs/10499172/account-executive-amazon-ads-sales-cpg-amazon-ads-sales-account-executive",
+      "posted": "2026-08-11T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, Amazon Ads SALES, CPG, CPG Amazon Ads Sales Account Executive",
+      "company": "Amazon Web Services",
+      "location": "Sao Paulo, Sao Paulo, BRA",
+      "url": "https://www.amazon.jobs/en/jobs/10507423/account-executive-amazon-ads-sales-cpg-cpg-amazon-ads-sales-account-executive",
+      "posted": "2026-08-19T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, AWS TMEGS, Telco",
+      "company": "Amazon Web Services",
+      "location": "Denver, Colorado, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10526578/account-executive-aws-tmegs-telco",
+      "posted": "2026-09-02T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, Commercial - Distributed Locations, Hospitality, Amazon Business",
+      "company": "Amazon Web Services",
+      "location": "Austin, Texas, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10503912/account-executive-commercial-distributed-locations-hospitality-amazon-business",
+      "posted": "2026-08-17T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, Commercial, Manufacturing & Industrials, Amazon Business",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10556589/account-executive-commercial-manufacturing-industrials-amazon-business",
+      "posted": "2026-09-22T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, Federal, Worldwide Public Sector",
+      "company": "Amazon Web Services",
+      "location": "Canberra, Australian Capital Territory, AUS",
+      "url": "https://www.amazon.jobs/en/jobs/10529888/account-executive-federal-worldwide-public-sector",
+      "posted": "2026-09-04T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, GGS （多様な広告主のマーケティング成果を最大化する広告営業スペシャリスト）, Global Growth Sales - Amazon Ads",
+      "company": "Amazon Web Services",
+      "location": "Tokyo, JPN",
+      "url": "https://www.amazon.jobs/en/jobs/10556354/account-executive-ggs-global-growth-sales-amazon-ads",
+      "posted": "2026-09-22T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, Government, PubSec - Local Gov West, Amazon Business",
+      "company": "Amazon Web Services",
+      "location": "Texas, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10503747/account-executive-government-pubsec-local-gov-west-amazon-business",
+      "posted": "2026-08-17T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, Healthcare, Amazon Business",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10526919/account-executive-healthcare-amazon-business",
+      "posted": "2026-09-02T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, Healthcare, Amazon Business",
+      "company": "Amazon Web Services",
+      "location": "Austin, Texas, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10507543/account-executive-healthcare-amazon-business",
+      "posted": "2026-08-20T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, Independent Software Vendors (ISVs) ANZ, ISV",
+      "company": "Amazon Web Services",
+      "location": "Sydney, New South Wales, AUS",
+      "url": "https://www.amazon.jobs/en/jobs/10530810/account-executive-independent-software-vendors-isvs-anz-isv",
+      "posted": "2026-09-07T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, Local Ads, Local Ads",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10502563/account-executive-local-ads-local-ads",
+      "posted": "2026-08-14T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, Public Sector & Advocacy, LCS Acquisition",
+      "company": "Amazon Web Services",
+      "location": "Arlington, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10517519/account-executive-public-sector-advocacy-lcs-acquisition",
+      "posted": "2026-08-27T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, Samsung Electronics MX (Mobile eXperience)",
+      "company": "Amazon Web Services",
+      "location": "Seoul, KOR",
+      "url": "https://www.amazon.jobs/en/jobs/10533747/account-executive-samsung-electronics-mx-mobile-experience",
+      "posted": "2026-09-09T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, US LCS Acquisition",
+      "company": "Amazon Web Services",
+      "location": "Santa Monica, California, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10517520/account-executive-us-lcs-acquisition",
+      "posted": "2026-08-27T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Account Executive, WW Growth Sales",
+      "company": "Amazon Web Services",
+      "location": "Sydney, New South Wales, AUS",
+      "url": "https://www.amazon.jobs/en/jobs/10522005/account-executive-ww-growth-sales",
+      "posted": "2026-08-31T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Associate Account Executive",
+      "company": "Amazon Web Services",
+      "location": "Arlington, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10517674/associate-account-executive",
+      "posted": "2026-08-27T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Associate Account Executive , Enterprise Greenfield",
+      "company": "Amazon Web Services",
+      "location": "Arlington, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10537594/associate-account-executive-enterprise-greenfield",
+      "posted": "2026-09-11T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Associate Account Executive , Financial Services",
+      "company": "Amazon Web Services",
+      "location": "Arlington, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10534454/associate-account-executive-financial-services",
+      "posted": "2026-09-09T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Associate Account Executive , SMB Engaged",
+      "company": "Amazon Web Services",
+      "location": "Seattle, Washington, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10537593/associate-account-executive-smb-engaged",
+      "posted": "2026-09-11T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Associate Account Executive , SMB Engaged",
+      "company": "Amazon Web Services",
+      "location": "Arlington, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10526561/associate-account-executive-smb-engaged",
+      "posted": "2026-09-02T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Associate Account Executive , SMB Engaged",
+      "company": "Amazon Web Services",
+      "location": "Arlington, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10504262/associate-account-executive-smb-engaged",
+      "posted": "2026-08-17T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Associate Account Executive , SMB Engaged",
+      "company": "Amazon Web Services",
+      "location": "Seattle, Washington, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10504258/associate-account-executive-smb-engaged",
+      "posted": "2026-08-17T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Associate Account Executive, ISV",
+      "company": "Amazon Web Services",
+      "location": "Seattle, Washington, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10501015/associate-account-executive-isv",
+      "posted": "2026-08-13T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Associate Account Executive, ISV",
+      "company": "Amazon Web Services",
+      "location": "Arlington, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10501016/associate-account-executive-isv",
+      "posted": "2026-08-13T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Associate Account Executive, ISV",
+      "company": "Amazon Web Services",
+      "location": "Seattle, Washington, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10498869/associate-account-executive-isv",
+      "posted": "2026-08-11T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Associate Account Executive, Startups",
+      "company": "Amazon Web Services",
+      "location": "Seattle, Washington, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10551391/associate-account-executive-startups",
+      "posted": "2026-09-16T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Associate Account Executive, Startups",
+      "company": "Amazon Web Services",
+      "location": "Seattle, Washington, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10506912/associate-account-executive-startups",
+      "posted": "2026-08-19T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Enterprise Sr. Account Manager, Energy Sales",
+      "company": "Amazon Web Services",
+      "location": "Dallas, Texas, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10506292/enterprise-sr-account-manager-energy-sales",
+      "posted": "2026-08-19T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Global Account Manager, Media & Entertainment, Games and Sports",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10544569/global-account-manager-media-entertainment-games-and-sports",
+      "posted": "2026-09-16T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "HCLS Principal Account Executive, US HCLS Payors , Global HCLS",
+      "company": "Amazon Web Services",
+      "location": "Minneapolis, Minnesota, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10542086/hcls-principal-account-executive-us-hcls-payors-global-hcls",
+      "posted": "2026-09-15T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Partner Account Executive, Global Growth Sales",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10556671/partner-account-executive-global-growth-sales",
+      "posted": "2026-09-22T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Partner Account Executive, Global Growth Sales, Global Growth Sales",
+      "company": "Amazon Web Services",
+      "location": "Seattle, Washington, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10556362/partner-account-executive-global-growth-sales-global-growth-sales",
+      "posted": "2026-09-22T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Pr ProServe Account Executive - ISV/ Gaming, NAMER ISV/ Gaming",
+      "company": "Amazon Web Services",
+      "location": "Chicago, Illinois, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10517443/pr-proserve-account-executive-isv-gaming-namer-isv-gaming",
+      "posted": "2026-08-27T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Prin. ProServe Account Executive, AWS WWPS Professional Services",
+      "company": "Amazon Web Services",
+      "location": "Herndon, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10509305/prin-proserve-account-executive-aws-wwps-professional-services",
+      "posted": "2026-08-20T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Principal Account Executive, Defence - Enterprise",
+      "company": "Amazon Web Services",
+      "location": "Canberra, Australian Capital Territory, AUS",
+      "url": "https://www.amazon.jobs/en/jobs/10529886/principal-account-executive-defence-enterprise",
+      "posted": "2026-09-04T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Principal Account Executive, National Security, Worldwide Public Sector",
+      "company": "Amazon Web Services",
+      "location": "Canberra, Australian Capital Territory, AUS",
+      "url": "https://www.amazon.jobs/en/jobs/10541283/principal-account-executive-national-security-worldwide-public-sector",
+      "posted": "2026-09-15T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Principal Account Executive, US LCS, Automotive",
+      "company": "Amazon Web Services",
+      "location": "Santa Monica, California, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10530576/principal-account-executive-us-lcs-automotive",
+      "posted": "2026-09-04T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Principal Enterprise Account Executive, Semiconductor",
+      "company": "Amazon Web Services",
+      "location": "San Francisco, California, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10522036/principal-enterprise-account-executive-semiconductor",
+      "posted": "2026-08-31T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Principal ProServe Account Executive, NAMER Rtl/Cpg/Manu, NAMER Rtl/Cpg/Manu",
+      "company": "Amazon Web Services",
+      "location": "Chicago, Illinois, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10552371/principal-proserve-account-executive-namer-rtl-cpg-manu-namer-rtl-cpg-manu",
+      "posted": "2026-09-17T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Principal ProServe Account Executive, Strategic Accounts - ISVs",
+      "company": "Amazon Web Services",
+      "location": "San Francisco, California, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10529147/principal-proserve-account-executive-strategic-accounts-isvs",
+      "posted": "2026-09-03T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Principal ProServe Account Executive, US Enterprise - Energy",
+      "company": "Amazon Web Services",
+      "location": "Seattle, Washington, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10531750/principal-proserve-account-executive-us-enterprise-energy",
+      "posted": "2026-09-08T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Proserve Account Executive, Professional Services",
+      "company": "Amazon Web Services",
+      "location": "Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, MYS",
+      "url": "https://www.amazon.jobs/en/jobs/10521454/proserve-account-executive-professional-services",
+      "posted": "2026-08-31T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "PrProServe Account Executive , NAMER RTL/CPG",
+      "company": "Amazon Web Services",
+      "location": "Arlington, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10523241/prproserve-account-executive-namer-rtl-cpg",
+      "posted": "2026-09-01T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Senior Account Executive , Automotive, Financial Services & Telco",
+      "company": "Amazon Web Services",
+      "location": "Toronto, Ontario, CAN",
+      "url": "https://www.amazon.jobs/en/jobs/10516153/senior-account-executive-automotive-financial-services-telco",
+      "posted": "2026-08-26T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Senior Account Executive , North America, Fulfilled By Merchant Business Development",
+      "company": "Amazon Web Services",
+      "location": "Seattle, Washington, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10547112/senior-account-executive-north-america-fulfilled-by-merchant-business-development",
+      "posted": "2026-09-16T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Senior Account Executive, AGS-APJ-ASEAN-Malaysia",
+      "company": "Amazon Web Services",
+      "location": "Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, MYS",
+      "url": "https://www.amazon.jobs/en/jobs/10538349/senior-account-executive-ags-apj-asean-malaysia",
+      "posted": "2026-09-14T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Senior Account Executive, AGS-APJ-ASEAN-Philippines",
+      "company": "Amazon Web Services",
+      "location": "Taguig City, National Capital Region, PHL",
+      "url": "https://www.amazon.jobs/en/jobs/10513387/senior-account-executive-ags-apj-asean-philippines",
+      "posted": "2026-08-25T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Senior Account Executive, Defence - ADF, ANZ Public Sector",
+      "company": "Amazon Web Services",
+      "location": "Canberra, Australian Capital Territory, AUS",
+      "url": "https://www.amazon.jobs/en/jobs/10511717/senior-account-executive-defence-adf-anz-public-sector",
+      "posted": "2026-08-24T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Senior Account Executive, European and Global Organizations",
+      "company": "Amazon Web Services",
+      "location": "Brussels, Brussels, BEL",
+      "url": "https://www.amazon.jobs/en/jobs/10529891/senior-account-executive-european-and-global-organizations",
+      "posted": "2026-09-04T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Senior Account Executive, Sovereign Defence Industry, Australia, ANZ Public Sector",
+      "company": "Amazon Web Services",
+      "location": "Canberra, Australian Capital Territory, AUS",
+      "url": "https://www.amazon.jobs/en/jobs/10511721/senior-account-executive-sovereign-defence-industry-australia-anz-public-sector",
+      "posted": "2026-08-24T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Senior Enterprise Account Executive, AWS Finland",
+      "company": "Amazon Web Services",
+      "location": "Helsinki, South Finland, FIN",
+      "url": "https://www.amazon.jobs/en/jobs/10522032/senior-enterprise-account-executive-aws-finland",
+      "posted": "2026-08-31T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Senior Professional Services Account Executive, ProServe DEU Central",
+      "company": "Amazon Web Services",
+      "location": "Berlin, Berlin, DEU",
+      "url": "https://www.amazon.jobs/en/jobs/10503432/senior-professional-services-account-executive-proserve-deu-central",
+      "posted": "2026-08-17T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Senior ProServe Account Executive — Media & Entertainment, UKI Professional Services",
+      "company": "Amazon Web Services",
+      "location": "London, England, GBR",
+      "url": "https://www.amazon.jobs/en/jobs/10516718/senior-proserve-account-executive-media-entertainment-uki-professional-services",
+      "posted": "2026-08-27T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Senior ProServe Account Executive, WWPS EDU SLG",
+      "company": "Amazon Web Services",
+      "location": "Arlington, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10516773/senior-proserve-account-executive-wwps-edu-slg",
+      "posted": "2026-08-27T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr Account Executive, Education, Amazon Business",
+      "company": "Amazon Web Services",
+      "location": "Texas, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10529900/sr-account-executive-education-amazon-business",
+      "posted": "2026-09-04T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr Account Executive, Government, Amazon Business Europe - Public Sector",
+      "company": "Amazon Web Services",
+      "location": "Munich, Bavaria, DEU",
+      "url": "https://www.amazon.jobs/en/jobs/10525628/sr-account-executive-government-amazon-business-europe-public-sector",
+      "posted": "2026-09-02T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr Account Executive, US Army",
+      "company": "Amazon Web Services",
+      "location": "Herndon, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10518443/sr-account-executive-us-army",
+      "posted": "2026-08-28T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr Account Executive, US Army",
+      "company": "Amazon Web Services",
+      "location": "Arlington, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10504859/sr-account-executive-us-army",
+      "posted": "2026-08-18T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Account Executive , Amazon Leo",
+      "company": "Amazon Web Services",
+      "location": "Arlington, Virginia, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10543760/sr-account-executive-amazon-leo",
+      "posted": "2026-09-15T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Account Executive, Americas Enterprise Sales, Amazon Leo",
+      "company": "Amazon Web Services",
+      "location": "Bellevue, Washington, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10528979/sr-account-executive-americas-enterprise-sales-amazon-leo",
+      "posted": "2026-09-03T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Account Executive, ANZ, Amazon Leo",
+      "company": "Amazon Web Services",
+      "location": "AUS",
+      "url": "https://www.amazon.jobs/en/jobs/10526472/sr-account-executive-anz-amazon-leo",
+      "posted": "2026-09-02T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Account Executive, AWS TMEGS, Telco",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10526579/sr-account-executive-aws-tmegs-telco",
+      "posted": "2026-09-02T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Account Executive, Beauty, CPG, CPG, Beauty",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10517521/sr-account-executive-beauty-cpg-cpg-beauty",
+      "posted": "2026-08-27T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Account Executive, CPG, Procter & Gamble team",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10516128/sr-account-executive-cpg-procter-gamble-team",
+      "posted": "2026-08-26T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Account Executive, FSI-Capital Markets",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10500083/sr-account-executive-fsi-capital-markets",
+      "posted": "2026-08-12T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Account Executive, Hardlines",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10553880/sr-account-executive-hardlines",
+      "posted": "2026-09-18T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Account Executive, Hardlines",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10536753/sr-account-executive-hardlines",
+      "posted": "2026-09-10T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Account Executive, Hardlines",
+      "company": "Amazon Web Services",
+      "location": "Santa Monica, California, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10497829/sr-account-executive-hardlines",
+      "posted": "2026-08-10T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Account Executive, Startups",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10536810/sr-account-executive-startups",
+      "posted": "2026-09-10T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Account Executive, US FED NATSEC",
+      "company": "Amazon Web Services",
+      "location": "Jessup, Maryland, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10506751/sr-account-executive-us-fed-natsec",
+      "posted": "2026-08-19T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Account Manager, AWS Startups, Germany",
+      "company": "Amazon Web Services",
+      "location": "Munich, Bavaria, DEU",
+      "url": "https://www.amazon.jobs/en/jobs/10511657/sr-account-manager-aws-startups-germany",
+      "posted": "2026-08-24T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Ads - Account Executive, Amazon Ads Sales",
+      "company": "Amazon Web Services",
+      "location": "Sao Paulo, Sao Paulo, BRA",
+      "url": "https://www.amazon.jobs/en/jobs/10516650/sr-ads-account-executive-amazon-ads-sales",
+      "posted": "2026-08-27T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. AdTech Account Executive, Ad Tech Sales",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10555254/sr-adtech-account-executive-ad-tech-sales",
+      "posted": "2026-09-21T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. AdTech Account Executive, Agency Accounts, Global HoldCos",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10554559/sr-adtech-account-executive-agency-accounts-global-holdcos",
+      "posted": "2026-09-21T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Sr. Professional Services Account Executive, AWS Professional Services Healthcare and Life Sciences",
+      "company": "Amazon Web Services",
+      "location": "Zurich, Zurich, CHE",
+      "url": "https://www.amazon.jobs/en/jobs/10556254/sr-professional-services-account-executive-aws-professional-services-healthcare-and-life-sciences",
+      "posted": "2026-09-22T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Twitch Account Manager, Twitch",
+      "company": "Amazon Web Services",
+      "location": "New York, New York, USA",
+      "url": "https://www.amazon.jobs/en/jobs/10556633/twitch-account-manager-twitch",
+      "posted": "2026-09-22T04:00:00.000Z",
+      "portal": "amazon"
+    },
+    {
+      "title": "Commercial Account Executive, Central",
+      "company": "Glean",
+      "location": "Austin, TX",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4735493005",
+      "posted": "2026-09-18T15:42:03.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Commercial Account Executive, East",
+      "company": "Glean",
+      "location": "New York, NY",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4689938005",
+      "posted": "2026-04-30T17:00:29.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive - Mountain View",
+      "company": "Glean",
+      "location": "Mountain View, CA",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4695585005",
+      "posted": "2026-05-14T20:00:40.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive - Oregon",
+      "company": "Glean",
+      "location": "Remote - US",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4707231005",
+      "posted": "2026-06-17T21:56:25.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive - Sacramento",
+      "company": "Glean",
+      "location": "Sacramento, CA",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4693862005",
+      "posted": "2026-05-08T17:56:17.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive - San Francisco",
+      "company": "Glean",
+      "location": "San Francisco, CA",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4619072005",
+      "posted": "2025-10-14T18:56:38.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive - Washington",
+      "company": "Glean",
+      "location": "Remote - US",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4694661005",
+      "posted": "2026-05-13T21:46:43.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive, Boston",
+      "company": "Glean",
+      "location": "Boston, MA",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4725414005",
+      "posted": "2026-08-19T16:32:57.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive, Chicago",
+      "company": "Glean",
+      "location": "Remote - US",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4723644005",
+      "posted": "2026-08-17T18:15:37.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive, Denver",
+      "company": "Glean",
+      "location": "Denver, CO",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4726168005",
+      "posted": "2026-08-20T20:27:14.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive, Japan",
+      "company": "Glean",
+      "location": "Japan",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4672064005",
+      "posted": "2026-03-12T06:02:42.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive, Mid-Atlantic",
+      "company": "Glean",
+      "location": "Remote - US",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4724264005",
+      "posted": "2026-08-14T14:42:26.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive, NYC",
+      "company": "Glean",
+      "location": "New York, NY",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4615117005",
+      "posted": "2025-10-02T16:55:53.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive, Ohio Valley",
+      "company": "Glean",
+      "location": "Remote - US",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4615635005",
+      "posted": "2025-10-06T19:18:58.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive, SoCal",
+      "company": "Glean",
+      "location": "Los Angeles, California",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4725055005",
+      "posted": "2026-08-17T21:56:08.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive, SoCal",
+      "company": "Glean",
+      "location": "Orange County, CA",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4724979005",
+      "posted": "2026-08-17T21:56:07.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive, Southeast",
+      "company": "Glean",
+      "location": "Remote - US",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4719454005",
+      "posted": "2026-07-29T14:10:23.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Enterprise Account Executive, Texas",
+      "company": "Glean",
+      "location": "Texas",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4725320005",
+      "posted": "2026-08-18T23:24:31.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Partner Sales Manager, Bay Area",
+      "company": "Glean",
+      "location": "San Francisco, CA",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4721382005",
+      "posted": "2026-08-06T22:21:45.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Partner Sales Manager, Southern California",
+      "company": "Glean",
+      "location": "Los Angeles, CA",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4721644005",
+      "posted": "2026-08-06T22:21:53.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Glean",
+      "location": "Mumbai, India",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4673995005",
+      "posted": "2026-03-18T16:45:06.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Strategic Account Executive, Dallas",
+      "company": "Glean",
+      "location": "Dallas, TX",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4588653005",
+      "posted": "2025-07-22T17:49:23.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Strategic Account Executive, Japan",
+      "company": "Glean",
+      "location": "Tokyo, Japan",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4721393005",
+      "posted": "2026-08-12T05:52:31.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Strategic Account Executive, Nashville",
+      "company": "Glean",
+      "location": "Nashville",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4730794005",
+      "posted": "2026-09-11T19:02:25.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Strategic Account Executive, North Central",
+      "company": "Glean",
+      "location": "Remote - US",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4681664005",
+      "posted": "2026-04-08T16:44:48.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Strategic Account Executive, San Francisco",
+      "company": "Glean",
+      "location": "San Francisco, CA",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4706212005",
+      "posted": "2026-06-15T20:47:04.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Strategic Account Executive, Southern California",
+      "company": "Glean",
+      "location": "Los Angeles, CA",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4725753005",
+      "posted": "2026-08-20T20:36:19.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Strategic Account Executive, STL/KC",
+      "company": "Glean",
+      "location": "St. Louis",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4733352005",
+      "posted": "2026-09-11T19:05:25.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Strategic Account Executive, UKI",
+      "company": "Glean",
+      "location": "London, United Kingdom",
+      "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4702767005",
+      "posted": "2026-06-09T08:02:10.000Z",
+      "portal": "glean"
+    },
+    {
+      "title": "Account Manager, CTV",
+      "company": "Google Cloud",
+      "location": "New York, NY, USA | Mountain View, CA, USA | Los Angeles, CA, USA | San Francisco, CA, USA",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/122695882893075142",
+      "posted": "2026-09-22T09:06:53.000Z",
+      "portal": "google"
+    },
+    {
+      "title": "Key Account Executive, Telecom, Google Cloud",
+      "company": "Google Cloud",
+      "location": "Atlanta, GA, USA",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/96491794572681926",
+      "posted": "2026-09-02T08:37:56.000Z",
+      "portal": "google"
+    },
+    {
+      "title": "Senior Account Executive, Large Customer Sales",
+      "company": "Google Cloud",
+      "location": "San Francisco, CA, USA | Chicago, IL, USA",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/115671095587021510",
+      "posted": "2026-09-14T12:39:59.000Z",
+      "portal": "google"
+    },
+    {
+      "title": "Account Executive (AI Natives)",
+      "company": "Microsoft",
+      "location": "New York, NY, US | San Francisco, CA, US | San Jose, CA, US",
+      "url": "https://jobs.careers.microsoft.com/careers/job/1970393556994767",
+      "posted": "2026-09-17T20:41:55.000Z",
+      "portal": "microsoft"
+    },
+    {
+      "title": "Bilingual Account Executive (AI Natives)",
+      "company": "Microsoft",
+      "location": "US | Dallas, TX, US | Austin, TX, US | Houston, TX, US | Santa Fe, NM, US | San Francisco, CA, US",
+      "url": "https://jobs.careers.microsoft.com/careers/job/1970393556994771",
+      "posted": "2026-09-17T20:42:20.000Z",
+      "portal": "microsoft"
+    },
+    {
+      "title": "Digital Account Executive",
+      "company": "Microsoft",
+      "location": "US",
+      "url": "https://jobs.careers.microsoft.com/careers/job/1970393556986134",
+      "posted": "2026-09-09T20:47:59.000Z",
+      "portal": "microsoft"
+    },
+    {
+      "title": "Senior Account Executive",
+      "company": "Microsoft",
+      "location": "US",
+      "url": "https://jobs.careers.microsoft.com/careers/job/1970393556866189",
+      "posted": "2026-09-17T15:39:04.000Z",
+      "portal": "microsoft"
+    },
+    {
+      "title": "Senior Services Account Executive",
+      "company": "Microsoft",
+      "location": "US",
+      "url": "https://jobs.careers.microsoft.com/careers/job/1970393556986107",
+      "posted": "2026-09-17T17:50:51.000Z",
+      "portal": "microsoft"
+    },
+    {
+      "title": "Strategic Account Executive",
+      "company": "Microsoft",
+      "location": "San Francisco, CA, US | San Jose, CA, US | Santa Clara, CA, US | Sunnyvale, CA, US | Palo Alto, CA, US",
+      "url": "https://jobs.careers.microsoft.com/careers/job/1970393556988914",
+      "posted": "2026-09-18T16:31:18.000Z",
+      "portal": "microsoft"
+    },
+    {
+      "title": "Strategic Account Executive - CTJ - Top Secret",
+      "company": "Microsoft",
+      "location": "US | Norfolk, VA, US",
+      "url": "https://jobs.careers.microsoft.com/careers/job/1970393556986826",
+      "posted": "2026-09-09T16:13:36.000Z",
+      "portal": "microsoft"
+    },
+    {
+      "title": "Strategic Account Executive - Japanese Banking and Capital Markets",
+      "company": "Microsoft",
+      "location": "New York, NY, US",
+      "url": "https://jobs.careers.microsoft.com/careers/job/1970393556984224",
+      "posted": "2026-09-04T01:21:09.000Z",
+      "portal": "microsoft"
+    },
+    {
+      "title": "Strategic Account Executive, Pharmaceutical",
+      "company": "Microsoft",
+      "location": "Philadelphia, PA, US | Bridgewater, NJ, US",
+      "url": "https://jobs.careers.microsoft.com/careers/job/1970393556978017",
+      "posted": "2026-09-09T19:58:29.000Z",
+      "portal": "microsoft"
+    },
+    {
+      "title": "Strategic Account Executive, Retail & Consumer Goods",
+      "company": "Microsoft",
+      "location": "Cincinnati, OH, US | Chicago, IL, US | Indianapolis, IN, US | Atlanta, GA, US | Nashville, TN, US",
+      "url": "https://jobs.careers.microsoft.com/careers/job/1970393556978503",
+      "posted": "2026-08-25T20:55:10.000Z",
+      "portal": "microsoft"
+    },
+    {
+      "title": "Account Manager - AI Natives",
+      "company": "NVIDIA",
+      "location": "US, CA, Santa Clara",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Account-Manager---AI-Natives_JR2025206",
+      "posted": "2026-09-10T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Account Manager - Semiconductor",
+      "company": "NVIDIA",
+      "location": "2 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Account-Manager---Semiconductor_JR2024960",
+      "posted": "2026-09-04T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Account Manager, Higher Education",
+      "company": "NVIDIA",
+      "location": "6 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-NC-Remote/Account-Manager--Higher-Education_JR2025227",
+      "posted": "2026-09-10T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Agentic AI Platform Senior Account Manager UK&I",
+      "company": "NVIDIA",
+      "location": "UK, Remote",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/UK-Remote/Agentic-AI-Platform-Senior-Account-Manager-UK-I_JR2024082",
+      "posted": "2026-08-25T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Agentic AI Platform Senior Account Manager, DACH",
+      "company": "NVIDIA",
+      "location": "2 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Germany-Munich/Agentic-AI-Platform-Senior-Account-Manager--DACH_JR2024090",
+      "posted": "2026-08-25T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "AI Natives Enterprise Account Manager",
+      "company": "NVIDIA",
+      "location": "4 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Poland-Remote/AI-Natives-Enterprise-Account-Manager_JR2025725",
+      "posted": "2026-09-16T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "AI Natives Senior Account Manager - Germany",
+      "company": "NVIDIA",
+      "location": "2 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Germany-Munich/AI-Natives-Senior-Account-Manager---Germany_JR2024149",
+      "posted": "2026-08-25T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "EMEA Sales Senior Account Manager, Smart Spaces and Local Government",
+      "company": "NVIDIA",
+      "location": "2 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Germany-Remote/EMEA-Sales-Senior-Account-Manager--Smart-Spaces-and-Local-Government_JR2009774",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Enterprise Account Manager, State and Local Government",
+      "company": "NVIDIA",
+      "location": "6 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-VA-Remote/Enterprise-Account-Manager--State-and-Local-Government_JR2025230",
+      "posted": "2026-09-16T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Enterprise Sales Account Manager – HCLS DACH",
+      "company": "NVIDIA",
+      "location": "2 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Switzerland-Remote/Enterprise-Sales-Account-Manager---HCLS-DACH_JR2020552",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Federal Sales Account Manager",
+      "company": "NVIDIA",
+      "location": "Australia, Remote",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Australia-Remote/Federal-Sales-Account-Manager_JR2017307",
+      "posted": "2026-09-07T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Global Account Manager – AI and Accelerated Computing Hardware Solution Implementation",
+      "company": "NVIDIA",
+      "location": "3 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-NC-Durham/Global-Account-Manager---AI-and-Accelerated-Computing-Hardware-Solution-Implementation_JR2025490",
+      "posted": "2026-09-15T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Global Account Manager – AI and Accelerated Computing Solutions",
+      "company": "NVIDIA",
+      "location": "2 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-NC-Durham/Global-Account-Manager---AI-and-Accelerated-Computing-Solutions_JR2021401",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Global Account Manager – Enterprise and NPN Software Sales",
+      "company": "NVIDIA",
+      "location": "US, NC, Durham",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-NC-Durham/Global-Account-Manager---Enterprise-and-NPN-Software-Sales_JR2021404",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Global Account Manager, Developer Relations - Amazon",
+      "company": "NVIDIA",
+      "location": "3 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Global-Account-Manager--Developer-Relations---Amazon_JR2022585",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Global Account Manager, Developer Relations - Hitachi",
+      "company": "NVIDIA",
+      "location": "US, CA, Santa Clara",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Global-Account-Manager--Developer-Relations---Hitachi_JR2024636",
+      "posted": "2026-09-03T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Global Account Manager, Developer Relations - Meta",
+      "company": "NVIDIA",
+      "location": "2 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Global-Account-Manager--Developer-Relations---Meta_JR2022590",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Global Account Manager, Developer Relations - Microsoft",
+      "company": "NVIDIA",
+      "location": "4 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Global-Account-Manager--Developer-Relations---Microsoft_JR2022583",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Global Account Manager, Robotics",
+      "company": "NVIDIA",
+      "location": "Japan, Tokyo",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Japan-Tokyo/Global-Account-Manager--Robotics_JR2023558",
+      "posted": "2026-08-26T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "OEM Account Manager",
+      "company": "NVIDIA",
+      "location": "US, CA, Santa Clara",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/OEM-Account-Manager_JR2023328",
+      "posted": "2026-09-02T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "OEM Account Manager - NVIDIA Networking Products",
+      "company": "NVIDIA",
+      "location": "US, CA, Santa Clara",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/OEM-Account-Manager---NVIDIA-Networking-Products_JR2022843",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "OEM Sales Director",
+      "company": "NVIDIA",
+      "location": "US, CA, Santa Clara",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/OEM-Sales-Director_JR2025735",
+      "posted": "2026-09-18T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Operation Account Manager",
+      "company": "NVIDIA",
+      "location": "China, Shenzhen",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/China-Shenzhen/Operation-Account-Manager_JR2018279",
+      "posted": "2026-08-23T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Robotics Regional Sales Lead - EMEA",
+      "company": "NVIDIA",
+      "location": "3 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Germany-Munich/Robotics-Regional-Sales-Lead---EMEA_JR2024221-1",
+      "posted": "2026-08-25T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager",
+      "company": "NVIDIA",
+      "location": "2 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Singapore-Remote/Senior-Account-Manager_JR2022227-1",
+      "posted": "2026-08-23T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager",
+      "company": "NVIDIA",
+      "location": "Singapore, Singapore-Suntec Tower",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Singapore-Singapore-Suntec-Tower/Senior-Account-Manager_JR2022647",
+      "posted": "2026-08-23T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager - CSP",
+      "company": "NVIDIA",
+      "location": "2 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Account-Manager---CSP_JR2021680",
+      "posted": "2026-08-23T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager - Semiconductor Ecosystem",
+      "company": "NVIDIA",
+      "location": "US, CA, Santa Clara",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Account-Manager---Semiconductor-Ecosystem_JR2021317",
+      "posted": "2026-09-08T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager - Walmart",
+      "company": "NVIDIA",
+      "location": "US, AR, Remote",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-AR-Remote/Senior-Account-Manager---Walmart_JR2023393",
+      "posted": "2026-08-23T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager – AI Natives, Startups and Scaleups",
+      "company": "NVIDIA",
+      "location": "2 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/UK-Remote/Senior-Account-Manager---AI-Natives--Startups-and-Scaleups_JR2008690-1",
+      "posted": "2026-09-09T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager – Digital Health Accounts",
+      "company": "NVIDIA",
+      "location": "3 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Account-Manager---Digital-Health-Accounts_JR2018190",
+      "posted": "2026-09-11T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager – Thailand",
+      "company": "NVIDIA",
+      "location": "Thailand, Remote",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Thailand-Remote/Senior-Account-Manager---Thailand_JR2023100",
+      "posted": "2026-08-23T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager Consumer – ANZ",
+      "company": "NVIDIA",
+      "location": "Australia, Remote",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Australia-Remote/Senior-Account-Manager-Consumer---ANZ_JR2025700-1",
+      "posted": "2026-09-19T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager- Telcom",
+      "company": "NVIDIA",
+      "location": "Japan, Tokyo",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Japan-Tokyo/Senior-Account-Manager--Telcom_JR2021876",
+      "posted": "2026-08-23T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager, Agentic AI Platform - UK&I",
+      "company": "NVIDIA",
+      "location": "3 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/UK-Remote/Senior-Account-Manager--Agentic-AI-Platform---UK-I_JR2024521",
+      "posted": "2026-09-10T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager, AI Factory - Global Segment Sales",
+      "company": "NVIDIA",
+      "location": "US, CA, Santa Clara",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Account-Manager--AI-Factory---Global-Segment-Sales_JR2021693",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager, Consumer Internet and Digital Natives",
+      "company": "NVIDIA",
+      "location": "US, CA, Santa Clara",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Account-Manager--Consumer-Internet-and-Digital-Natives_JR2022721",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager, Consumer Sales",
+      "company": "NVIDIA",
+      "location": "Korea, Seoul",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Korea-Seoul/Senior-Account-Manager--Consumer-Sales_JR2012877",
+      "posted": "2026-09-02T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager, CSP - Networking",
+      "company": "NVIDIA",
+      "location": "2 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Remote/Senior-Account-Manager--CSP---Networking_JR2023238",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager, CSP - Networking Business",
+      "company": "NVIDIA",
+      "location": "3 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Account-Manager--CSP---Networking-Business_JR2021682",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager, Host Networking Segment Sales",
+      "company": "NVIDIA",
+      "location": "2 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Account-Manager--Host-Networking-Segment-Sales_JR2018974",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Account Manager, Walmart",
+      "company": "NVIDIA",
+      "location": "US, AR, Remote",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-AR-Remote/Senior-Account-Manager-Lead--Walmart_JR2022720",
+      "posted": "2026-08-23T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Consumer Sales Manager",
+      "company": "NVIDIA",
+      "location": "Australia, Remote",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Australia-Remote/Senior-Consumer-Sales-Manager_JR2018302",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Enterprise Sales Account Manager - Spain",
+      "company": "NVIDIA",
+      "location": "Spain, Remote",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Spain-Remote/Senior-Enterprise-Sales-Account-Manager---Spain_JR2024214",
+      "posted": "2026-09-10T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Global Account Manager, Game Developers",
+      "company": "NVIDIA",
+      "location": "US, CA, Santa Clara",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Global-Account-Manager--Game-Developers_JR2022528",
+      "posted": "2026-08-23T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Global CPU Segment Sales Manager",
+      "company": "NVIDIA",
+      "location": "US, CA, Santa Clara",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Global-CPU-Segment-Sales-Manager_JR2021324",
+      "posted": "2026-08-23T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Retail and CPG Account Manager",
+      "company": "NVIDIA",
+      "location": "UK, Remote",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/UK-Remote/Senior-Retail-and-CPG-Account-Manager_JR2024075",
+      "posted": "2026-09-10T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Senior Sales Account Manager, Enterprise - Denmark",
+      "company": "NVIDIA",
+      "location": "2 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Denmark-Remote/Senior-Sales-Account-Manager--Enterprise---Denmark_JR2024155",
+      "posted": "2026-09-15T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Strategic Account Manager, CSP",
+      "company": "NVIDIA",
+      "location": "US, CA, Santa Clara",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Strategic-Account-Manager--CSP---Networking_JR2020916",
+      "posted": "2026-09-11T18:43:36.983Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Supercomputing Account Manager, Public Sector",
+      "company": "NVIDIA",
+      "location": "2 Locations",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-DC-Remote/Supercomputing-Account-Manager--Public-Sector_JR2022812",
+      "posted": "2026-08-31T18:43:36.984Z",
+      "portal": "nvidia"
+    },
+    {
+      "title": "Account Executive - Mid Market",
+      "company": "Oracle",
+      "location": "New York, NY, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344321",
+      "posted": "2026-09-10T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Account Executive - Mid Market",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/342636",
+      "posted": "2026-09-09T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Account Executive - Mid Market",
+      "company": "Oracle",
+      "location": "Austin, TX, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/343517",
+      "posted": "2026-09-08T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Applications Account Executive",
+      "company": "Oracle",
+      "location": "Norway",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/345496",
+      "posted": "2026-09-16T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Corporate Account Executive - Oracle NetSuite Consumer Services",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344883",
+      "posted": "2026-09-10T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Corporate Account Executive - Oracle NetSuite Consumer Services",
+      "company": "Oracle",
+      "location": "Austin, TX, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344506",
+      "posted": "2026-09-03T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Health Industry Account Executive",
+      "company": "Oracle",
+      "location": "South Africa",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/345788",
+      "posted": "2026-09-21T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Mid-Market Account Executive - Consumer Services — NetSuite",
+      "company": "Oracle",
+      "location": "Santa Monica, CA, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344459",
+      "posted": "2026-09-03T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Mid-Market Account Executive ( Austin, TX ) - Consumer Services — NetSuite",
+      "company": "Oracle",
+      "location": "Austin, TX, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344456",
+      "posted": "2026-09-03T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Mid-Market Account Executive, Consumer Services — NetSuite",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/345366",
+      "posted": "2026-09-14T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Mid-Market Account Executive, Consumer Services — NetSuite",
+      "company": "Oracle",
+      "location": "Nashville, TN, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344280",
+      "posted": "2026-09-01T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Mid-Market Account Executive, Consumer Services — NetSuite",
+      "company": "Oracle",
+      "location": "Chicago, IL, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344144",
+      "posted": "2026-08-28T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Mid-Market Account Executive, Consumer Services — NetSuite",
+      "company": "Oracle",
+      "location": "Denver, CO, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344151",
+      "posted": "2026-08-28T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "NetSuite Account Executive - Mid Market",
+      "company": "Oracle",
+      "location": "Austin, TX, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/345675",
+      "posted": "2026-09-19T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "NetSuite Account Executive - Mid Market",
+      "company": "Oracle",
+      "location": "Raleigh, NC, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/345497",
+      "posted": "2026-09-17T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "NetSuite Account Executive - Mid Market",
+      "company": "Oracle",
+      "location": "Chicago, IL, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344333",
+      "posted": "2026-09-11T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "NetSuite Account Manager",
+      "company": "Oracle",
+      "location": "Austin, TX, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/343640",
+      "posted": "2026-09-14T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "NetSuite Channel Sales Account Manager",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/345429",
+      "posted": "2026-09-16T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "NetSuite Channel Sales Account Manager",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/345430",
+      "posted": "2026-09-15T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "NetSuite Channel Sales Account Manager",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/345431",
+      "posted": "2026-09-15T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "NetSuite Corporate Account Executive - Construction & Energy",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344633",
+      "posted": "2026-09-08T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "NetSuite Corporate Account Executive - Construction & Energy",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344639",
+      "posted": "2026-09-08T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "NetSuite Corporate Account Executive - Construction & Energy",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/343873",
+      "posted": "2026-08-26T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "NetSuite Enterprise Account Manager - Austin, TX",
+      "company": "Oracle",
+      "location": "Austin, TX, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344358",
+      "posted": "2026-09-02T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite - Account Executive - Corporate - Business Services - East",
+      "company": "Oracle",
+      "location": "Burlington, MA, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/343831",
+      "posted": "2026-08-25T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite - Account Executive - Mid market - Business Services - East",
+      "company": "Oracle",
+      "location": "Austin, TX, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/345453",
+      "posted": "2026-09-16T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite - Account Executive - Mid market - Business Services - East",
+      "company": "Oracle",
+      "location": "Austin, TX, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/345455",
+      "posted": "2026-09-16T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite - Account Executive - Mid market - Business Services - East",
+      "company": "Oracle",
+      "location": "Burlington, MA, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/345579",
+      "posted": "2026-09-16T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite - Account Executive - Mid market - Business Services - West",
+      "company": "Oracle",
+      "location": "Santa Monica, CA, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/345580",
+      "posted": "2026-09-16T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite - Account Executive - Mid market - Business Services - West",
+      "company": "Oracle",
+      "location": "Austin, TX, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344509",
+      "posted": "2026-09-04T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite - Account Executive - Mid market - Software East",
+      "company": "Oracle",
+      "location": "New York, NY, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/343826",
+      "posted": "2026-08-25T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite - Account Executive - Mid market - Software East",
+      "company": "Oracle",
+      "location": "Burlington, MA, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/343827",
+      "posted": "2026-08-25T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite - Account Executive - Mid market - Software West",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344364",
+      "posted": "2026-09-02T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite - Account Executive - Mid-Market- Products",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/337217",
+      "posted": "2026-09-15T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite Account Executive - Mid Market - Products",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344769",
+      "posted": "2026-09-10T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite Corporate Account Executive- Products",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/337150",
+      "posted": "2026-08-25T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite Mid-Market Account Executive - Healthcare, Hospitality, and Life Sciences",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344522",
+      "posted": "2026-09-04T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite Mid-Market Account Executive - Healthcare, Hospitality, and Life Sciences",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344523",
+      "posted": "2026-09-04T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite Mid-Market Account Executive - Healthcare, Hospitality, and Life Sciences",
+      "company": "Oracle",
+      "location": "Chicago, IL, United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344286",
+      "posted": "2026-09-01T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Oracle NetSuite Mid-Market Account Executive - Healthcare, Hospitality, and Life Sciences",
+      "company": "Oracle",
+      "location": "United States",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/344288",
+      "posted": "2026-09-01T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "PAM – Partner Account Manager - GSI",
+      "company": "Oracle",
+      "location": "CIUDAD DE MEXICO, Mexico",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/345779",
+      "posted": "2026-09-21T00:00:00.000Z",
+      "portal": "oracle"
+    },
+    {
+      "title": "Sales Director-Tech Cloud",
+      "company": "Oracle",
+      "location": "GURUGRAM, HARYANA, India",
+      "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/345769",
+      "posted": "2026-09-22T00:00:00.000Z",
+      "portal": "oracle"
+    }
+  ]
+}

@@ -14,7 +14,8 @@
   ],
   "homepage": "https://pinloop.ai",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "npm run build && node --test tests/fit.test.mjs tests/intake.test.mjs tests/daily-100.test.mjs tests/intake-prune.test.mjs tests/intake-brief.test.mjs tests/intake-score.test.mjs tests/intake-applied.test.mjs"
   },
   "dependencies": {
     "commander": "^15.0.0",
