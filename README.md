@@ -1,119 +1,58 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/pinloop-wordmark-dark.svg">
-    <img src="assets/pinloop-wordmark.svg" width="450" alt="Pinloop">
-  </picture>
-</p>
+# pinloop-cli fork
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/pinloop"><img alt="npm version" src="https://img.shields.io/npm/v/pinloop?label=npm&labelColor=2A2B30&color=5D5E66"></a>
-  <a href="LICENSE"><img alt="license: MIT" src="https://img.shields.io/badge/license-MIT-5D5E66?labelColor=2A2B30"></a>
-  <a href="https://pinloop.ai"><img alt="pinloop.ai website" src="https://img.shields.io/badge/pinloop.ai-website-5D5E66?labelColor=2A2B30"></a>
-</p>
+This is my fork of [pinloop-ai/pinloop-cli](https://github.com/pinloop-ai/pinloop-cli).
 
-<p align="center">
-  <a href="https://pinloop.ai/discord"><img alt="Join our Discord" src="https://img.shields.io/badge/Discord-Join%20the%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
-</p>
+Upstream Pinloop is a job-board command line for a coding agent. It is useful. I did not fork it to replace that product. I forked it because the free plan cannot do the search I need.
 
-<p align="center">
-  Pinloop is a job board built for your coding agent, run entirely from a terminal.
-</p>
+## Why I forked it
 
-<p align="center">
-  It pulls in millions of postings a month, worldwide, across every white-collar<br>
-  field, refreshed hourly from company hiring systems and from job boards like<br>
-  LinkedIn. It can also hold your resume and any other preference files and make<br>
-  LLM calls to judge every posting against what it knows about you.
-</p>
+I want account executive jobs in Boston, or jobs that are fully remote in the United States. I do not want jobs in other cities, and I do not want regional remote jobs.
 
-<br>
+Pinloop's server decides how many new postings a free account can take. That number is 5 a day. On the first day this account ran this version, the server handed 10. The client in this repository does not hold that number, and a change here cannot raise it. Pro is 1,500 new postings a month. That is still not 100 a day, and the terms say not to work around the limit.
 
-https://github.com/user-attachments/assets/3657dcdc-4cac-4778-8cc6-5ca3b40e5fed
+I already use career-ops to evaluate jobs. I needed a daily collector that reads public company boards, keeps only Boston and fully remote seats, and does not spend the Pinloop allowance.
 
-## Try it
+## What I changed
 
-You don't run anything yourself. Paste this sentence into your coding agent
-(Claude Code, Codex, Cursor, or similar) and it installs Pinloop and walks you
-through setup:
+- `pinloop fit` scores a posting against an account executive profile before any pull.
+- `scripts/daily-100.mjs` reads public Greenhouse, Ashby, and Lever boards, plus career sites for Amazon, Microsoft, NVIDIA, Oracle, Google, and Glean. Voltage Park had no open jobs on 22 September 2026.
+- The default location rule keeps Boston and Cambridge, or a fully remote United States seat. Other cities stay out.
+- `pinloop intake` stores board results locally, writes a job brief, and can mark a job applied. One board error does not stop the run.
+- Tests cover the fit commands, the intake store, and the daily list rules. The last full run reported 54 passing tests.
+- `scripts/apply.mjs` prepares one application packet for a coding agent. It does not submit the application.
+- The page at [omarchy-jobs.vercel.app](https://omarchy-jobs.vercel.app) shows one list. Neon Postgres keeps each run by date. A later run adds jobs. It does not delete earlier days.
 
-```
-Run npm install -g pinloop, then run pinloop welcome and follow the instructions.
-```
+## Why this is better
 
-## Install
+The upstream command is still the right tool for a Pinloop account. This fork is better for my search.
 
-Needs Node 22 or newer.
+I can collect jobs every day without using the 5-a-day pull. The page no longer fills with New York, San Francisco, or regional remote seats. A Greenhouse location bug had stored 2,788 rows with no location, so a city filter did nothing. That bug is fixed, and the Boston rule now runs on real locations. Each day's jobs stay on the page.
+
+The honest size of this search is small. On 22 September 2026 the Boston and fully remote list had 16 jobs, not 100. A wider United States search can return 100 jobs, but that list includes cities I do not want. Fewer correct jobs is the improvement.
+
+## How it was built
+
+Grok Build 4.7 led the fork and wrote the tasks. Two Hermes sessions did the other work, on separate files.
+
+Agent 2 used DeepSeek V4.1 Flash. That session added the extra boards, the employer site loaders, and the apply queue.
+
+Agent 3 used GLM 5.3 Flash. That session added the tests, the intake store, and the Boston and remote gate.
+
+The full record is in [OVERVIEW.md](OVERVIEW.md), [WORKLOG.md](WORKLOG.md), and [AGENT3-WORKLOG.md](AGENT3-WORKLOG.md).
+
+## Upstream command
+
+The original command still needs Node 22 or newer and a Pinloop account.
 
 ```
 npm install -g pinloop
-```
-
-## Start
-
-```
 pinloop
 ```
 
-Run on its own, `pinloop` prints instructions written for a coding agent.
-`pinloop welcome` gets your coding agent to walk you through a more structured
-onboarding flow, and `pinloop guide` gives it the full usage instructions.
+`pinloop welcome` and `pinloop guide` describe the upstream command. Login uses a browser and has no password. The license in this repository covers the command line only. See [LICENSE](LICENSE).
 
-## Accounts and payments
-
-Run `pinloop login` to make an account.
-
-The commands talk to Pinloop's servers, so everything except the guide needs an
-account. Login goes through a browser, with no password.
-
-Free plan:
-- Search Pinloop with words and filters to count how many postings match you before pulling
-- Pull 5 postings per day
-- Judge 150 postings per month through LLM calls (or infinite postings w/ your own agent)
-- 50 semantic searches per month
-
-Pro plan:
-- Pull 1500 postings per month
-- Judge 1500 postings per month through LLM calls
-- Set routines to scan and save postings automatically on Pinloop's servers, either on a schedule or when new postings come in, even when your laptop is closed
-- Unlimited semantic search
-- Everything on Free
-
-Run `pinloop upgrade` to upgrade to Pro.
-
-## License
-
-MIT. See [LICENSE](LICENSE).
-
-The license covers the CLI only.
-
-## Links
-
+- Upstream: https://github.com/pinloop-ai/pinloop-cli
 - Home: https://pinloop.ai
 - Discord: https://pinloop.ai/discord
 - Privacy: https://pinloop.ai/privacy
 - Terms: https://pinloop.ai/terms
-
-## How this fork was built
-
-This fork was built on 22 September 2026.
-The lead agent was Grok Build 4.7.
-Grok Build 4.7 wrote the tasks and the project overview.
-Two Hermes sessions did the other build work.
-The sessions did not edit the same files.
-
-Agent 2 was a Hermes session.
-Agent 2 used DeepSeek V4.1 Flash.
-Agent 2 added the extra job boards.
-Agent 2 added the employer career site loaders.
-Agent 2 added the apply queue.
-
-Agent 3 was a Hermes session.
-Agent 3 used GLM 5.3 Flash.
-Agent 3 added the tests.
-Agent 3 added the local intake store.
-Agent 3 added the Boston and remote gate.
-
-Read OVERVIEW.md for the full record.
-Read WORKLOG.md for the agent 2 record.
-Read AGENT3-WORKLOG.md for the agent 3 record.
-
