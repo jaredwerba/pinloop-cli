@@ -92,3 +92,28 @@ The license covers the CLI only.
 - Discord: https://pinloop.ai/discord
 - Privacy: https://pinloop.ai/privacy
 - Terms: https://pinloop.ai/terms
+
+## How this fork was built
+
+This fork was built on 22 September 2026.
+The lead agent was Grok Build 4.7.
+Grok Build 4.7 wrote the tasks and the project overview.
+Two Hermes sessions did the other build work.
+The sessions did not edit the same files.
+
+Agent 2 was a Hermes session.
+Agent 2 used DeepSeek V4.1 Flash.
+Agent 2 added the extra job boards.
+Agent 2 added the employer career site loaders.
+Agent 2 added the apply queue.
+
+Agent 3 was a Hermes session.
+Agent 3 used GLM 5.3 Flash.
+Agent 3 added the tests.
+Agent 3 added the local intake store.
+Agent 3 added the Boston and remote gate.
+
+Read OVERVIEW.md for the full record.
+Read WORKLOG.md for the agent 2 record.
+Read AGENT3-WORKLOG.md for the agent 3 record.
+
